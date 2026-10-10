@@ -4,6 +4,9 @@
 		"ignore": [
 			".astro/**",
 			"dist/**",
+			"coverage/**",
+			"test-results/**",
+			"playwright-report/**",
 			"src/data/**",
 			"public/**",
 			"src/styles/panda/**",
