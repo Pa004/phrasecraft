@@ -75,6 +75,7 @@ if (!existsSync(esPath)) {
 const es = loadJson(esPath);
 const denylist = new Set(loadJson(join(ROOT, "src", "data", "es", "denylist.json")));
 const overrides = loadJson(join(ROOT, "scripts", "overrides.json"));
+const noFluent = loadJson(join(ROOT, "scripts", "no-fluent.json"));
 
 const report = {
   raw: es.length,
@@ -108,6 +109,10 @@ for (const e of es) {
   }
   if (e.skins && e.skins.length > 0) {
     report.excludedSkins++;
+    continue;
+  }
+  if (noFluent[e.hexcode]) {
+    report.excludedNoFluent = (report.excludedNoFluent ?? 0) + 1;
     continue;
   }
   let name = null;
