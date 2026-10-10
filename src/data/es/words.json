@@ -1,0 +1,5679 @@
+[
+  {
+    "id": "abaco",
+    "es": "ábaco",
+    "ascii": "abaco",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f9ee",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "abanico",
+    "es": "abanico",
+    "ascii": "abanico",
+    "gender": "m",
+    "animate": false,
+    "icon": "1faad",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "abeja",
+    "es": "abeja",
+    "ascii": "abeja",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f41d",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "abierto",
+    "es": "abierto",
+    "ascii": "abierto",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4d6",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "abrigo",
+    "es": "abrigo",
+    "ascii": "abrigo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f9e5",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "accesorio",
+    "es": "accesorio",
+    "ascii": "accesorio",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f452",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "aceite",
+    "es": "aceite",
+    "ascii": "aceite",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fa94",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "aceituna",
+    "es": "aceituna",
+    "ascii": "aceituna",
+    "gender": "f",
+    "animate": false,
+    "icon": "1fad2",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "acordeon",
+    "es": "acordeón",
+    "ascii": "acordeon",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fa97",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "actuacion",
+    "es": "actuación",
+    "ascii": "actuacion",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3ad",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "aeroplano",
+    "es": "aeroplano",
+    "ascii": "aeroplano",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f6eb",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "afeitado",
+    "es": "afeitado",
+    "ascii": "afeitado",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fa92",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "agua",
+    "es": "agua",
+    "ascii": "agua",
+    "gender": "f",
+    "stressedA": true,
+    "animate": true,
+    "icon": "1f403",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "aguacate",
+    "es": "aguacate",
+    "ascii": "aguacate",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f951",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "aguila",
+    "es": "águila",
+    "ascii": "aguila",
+    "gender": "f",
+    "stressedA": true,
+    "animate": true,
+    "icon": "1f985",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "ajedrez",
+    "es": "ajedrez",
+    "ascii": "ajedrez",
+    "gender": "m",
+    "animate": false,
+    "icon": "265f",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "alambique",
+    "es": "alambique",
+    "ascii": "alambique",
+    "gender": "m",
+    "animate": false,
+    "icon": "2697",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "alce",
+    "es": "alce",
+    "ascii": "alce",
+    "gender": "m",
+    "animate": true,
+    "icon": "1face",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "altavoz",
+    "es": "altavoz",
+    "ascii": "altavoz",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f507",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "alubias",
+    "es": "alubias",
+    "ascii": "alubias",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fad8",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "alza",
+    "es": "alza",
+    "ascii": "alza",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f4b9",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "amanecer",
+    "es": "amanecer",
+    "ascii": "amanecer",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f304",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "amor",
+    "es": "amor",
+    "ascii": "amor",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3e9",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "amuleto",
+    "es": "amuleto",
+    "ascii": "amuleto",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f9ff",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "ancla",
+    "es": "ancla",
+    "ascii": "ancla",
+    "gender": "f",
+    "stressedA": true,
+    "animate": false,
+    "icon": "2693",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "anfora",
+    "es": "ánfora",
+    "ascii": "anfora",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f3fa",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "anidacion",
+    "es": "anidación",
+    "ascii": "anidacion",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fab9",
+    "tags": [
+      "naturaleza"
+    ]
+  },
+  {
+    "id": "anillo",
+    "es": "anillo",
+    "ascii": "anillo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f48d",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "antena",
+    "es": "antena",
+    "ascii": "antena",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f4e1",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "antigua",
+    "es": "antigua",
+    "ascii": "antigua",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f5dd",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "anverso",
+    "es": "anverso",
+    "ascii": "anverso",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4c4",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "arana",
+    "es": "araña",
+    "ascii": "arana",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f577",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "arandanos",
+    "es": "arándanos",
+    "ascii": "arandanos",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fad0",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "archivo",
+    "es": "archivo",
+    "ascii": "archivo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4c1",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "arcoiris",
+    "es": "arcoíris",
+    "ascii": "arcoiris",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f308",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "ardilla",
+    "es": "ardilla",
+    "ascii": "ardilla",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f43f",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "arepa",
+    "es": "arepa",
+    "ascii": "arepa",
+    "gender": "f",
+    "animate": false,
+    "icon": "1fad3",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "arma",
+    "es": "arma",
+    "ascii": "arma",
+    "gender": "f",
+    "stressedA": true,
+    "animate": false,
+    "icon": "1f52a",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "armario",
+    "es": "armario",
+    "ascii": "armario",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f9f0",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "arroz",
+    "es": "arroz",
+    "ascii": "arroz",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f33e",
+    "tags": [
+      "naturaleza"
+    ]
+  },
+  {
+    "id": "arte",
+    "es": "arte",
+    "ascii": "arte",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3a8",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "asada",
+    "es": "asada",
+    "ascii": "asada",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f360",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "ascensor",
+    "es": "ascensor",
+    "ascii": "ascensor",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f6d7",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "asiento",
+    "es": "asiento",
+    "ascii": "asiento",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4ba",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "atardecer",
+    "es": "atardecer",
+    "ascii": "atardecer",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f306",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "ataud",
+    "es": "ataúd",
+    "ascii": "ataud",
+    "gender": "m",
+    "animate": false,
+    "icon": "26b0",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "auricular",
+    "es": "auricular",
+    "ascii": "auricular",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3a7",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "autobus",
+    "es": "autobús",
+    "ascii": "autobus",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f68c",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "automovil",
+    "es": "automóvil",
+    "ascii": "automovil",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f698",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "autopista",
+    "es": "autopista",
+    "ascii": "autopista",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f6e3",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "avion",
+    "es": "avión",
+    "ascii": "avion",
+    "gender": "m",
+    "animate": false,
+    "icon": "2708",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "avioneta",
+    "es": "avioneta",
+    "ascii": "avioneta",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f6e9",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "ayuda",
+    "es": "ayuda",
+    "ascii": "ayuda",
+    "gender": "f",
+    "animate": false,
+    "icon": "26d1",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "azul",
+    "es": "azul",
+    "ascii": "azul",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4d8",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "babushka",
+    "es": "babushka",
+    "ascii": "babushka",
+    "gender": "f",
+    "animate": false,
+    "icon": "1fa86",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "bacterias",
+    "es": "bacterias",
+    "ascii": "bacterias",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f9eb",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "badminton",
+    "es": "bádminton",
+    "ascii": "badminton",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3f8",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "bagel",
+    "es": "bagel",
+    "ascii": "bagel",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f96f",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "baguete",
+    "es": "baguete",
+    "ascii": "baguete",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f956",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "bailar",
+    "es": "bailar",
+    "ascii": "bailar",
+    "gender": "m",
+    "animate": false,
+    "icon": "1faa9",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "bailarina",
+    "es": "bailarina",
+    "ascii": "bailarina",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f97f",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "balanza",
+    "es": "balanza",
+    "ascii": "balanza",
+    "gender": "f",
+    "animate": false,
+    "icon": "2696",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "ballena",
+    "es": "ballena",
+    "ascii": "ballena",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f433",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "balon",
+    "es": "balón",
+    "ascii": "balon",
+    "gender": "m",
+    "animate": false,
+    "icon": "26bd",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "bambu",
+    "es": "bambú",
+    "ascii": "bambu",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f38d",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "banador",
+    "es": "bañador",
+    "ascii": "banador",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fa71",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "bandeja",
+    "es": "bandeja",
+    "ascii": "bandeja",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f4e4",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "banderin",
+    "es": "banderín",
+    "ascii": "banderin",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f38f",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "banera",
+    "es": "bañera",
+    "ascii": "banera",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f6c1",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "banjo",
+    "es": "banjo",
+    "ascii": "banjo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fa95",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "barbero",
+    "es": "barbero",
+    "ascii": "barbero",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f488",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "barco",
+    "es": "barco",
+    "ascii": "barco",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f6a4",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "barra",
+    "es": "barra",
+    "ascii": "barra",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f36b",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "barril",
+    "es": "barril",
+    "ascii": "barril",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f6e2",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "baston",
+    "es": "bastón",
+    "ascii": "baston",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f9af",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "bateria",
+    "es": "batería",
+    "ascii": "bateria",
+    "gender": "f",
+    "animate": false,
+    "icon": "1faab",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "bebida",
+    "es": "bebida",
+    "ascii": "bebida",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f95b",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "beicon",
+    "es": "beicon",
+    "ascii": "beicon",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f953",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "beisbol",
+    "es": "béisbol",
+    "ascii": "beisbol",
+    "gender": "m",
+    "animate": false,
+    "icon": "26be",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "bengala",
+    "es": "bengala",
+    "ascii": "bengala",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f387",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "bento",
+    "es": "bento",
+    "ascii": "bento",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f371",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "berenjena",
+    "es": "berenjena",
+    "ascii": "berenjena",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f346",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "biberon",
+    "es": "biberón",
+    "ascii": "biberon",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f37c",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "bicho",
+    "es": "bicho",
+    "ascii": "bicho",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f41b",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "bicicleta",
+    "es": "bicicleta",
+    "ascii": "bicicleta",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f6b2",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "bikini",
+    "es": "bikini",
+    "ascii": "bikini",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f459",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "billete",
+    "es": "billete",
+    "ascii": "billete",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4b4",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "birrete",
+    "es": "birrete",
+    "ascii": "birrete",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f393",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "bisonte",
+    "es": "bisonte",
+    "ascii": "bisonte",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f9ac",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "blanco",
+    "es": "blanco",
+    "ascii": "blanco",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f43b-200d-2744-fe0f",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "bloc",
+    "es": "bloc",
+    "ascii": "bloc",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f5d2",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "blusa",
+    "es": "blusa",
+    "ascii": "blusa",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f45a",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "boba",
+    "es": "boba",
+    "ascii": "boba",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f9cb",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "bogavante",
+    "es": "bogavante",
+    "ascii": "bogavante",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f99e",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "boligrafo",
+    "es": "bolígrafo",
+    "ascii": "boligrafo",
+    "gender": "m",
+    "animate": false,
+    "icon": "2712",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "bolos",
+    "es": "bolos",
+    "ascii": "bolos",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3b3",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "bolso",
+    "es": "bolso",
+    "ascii": "bolso",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f45c",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "bombilla",
+    "es": "bombilla",
+    "ascii": "bombilla",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f4a1",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "botin",
+    "es": "botín",
+    "ascii": "botin",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fa8e",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "botones",
+    "es": "botones",
+    "ascii": "botones",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f6ce",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "bouquet",
+    "es": "bouquet",
+    "ascii": "bouquet",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f490",
+    "tags": [
+      "naturaleza"
+    ]
+  },
+  {
+    "id": "boxeo",
+    "es": "boxeo",
+    "ascii": "boxeo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f94a",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "bretzel",
+    "es": "bretzel",
+    "ascii": "bretzel",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f968",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "brillante",
+    "es": "brillante",
+    "ascii": "brillante",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f31e",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "brocheta",
+    "es": "brocheta",
+    "ascii": "brocheta",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f362",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "brocoli",
+    "es": "brócoli",
+    "ascii": "brocoli",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f966",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "bronce",
+    "es": "bronce",
+    "ascii": "bronce",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f949",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "brujula",
+    "es": "brújula",
+    "ascii": "brujula",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f9ed",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "bruma",
+    "es": "bruma",
+    "ascii": "bruma",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f301",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "bucear",
+    "es": "bucear",
+    "ascii": "bucear",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f93f",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "buey",
+    "es": "buey",
+    "ascii": "buey",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f402",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "bufanda",
+    "es": "bufanda",
+    "ascii": "bufanda",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f9e3",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "buho",
+    "es": "búho",
+    "ascii": "buho",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f989",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "bumeran",
+    "es": "bumerán",
+    "ascii": "bumeran",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fa83",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "burbujas",
+    "es": "burbujas",
+    "ascii": "burbujas",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fae7",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "burrito",
+    "es": "burrito",
+    "ascii": "burrito",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f32f",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "burro",
+    "es": "burro",
+    "ascii": "burro",
+    "gender": "m",
+    "animate": true,
+    "icon": "1facf",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "busca",
+    "es": "busca",
+    "ascii": "busca",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f4df",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "buzon",
+    "es": "buzón",
+    "ascii": "buzon",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4ee",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "caballo",
+    "es": "caballo",
+    "ascii": "caballo",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f434",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "cabana",
+    "es": "cabaña",
+    "ascii": "cabana",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f6d6",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "cable",
+    "es": "cable",
+    "ascii": "cable",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f6a0",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "cactus",
+    "es": "cactus",
+    "ascii": "cactus",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f335",
+    "tags": [
+      "naturaleza"
+    ]
+  },
+  {
+    "id": "cadena",
+    "es": "cadena",
+    "ascii": "cadena",
+    "gender": "f",
+    "animate": false,
+    "icon": "26d3-fe0f-200d-1f4a5",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "caida",
+    "es": "caída",
+    "ascii": "caida",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f342",
+    "tags": [
+      "naturaleza"
+    ]
+  },
+  {
+    "id": "calabaza",
+    "es": "calabaza",
+    "ascii": "calabaza",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f383",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "calamar",
+    "es": "calamar",
+    "ascii": "calamar",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f991",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "calzado",
+    "es": "calzado",
+    "ascii": "calzado",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f45e",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "camara",
+    "es": "cámara",
+    "ascii": "camara",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f4f7",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "camello",
+    "es": "camello",
+    "ascii": "camello",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f42b",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "camion",
+    "es": "camión",
+    "ascii": "camion",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f692",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "camioneta",
+    "es": "camioneta",
+    "ascii": "camioneta",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f6fb",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "camiseta",
+    "es": "camiseta",
+    "ascii": "camiseta",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f455",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "campana",
+    "es": "campaña",
+    "ascii": "campana",
+    "gender": "f",
+    "animate": false,
+    "icon": "26fa",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "camping",
+    "es": "camping",
+    "ascii": "camping",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3d5",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "candado",
+    "es": "candado",
+    "ascii": "candado",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f512",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "cangrejo",
+    "es": "cangrejo",
+    "ascii": "cangrejo",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f980",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "canguro",
+    "es": "canguro",
+    "ascii": "canguro",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f998",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "caniche",
+    "es": "caniche",
+    "ascii": "caniche",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f429",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "canoa",
+    "es": "canoa",
+    "ascii": "canoa",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f6f6",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "cara",
+    "es": "cara",
+    "ascii": "cara",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f435",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "caracola",
+    "es": "caracola",
+    "ascii": "caracola",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f41a",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "caramelo",
+    "es": "caramelo",
+    "ascii": "caramelo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f36c",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "carne",
+    "es": "carne",
+    "ascii": "carne",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f356",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "carnero",
+    "es": "carnero",
+    "ascii": "carnero",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f40f",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "carreras",
+    "es": "carreras",
+    "ascii": "carreras",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3ce",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "carrito",
+    "es": "carrito",
+    "ascii": "carrito",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f6d2",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "cartera",
+    "es": "cartera",
+    "ascii": "cartera",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f4c7",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "casas",
+    "es": "casas",
+    "ascii": "casas",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3d8",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "casco",
+    "es": "casco",
+    "ascii": "casco",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fa96",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "castana",
+    "es": "castaña",
+    "ascii": "castana",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f330",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "castillo",
+    "es": "castillo",
+    "ascii": "castillo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3ef",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "castor",
+    "es": "castor",
+    "ascii": "castor",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f9ab",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "cebo",
+    "es": "cebo",
+    "ascii": "cebo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1faa4",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "cebolla",
+    "es": "cebolla",
+    "ascii": "cebolla",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f9c5",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "cebra",
+    "es": "cebra",
+    "ascii": "cebra",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f993",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "celular",
+    "es": "celular",
+    "ascii": "celular",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4f1",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "cepillo",
+    "es": "cepillo",
+    "ascii": "cepillo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1faa5",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "cerdo",
+    "es": "cerdo",
+    "ascii": "cerdo",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f416",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "cereal",
+    "es": "cereal",
+    "ascii": "cereal",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f963",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "cerezas",
+    "es": "cerezas",
+    "ascii": "cerezas",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f352",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "cerezo",
+    "es": "cerezo",
+    "ascii": "cerezo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f338",
+    "tags": [
+      "naturaleza"
+    ]
+  },
+  {
+    "id": "cerrado",
+    "es": "cerrado",
+    "ascii": "cerrado",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4d5",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "cesta",
+    "es": "cesta",
+    "ascii": "cesta",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f9fa",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "chaleco",
+    "es": "chaleco",
+    "ascii": "chaleco",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f9ba",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "champinon",
+    "es": "champiñón",
+    "ascii": "champinon",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f344",
+    "tags": [
+      "naturaleza"
+    ]
+  },
+  {
+    "id": "champu",
+    "es": "champú",
+    "ascii": "champu",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f9f4",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "chancla",
+    "es": "chancla",
+    "ascii": "chancla",
+    "gender": "f",
+    "animate": false,
+    "icon": "1fa74",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "chile",
+    "es": "chile",
+    "ascii": "chile",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f336",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "chincheta",
+    "es": "chincheta",
+    "ascii": "chincheta",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f4cc",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "chirivia",
+    "es": "chirivía",
+    "ascii": "chirivia",
+    "gender": "f",
+    "animate": false,
+    "icon": "1fadc",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "chispas",
+    "es": "chispas",
+    "ascii": "chispas",
+    "gender": "m",
+    "animate": false,
+    "icon": "2728",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "chistera",
+    "es": "chistera",
+    "ascii": "chistera",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f3a9",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "chupito",
+    "es": "chupito",
+    "ascii": "chupito",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f943",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "ciclon",
+    "es": "ciclón",
+    "ascii": "ciclon",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f300",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "ciencia",
+    "es": "ciencia",
+    "ascii": "ciencia",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f9ea",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "ciervo",
+    "es": "ciervo",
+    "ascii": "ciervo",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f98c",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "cinta",
+    "es": "cinta",
+    "ascii": "cinta",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f4fc",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "cisne",
+    "es": "cisne",
+    "ascii": "cisne",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f9a2",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "ciudad",
+    "es": "ciudad",
+    "ascii": "ciudad",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3d9",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "claqueta",
+    "es": "claqueta",
+    "ascii": "claqueta",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f3ac",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "clasico",
+    "es": "clásico",
+    "ascii": "clasico",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3db",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "clip",
+    "es": "clip",
+    "ascii": "clip",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4ce",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "cocinar",
+    "es": "cocinar",
+    "ascii": "cocinar",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f373",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "coco",
+    "es": "coco",
+    "ascii": "coco",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f965",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "cocodrilo",
+    "es": "cocodrilo",
+    "ascii": "cocodrilo",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f40a",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "cohete",
+    "es": "cohete",
+    "ascii": "cohete",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f680",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "colegio",
+    "es": "colegio",
+    "ascii": "colegio",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3eb",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "comercio",
+    "es": "comercio",
+    "ascii": "comercio",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3ec",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "cometa",
+    "es": "cometa",
+    "ascii": "cometa",
+    "gender": "f",
+    "animate": false,
+    "icon": "1fa81",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "comida",
+    "es": "comida",
+    "ascii": "comida",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f344-200d-1f7eb",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "comodin",
+    "es": "comodín",
+    "ascii": "comodin",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f0cf",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "conejo",
+    "es": "conejo",
+    "ascii": "conejo",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f407",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "conserva",
+    "es": "conserva",
+    "ascii": "conserva",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f96b",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "control",
+    "es": "control",
+    "ascii": "control",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f39a",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "coral",
+    "es": "coral",
+    "ascii": "coral",
+    "gender": "m",
+    "animate": true,
+    "icon": "1fab8",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "corbata",
+    "es": "corbata",
+    "ascii": "corbata",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f454",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "corneta",
+    "es": "corneta",
+    "ascii": "corneta",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f4ef",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "corona",
+    "es": "corona",
+    "ascii": "corona",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f451",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "correos",
+    "es": "correos",
+    "ascii": "correos",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3e3",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "corriente",
+    "es": "corriente",
+    "ascii": "corriente",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f50c",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "crecer",
+    "es": "crecer",
+    "ascii": "crecer",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fab4",
+    "tags": [
+      "naturaleza"
+    ]
+  },
+  {
+    "id": "creciente",
+    "es": "creciente",
+    "ascii": "creciente",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f312",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "credito",
+    "es": "crédito",
+    "ascii": "credito",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4b3",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "criquet",
+    "es": "críquet",
+    "ascii": "criquet",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3cf",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "cruasan",
+    "es": "cruasán",
+    "ascii": "cruasan",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f950",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "cuaderno",
+    "es": "cuaderno",
+    "ascii": "cuaderno",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4d4",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "cuarto",
+    "es": "cuarto",
+    "ascii": "cuarto",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f317",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "cucaracha",
+    "es": "cucaracha",
+    "ascii": "cucaracha",
+    "gender": "f",
+    "animate": true,
+    "icon": "1fab3",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "cuchara",
+    "es": "cuchara",
+    "ascii": "cuchara",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f944",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "cucurucho",
+    "es": "cucurucho",
+    "ascii": "cucurucho",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f366",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "cuna",
+    "es": "cuña",
+    "ascii": "cuna",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f9c0",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "delfin",
+    "es": "delfín",
+    "ascii": "delfin",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f42c",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "deporte",
+    "es": "deporte",
+    "ascii": "deporte",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3be",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "deshojado",
+    "es": "deshojado",
+    "ascii": "deshojado",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fabe",
+    "tags": [
+      "naturaleza"
+    ]
+  },
+  {
+    "id": "desierto",
+    "es": "desierto",
+    "ascii": "desierto",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3dc",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "diamante",
+    "es": "diamante",
+    "ascii": "diamante",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f48e",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "diana",
+    "es": "diana",
+    "ascii": "diana",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f3af",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "dinero",
+    "es": "dinero",
+    "ascii": "dinero",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4b7",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "disco",
+    "es": "disco",
+    "ascii": "disco",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f94f",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "disquete",
+    "es": "disquete",
+    "ascii": "disquete",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4be",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "documento",
+    "es": "documento",
+    "ascii": "documento",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4c3",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "dodo",
+    "es": "dodo",
+    "ascii": "dodo",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f9a4",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "donut",
+    "es": "dónut",
+    "ascii": "donut",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f369",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "dragon",
+    "es": "dragón",
+    "ascii": "dragon",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f409",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "ducha",
+    "es": "ducha",
+    "ascii": "ducha",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f6bf",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "dulce",
+    "es": "dulce",
+    "ascii": "dulce",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f36f",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "dumpling",
+    "es": "dumpling",
+    "ascii": "dumpling",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f95f",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "edificio",
+    "es": "edificio",
+    "ascii": "edificio",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3ea",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "elefante",
+    "es": "elefante",
+    "ascii": "elefante",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f418",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "engranaje",
+    "es": "engranaje",
+    "ascii": "engranaje",
+    "gender": "m",
+    "animate": false,
+    "icon": "2699",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "ensalada",
+    "es": "ensalada",
+    "ascii": "ensalada",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f957",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "entradas",
+    "es": "entradas",
+    "ascii": "entradas",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f39f",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "equipaje",
+    "es": "equipaje",
+    "ascii": "equipaje",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f9f3",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "erizo",
+    "es": "erizo",
+    "ascii": "erizo",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f994",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "escalera",
+    "es": "escalera",
+    "ascii": "escalera",
+    "gender": "f",
+    "animate": false,
+    "icon": "1fa9c",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "escoba",
+    "es": "escoba",
+    "ascii": "escoba",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f9f9",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "escorpion",
+    "es": "escorpión",
+    "ascii": "escorpion",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f982",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "escuadra",
+    "es": "escuadra",
+    "ascii": "escuadra",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f4d0",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "escudo",
+    "es": "escudo",
+    "ascii": "escudo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f6e1",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "eslabon",
+    "es": "eslabón",
+    "ascii": "eslabon",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f517",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "espacio",
+    "es": "espacio",
+    "ascii": "espacio",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f30c",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "espagueti",
+    "es": "espagueti",
+    "ascii": "espagueti",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f35d",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "espejo",
+    "es": "espejo",
+    "ascii": "espejo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fa9e",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "espiga",
+    "es": "espiga",
+    "ascii": "espiga",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f33d",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "esponja",
+    "es": "esponja",
+    "ascii": "esponja",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f9fd",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "esquis",
+    "es": "esquís",
+    "ascii": "esquis",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3bf",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "estacion",
+    "es": "estación",
+    "ascii": "estacion",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f689",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "estadio",
+    "es": "estadio",
+    "ascii": "estadio",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3df",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "estatua",
+    "es": "estatua",
+    "ascii": "estatua",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f5fd",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "estrellas",
+    "es": "estrellas",
+    "ascii": "estrellas",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f303",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "etiqueta",
+    "es": "etiqueta",
+    "ascii": "etiqueta",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f3f7",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "extintor",
+    "es": "extintor",
+    "ascii": "extintor",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f9ef",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "fabrica",
+    "es": "fábrica",
+    "ascii": "fabrica",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f3ed",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "falafel",
+    "es": "falafel",
+    "ascii": "falafel",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f9c6",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "fenix",
+    "es": "fénix",
+    "ascii": "fenix",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f426-200d-1f525",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "ferri",
+    "es": "ferri",
+    "ascii": "ferri",
+    "gender": "m",
+    "animate": false,
+    "icon": "26f4",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "festival",
+    "es": "festival",
+    "ascii": "festival",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f96e",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "fichas",
+    "es": "fichas",
+    "ascii": "fichas",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f5c2",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "flamenco",
+    "es": "flamenco",
+    "ascii": "flamenco",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f9a9",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "flan",
+    "es": "flan",
+    "ascii": "flan",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f36e",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "flauta",
+    "es": "flauta",
+    "ascii": "flauta",
+    "gender": "f",
+    "animate": false,
+    "icon": "1fa88",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "flecha",
+    "es": "flecha",
+    "ascii": "flecha",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f4f2",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "flor",
+    "es": "flor",
+    "ascii": "flor",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f940",
+    "tags": [
+      "naturaleza"
+    ]
+  },
+  {
+    "id": "foca",
+    "es": "foca",
+    "ascii": "foca",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f9ad",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "fondue",
+    "es": "fondue",
+    "ascii": "fondue",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fad5",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "fresa",
+    "es": "fresa",
+    "ascii": "fresa",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f353",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "frito",
+    "es": "frito",
+    "ascii": "frito",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f364",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "fruta",
+    "es": "fruta",
+    "ascii": "fruta",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f34e",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "fuego",
+    "es": "fuego",
+    "ascii": "fuego",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f525",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "fuente",
+    "es": "fuente",
+    "ascii": "fuente",
+    "gender": "m",
+    "animate": false,
+    "icon": "26f2",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "funeraria",
+    "es": "funeraria",
+    "ascii": "funeraria",
+    "gender": "f",
+    "animate": false,
+    "icon": "26b1",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "gafas",
+    "es": "gafas",
+    "ascii": "gafas",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f453",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "galleta",
+    "es": "galleta",
+    "ascii": "galleta",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f36a",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "gallina",
+    "es": "gallina",
+    "ascii": "gallina",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f414",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "gallo",
+    "es": "gallo",
+    "ascii": "gallo",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f413",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "gamba",
+    "es": "gamba",
+    "ascii": "gamba",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f990",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "gancho",
+    "es": "gancho",
+    "ascii": "gancho",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fa9d",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "gato",
+    "es": "gato",
+    "ascii": "gato",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f408",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "gibosa",
+    "es": "gibosa",
+    "ascii": "gibosa",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f316",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "girasol",
+    "es": "girasol",
+    "ascii": "girasol",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f33b",
+    "tags": [
+      "naturaleza"
+    ]
+  },
+  {
+    "id": "gofre",
+    "es": "gofre",
+    "ascii": "gofre",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f9c7",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "gorila",
+    "es": "gorila",
+    "ascii": "gorila",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f98d",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "gotas",
+    "es": "gotas",
+    "ascii": "gotas",
+    "gender": "m",
+    "animate": false,
+    "icon": "2614",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "grillo",
+    "es": "grillo",
+    "ascii": "grillo",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f997",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "guantes",
+    "es": "guantes",
+    "ascii": "guantes",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f9e4",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "guitarra",
+    "es": "guitarra",
+    "ascii": "guitarra",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f3b8",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "gusano",
+    "es": "gusano",
+    "ascii": "gusano",
+    "gender": "m",
+    "animate": true,
+    "icon": "1fab1",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "hacha",
+    "es": "hacha",
+    "ascii": "hacha",
+    "gender": "f",
+    "stressedA": true,
+    "animate": false,
+    "icon": "1fa93",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "hamsa",
+    "es": "hamsa",
+    "ascii": "hamsa",
+    "gender": "f",
+    "animate": false,
+    "icon": "1faac",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "hamster",
+    "es": "hámster",
+    "ascii": "hamster",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f439",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "helado",
+    "es": "helado",
+    "ascii": "helado",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f367",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "herida",
+    "es": "herida",
+    "ascii": "herida",
+    "gender": "f",
+    "animate": false,
+    "icon": "1fa78",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "hielo",
+    "es": "hielo",
+    "ascii": "hielo",
+    "gender": "m",
+    "animate": false,
+    "icon": "26f8",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "hierba",
+    "es": "hierba",
+    "ascii": "hierba",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f33f",
+    "tags": [
+      "naturaleza"
+    ]
+  },
+  {
+    "id": "hoja",
+    "es": "hoja",
+    "ascii": "hoja",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f343",
+    "tags": [
+      "naturaleza"
+    ]
+  },
+  {
+    "id": "hongbao",
+    "es": "hóngbāo",
+    "ascii": "hongbao",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f9e7",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "hormiga",
+    "es": "hormiga",
+    "ascii": "hormiga",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f41c",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "hospital",
+    "es": "hospital",
+    "ascii": "hospital",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3e5",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "hotel",
+    "es": "hotel",
+    "ascii": "hotel",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3e8",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "huellas",
+    "es": "huellas",
+    "ascii": "huellas",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f43e",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "huevo",
+    "es": "huevo",
+    "ascii": "huevo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f95a",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "iman",
+    "es": "imán",
+    "ascii": "iman",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f9f2",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "impresora",
+    "es": "impresora",
+    "ascii": "impresora",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f5a8",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "inodoro",
+    "es": "inodoro",
+    "ascii": "inodoro",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f6bd",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "izakaya",
+    "es": "izakaya",
+    "ascii": "izakaya",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f3ee",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "jabali",
+    "es": "jabalí",
+    "ascii": "jabali",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f417",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "jirafa",
+    "es": "jirafa",
+    "ascii": "jirafa",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f992",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "joystick",
+    "es": "joystick",
+    "ascii": "joystick",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f579",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "judo",
+    "es": "judo",
+    "ascii": "judo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f94b",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "juguete",
+    "es": "juguete",
+    "ascii": "juguete",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f9f8",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "kimono",
+    "es": "kimono",
+    "ascii": "kimono",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f458",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "kiwi",
+    "es": "kiwi",
+    "ascii": "kiwi",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f95d",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "koala",
+    "es": "koala",
+    "ascii": "koala",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f428",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "lacrosse",
+    "es": "lacrosse",
+    "ascii": "lacrosse",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f94d",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "ladrillo",
+    "es": "ladrillo",
+    "ascii": "ladrillo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f9f1",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "lagarto",
+    "es": "lagarto",
+    "ascii": "lagarto",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f98e",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "lapida",
+    "es": "lápida",
+    "ascii": "lapida",
+    "gender": "f",
+    "animate": false,
+    "icon": "1faa6",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "lapiz",
+    "es": "lápiz",
+    "ascii": "lapiz",
+    "gender": "m",
+    "animate": false,
+    "icon": "270f",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "lazo",
+    "es": "lazo",
+    "ascii": "lazo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f380",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "leon",
+    "es": "león",
+    "ascii": "leon",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f981",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "leopardo",
+    "es": "leopardo",
+    "ascii": "leopardo",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f406",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "letrero",
+    "es": "letrero",
+    "ascii": "letrero",
+    "gender": "m",
+    "animate": false,
+    "icon": "1faa7",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "libro",
+    "es": "libro",
+    "ascii": "libro",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4d7",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "lima",
+    "es": "lima",
+    "ascii": "lima",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f34b-200d-1f7e9",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "limon",
+    "es": "limón",
+    "ascii": "limon",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f34b",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "linterna",
+    "es": "linterna",
+    "ascii": "linterna",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f526",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "llama",
+    "es": "llama",
+    "ascii": "llama",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f999",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "llave",
+    "es": "llave",
+    "ascii": "llave",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f511",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "llena",
+    "es": "llena",
+    "ascii": "llena",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f315",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "lluvia",
+    "es": "lluvia",
+    "ascii": "lluvia",
+    "gender": "f",
+    "animate": false,
+    "icon": "26c8",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "lobo",
+    "es": "lobo",
+    "ascii": "lobo",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f43a",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "luces",
+    "es": "luces",
+    "ascii": "luces",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f6a8",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "madera",
+    "es": "madera",
+    "ascii": "madera",
+    "gender": "f",
+    "animate": false,
+    "icon": "1fab5",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "magdalena",
+    "es": "magdalena",
+    "ascii": "magdalena",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f9c1",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "maletin",
+    "es": "maletín",
+    "ascii": "maletin",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4bc",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "mamut",
+    "es": "mamut",
+    "ascii": "mamut",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f9a3",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "mandarina",
+    "es": "mandarina",
+    "ascii": "mandarina",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f34a",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "mango",
+    "es": "mango",
+    "ascii": "mango",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f96d",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "mapa",
+    "es": "mapa",
+    "ascii": "mapa",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f5fa",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "mapache",
+    "es": "mapache",
+    "ascii": "mapache",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f99d",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "maracas",
+    "es": "maracas",
+    "ascii": "maracas",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fa87",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "mariposa",
+    "es": "mariposa",
+    "ascii": "mariposa",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f98b",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "mariquita",
+    "es": "mariquita",
+    "ascii": "mariquita",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f41e",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "martillo",
+    "es": "martillo",
+    "ascii": "martillo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f528",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "mate",
+    "es": "mate",
+    "ascii": "mate",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f9c9",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "medalla",
+    "es": "medalla",
+    "ascii": "medalla",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f3c5",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "medio",
+    "es": "medio",
+    "ascii": "medio",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f509",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "medusa",
+    "es": "medusa",
+    "ascii": "medusa",
+    "gender": "f",
+    "animate": true,
+    "icon": "1fabc",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "megafono",
+    "es": "megáfono",
+    "ascii": "megafono",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4e3",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "melocoton",
+    "es": "melocotón",
+    "ascii": "melocoton",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f351",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "melon",
+    "es": "melón",
+    "ascii": "melon",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f348",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "meteorito",
+    "es": "meteorito",
+    "ascii": "meteorito",
+    "gender": "m",
+    "animate": false,
+    "icon": "2604",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "metro",
+    "es": "metro",
+    "ascii": "metro",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f687",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "microbio",
+    "es": "microbio",
+    "ascii": "microbio",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f9a0",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "microfono",
+    "es": "micrófono",
+    "ascii": "microfono",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3a4",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "minibus",
+    "es": "minibús",
+    "ascii": "minibus",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f690",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "minidisc",
+    "es": "minidisc",
+    "ascii": "minidisc",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4bd",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "mofeta",
+    "es": "mofeta",
+    "ascii": "mofeta",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f9a8",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "moneda",
+    "es": "moneda",
+    "ascii": "moneda",
+    "gender": "f",
+    "animate": false,
+    "icon": "1fa99",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "monedero",
+    "es": "monedero",
+    "ascii": "monedero",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f45b",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "mono",
+    "es": "mono",
+    "ascii": "mono",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f412",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "monopatin",
+    "es": "monopatín",
+    "ascii": "monopatin",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f6f9",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "monorrail",
+    "es": "monorraíl",
+    "ascii": "monorrail",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f69d",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "montana",
+    "es": "montaña",
+    "ascii": "montana",
+    "gender": "f",
+    "animate": false,
+    "icon": "26f0",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "mosca",
+    "es": "mosca",
+    "ascii": "mosca",
+    "gender": "f",
+    "animate": true,
+    "icon": "1fab0",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "mosquito",
+    "es": "mosquito",
+    "ascii": "mosquito",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f99f",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "mototaxi",
+    "es": "mototaxi",
+    "ascii": "mototaxi",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f6fa",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "mujer",
+    "es": "mujer",
+    "ascii": "mujer",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f460",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "muleta",
+    "es": "muleta",
+    "ascii": "muleta",
+    "gender": "f",
+    "animate": false,
+    "icon": "1fa7c",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "musica",
+    "es": "música",
+    "ascii": "musica",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f3b5",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "muslo",
+    "es": "muslo",
+    "ascii": "muslo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f357",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "nacional",
+    "es": "nacional",
+    "ascii": "nacional",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3de",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "niebla",
+    "es": "niebla",
+    "ascii": "niebla",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f32b",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "nieve",
+    "es": "nieve",
+    "ascii": "nieve",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f30b",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "noche",
+    "es": "noche",
+    "ascii": "noche",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f309",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "noticias",
+    "es": "noticias",
+    "ascii": "noticias",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f5de",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "nube",
+    "es": "nube",
+    "ascii": "nube",
+    "gender": "m",
+    "animate": false,
+    "icon": "2601",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "nutria",
+    "es": "nutria",
+    "ascii": "nutria",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f9a6",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "obras",
+    "es": "obras",
+    "ascii": "obras",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f6a7",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "octagono",
+    "es": "octágono",
+    "ascii": "octagono",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f6d1",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "orangutan",
+    "es": "orangután",
+    "ascii": "orangutan",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f9a7",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "orca",
+    "es": "orca",
+    "ascii": "orca",
+    "gender": "f",
+    "animate": true,
+    "icon": "1facd",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "ordenador",
+    "es": "ordenador",
+    "ascii": "ordenador",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4bb",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "ostra",
+    "es": "ostra",
+    "ascii": "ostra",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f9aa",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "oveja",
+    "es": "oveja",
+    "ascii": "oveja",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f411",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "ovillo",
+    "es": "ovillo",
+    "ascii": "ovillo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f9f6",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "ovni",
+    "es": "ovni",
+    "ascii": "ovni",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f6f8",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "paella",
+    "es": "paella",
+    "ascii": "paella",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f958",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "pajaro",
+    "es": "pájaro",
+    "ascii": "pajaro",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f426",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "palillos",
+    "es": "palillos",
+    "ascii": "palillos",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f962",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "palmera",
+    "es": "palmera",
+    "ascii": "palmera",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f334",
+    "tags": [
+      "naturaleza"
+    ]
+  },
+  {
+    "id": "paloma",
+    "es": "paloma",
+    "ascii": "paloma",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f54a",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "palomitas",
+    "es": "palomitas",
+    "ascii": "palomitas",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f37f",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "panda",
+    "es": "panda",
+    "ascii": "panda",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f43c",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "papeleta",
+    "es": "papeleta",
+    "ascii": "papeleta",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f5f3",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "paquete",
+    "es": "paquete",
+    "ascii": "paquete",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4e6",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "paraguas",
+    "es": "paraguas",
+    "ascii": "paraguas",
+    "gender": "m",
+    "animate": false,
+    "icon": "2602",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "pastel",
+    "es": "pastel",
+    "ascii": "pastel",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f365",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "patata",
+    "es": "patata",
+    "ascii": "patata",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f954",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "patines",
+    "es": "patines",
+    "ascii": "patines",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f6fc",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "patinete",
+    "es": "patinete",
+    "ascii": "patinete",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f6f4",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "pavo",
+    "es": "pavo",
+    "ascii": "pavo",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f983",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "peineta",
+    "es": "peineta",
+    "ascii": "peineta",
+    "gender": "f",
+    "animate": false,
+    "icon": "1faae",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "pepino",
+    "es": "pepino",
+    "ascii": "pepino",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f952",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "pera",
+    "es": "pera",
+    "ascii": "pera",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f350",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "perenne",
+    "es": "perenne",
+    "ascii": "perenne",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f332",
+    "tags": [
+      "naturaleza"
+    ]
+  },
+  {
+    "id": "perezoso",
+    "es": "perezoso",
+    "ascii": "perezoso",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f9a5",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "pergamino",
+    "es": "pergamino",
+    "ascii": "pergamino",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4dc",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "periodico",
+    "es": "periódico",
+    "ascii": "periodico",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4f0",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "perrito",
+    "es": "perrito",
+    "ascii": "perrito",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f32d",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "perro",
+    "es": "perro",
+    "ascii": "perro",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f415",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "petardo",
+    "es": "petardo",
+    "ascii": "petardo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f9e8",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "pico",
+    "es": "pico",
+    "ascii": "pico",
+    "gender": "m",
+    "animate": false,
+    "icon": "26cf",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "piedra",
+    "es": "piedra",
+    "ascii": "piedra",
+    "gender": "f",
+    "animate": false,
+    "icon": "1faa8",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "pildora",
+    "es": "píldora",
+    "ascii": "pildora",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f48a",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "pimiento",
+    "es": "pimiento",
+    "ascii": "pimiento",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fad1",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "pina",
+    "es": "piña",
+    "ascii": "pina",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f34d",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "pinata",
+    "es": "piñata",
+    "ascii": "pinata",
+    "gender": "f",
+    "animate": false,
+    "icon": "1fa85",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "pincel",
+    "es": "pincel",
+    "ascii": "pincel",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f58c",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "pinguino",
+    "es": "pingüino",
+    "ascii": "pinguino",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f427",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "piruleta",
+    "es": "piruleta",
+    "ascii": "piruleta",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f36d",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "pizza",
+    "es": "pizza",
+    "ascii": "pizza",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f355",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "planton",
+    "es": "plantón",
+    "ascii": "planton",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f331",
+    "tags": [
+      "naturaleza"
+    ]
+  },
+  {
+    "id": "platano",
+    "es": "plátano",
+    "ascii": "platano",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f34c",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "playa",
+    "es": "playa",
+    "ascii": "playa",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f3d6",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "pluma",
+    "es": "pluma",
+    "ascii": "pluma",
+    "gender": "f",
+    "animate": true,
+    "icon": "1fab6",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "policia",
+    "es": "policía",
+    "ascii": "policia",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f693",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "pollito",
+    "es": "pollito",
+    "ascii": "pollito",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f424",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "porteria",
+    "es": "portería",
+    "ascii": "porteria",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f945",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "puchero",
+    "es": "puchero",
+    "ascii": "puchero",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f372",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "puerta",
+    "es": "puerta",
+    "ascii": "puerta",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f6aa",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "pulpo",
+    "es": "pulpo",
+    "ascii": "pulpo",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f419",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "punal",
+    "es": "puñal",
+    "ascii": "punal",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f5e1",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "radio",
+    "es": "radio",
+    "ascii": "radio",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4fb",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "ramen",
+    "es": "ramen",
+    "ascii": "ramen",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f35c",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "rata",
+    "es": "rata",
+    "ascii": "rata",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f400",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "raton",
+    "es": "ratón",
+    "ascii": "raton",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f401",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "recibo",
+    "es": "recibo",
+    "ascii": "recibo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f9fe",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "refresco",
+    "es": "refresco",
+    "ascii": "refresco",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f964",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "regalo",
+    "es": "regalo",
+    "ascii": "regalo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f381",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "regla",
+    "es": "regla",
+    "ascii": "regla",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f4cf",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "rosa",
+    "es": "rosa",
+    "ascii": "rosa",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f339",
+    "tags": [
+      "naturaleza"
+    ]
+  },
+  {
+    "id": "rosario",
+    "es": "rosario",
+    "ascii": "rosario",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f4ff",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "roseta",
+    "es": "roseta",
+    "ascii": "roseta",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f3f5",
+    "tags": [
+      "naturaleza"
+    ]
+  },
+  {
+    "id": "rueda",
+    "es": "rueda",
+    "ascii": "rueda",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f6de",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "sake",
+    "es": "sake",
+    "ascii": "sake",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f376",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "sandia",
+    "es": "sandía",
+    "ascii": "sandia",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f349",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "sandwich",
+    "es": "sándwich",
+    "ascii": "sandwich",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f96a",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "sari",
+    "es": "sari",
+    "ascii": "sari",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f97b",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "satelite",
+    "es": "satélite",
+    "ascii": "satelite",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f6f0",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "saturnino",
+    "es": "saturnino",
+    "ascii": "saturnino",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fa90",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "sauropodo",
+    "es": "saurópodo",
+    "ascii": "sauropodo",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f995",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "saxofon",
+    "es": "saxofón",
+    "ascii": "saxofon",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3b7",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "scooter",
+    "es": "scooter",
+    "ascii": "scooter",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f6f5",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "semaforo",
+    "es": "semáforo",
+    "ascii": "semaforo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f6a6",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "serpiente",
+    "es": "serpiente",
+    "ascii": "serpiente",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f40d",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "silla",
+    "es": "silla",
+    "ascii": "silla",
+    "gender": "f",
+    "animate": false,
+    "icon": "1fa91",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "sobre",
+    "es": "sobre",
+    "ascii": "sobre",
+    "gender": "m",
+    "animate": false,
+    "icon": "2709",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "suerte",
+    "es": "suerte",
+    "ascii": "suerte",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f340",
+    "tags": [
+      "naturaleza"
+    ]
+  },
+  {
+    "id": "sushi",
+    "es": "sushi",
+    "ascii": "sushi",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f363",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "taco",
+    "es": "taco",
+    "ascii": "taco",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f32e",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "tamal",
+    "es": "tamal",
+    "ascii": "tamal",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fad4",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "tambor",
+    "es": "tambor",
+    "ascii": "tambor",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f941",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "tamboril",
+    "es": "tamboril",
+    "ascii": "tamboril",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fa98",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "tarro",
+    "es": "tarro",
+    "ascii": "tarro",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fad9",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "taxi",
+    "es": "taxi",
+    "ascii": "taxi",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f695",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "teclado",
+    "es": "teclado",
+    "ascii": "teclado",
+    "gender": "m",
+    "animate": false,
+    "icon": "2328",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "tejon",
+    "es": "tejón",
+    "ascii": "tejon",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f9a1",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "telefono",
+    "es": "teléfono",
+    "ascii": "telefono",
+    "gender": "m",
+    "animate": false,
+    "icon": "260e",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "termas",
+    "es": "termas",
+    "ascii": "termas",
+    "gender": "m",
+    "animate": false,
+    "icon": "2668",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "tetera",
+    "es": "tetera",
+    "ascii": "tetera",
+    "gender": "f",
+    "animate": false,
+    "icon": "1fad6",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "tetrabrik",
+    "es": "tetrabrik",
+    "ascii": "tetrabrik",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f9c3",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "tiburon",
+    "es": "tiburón",
+    "ascii": "tiburon",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f988",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "tigre",
+    "es": "tigre",
+    "ascii": "tigre",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f405",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "tijeras",
+    "es": "tijeras",
+    "ascii": "tijeras",
+    "gender": "m",
+    "animate": false,
+    "icon": "2702",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "tique",
+    "es": "tique",
+    "ascii": "tique",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3ab",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "tirita",
+    "es": "tirita",
+    "ascii": "tirita",
+    "gender": "f",
+    "animate": false,
+    "icon": "1fa79",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "tobogan",
+    "es": "tobogán",
+    "ascii": "tobogan",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f6dd",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "tomate",
+    "es": "tomate",
+    "ascii": "tomate",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f345",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "tornado",
+    "es": "tornado",
+    "ascii": "tornado",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f32a",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "tortitas",
+    "es": "tortitas",
+    "ascii": "tortitas",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f95e",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "tortuga",
+    "es": "tortuga",
+    "ascii": "tortuga",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f422",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "tractor",
+    "es": "tractor",
+    "ascii": "tractor",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f69c",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "tranvia",
+    "es": "tranvía",
+    "ascii": "tranvia",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f68a",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "trebol",
+    "es": "trébol",
+    "ascii": "trebol",
+    "gender": "m",
+    "animate": false,
+    "icon": "2618",
+    "tags": [
+      "naturaleza"
+    ]
+  },
+  {
+    "id": "tren",
+    "es": "tren",
+    "ascii": "tren",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f686",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "trineo",
+    "es": "trineo",
+    "ascii": "trineo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f6f7",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "trofeo",
+    "es": "trofeo",
+    "ascii": "trofeo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3c6",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "trolebus",
+    "es": "trolebús",
+    "ascii": "trolebus",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f68e",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "trombon",
+    "es": "trombón",
+    "ascii": "trombon",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fa8a",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "trompeta",
+    "es": "trompeta",
+    "ascii": "trompeta",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f3ba",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "tulipan",
+    "es": "tulipán",
+    "ascii": "tulipan",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f337",
+    "tags": [
+      "naturaleza"
+    ]
+  },
+  {
+    "id": "unicornio",
+    "es": "unicornio",
+    "ascii": "unicornio",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f984",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "uvas",
+    "es": "uvas",
+    "ascii": "uvas",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f347",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "vaca",
+    "es": "vaca",
+    "ascii": "vaca",
+    "gender": "f",
+    "animate": true,
+    "icon": "1f404",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  },
+  {
+    "id": "vagon",
+    "es": "vagón",
+    "ascii": "vagon",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f683",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "vaina",
+    "es": "vaina",
+    "ascii": "vaina",
+    "gender": "f",
+    "animate": false,
+    "icon": "1fadb",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "vaqueros",
+    "es": "vaqueros",
+    "ascii": "vaqueros",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f456",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "vela",
+    "es": "vela",
+    "ascii": "vela",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f56f",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "velero",
+    "es": "velero",
+    "ascii": "velero",
+    "gender": "m",
+    "animate": false,
+    "icon": "26f5",
+    "tags": [
+      "lugar"
+    ]
+  },
+  {
+    "id": "ventana",
+    "es": "ventana",
+    "ascii": "ventana",
+    "gender": "f",
+    "animate": false,
+    "icon": "1fa9f",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "vestido",
+    "es": "vestido",
+    "ascii": "vestido",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f457",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "violin",
+    "es": "violín",
+    "ascii": "violin",
+    "gender": "m",
+    "animate": false,
+    "icon": "1f3bb",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "yoyo",
+    "es": "yoyó",
+    "ascii": "yoyo",
+    "gender": "m",
+    "animate": false,
+    "icon": "1fa80",
+    "tags": [
+      "objeto"
+    ]
+  },
+  {
+    "id": "zanahoria",
+    "es": "zanahoria",
+    "ascii": "zanahoria",
+    "gender": "f",
+    "animate": false,
+    "icon": "1f955",
+    "tags": [
+      "comida"
+    ]
+  },
+  {
+    "id": "zorro",
+    "es": "zorro",
+    "ascii": "zorro",
+    "gender": "m",
+    "animate": true,
+    "icon": "1f98a",
+    "tags": [
+      "naturaleza",
+      "animal"
+    ]
+  }
+]

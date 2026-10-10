@@ -29,6 +29,7 @@
     "@pandacss/dev": "^0.5.0",
     "@playwright/test": "^1.49.0",
     "@vite-pwa/astro": "^1.0.0",
+    "emojibase-data": "^17.0.0",
     "typescript": "^5.6.0",
     "vitest": "^3.0.0"
   }

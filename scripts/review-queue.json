@@ -1,0 +1,1238 @@
+[
+  {
+    "id": "orangutan",
+    "es": "orangután",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "caniche",
+    "es": "caniche",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "mapache",
+    "es": "mapache",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "leon",
+    "es": "león",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "tigre",
+    "es": "tigre",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "alce",
+    "es": "alce",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "bisonte",
+    "es": "bisonte",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "buey",
+    "es": "buey",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "jabali",
+    "es": "jabalí",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "elefante",
+    "es": "elefante",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "mamut",
+    "es": "mamut",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "raton",
+    "es": "ratón",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "hamster",
+    "es": "hámster",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "castor",
+    "es": "castor",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "tejon",
+    "es": "tejón",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "huellas",
+    "es": "huellas",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "cisne",
+    "es": "cisne",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "fenix",
+    "es": "fénix",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "serpiente",
+    "es": "serpiente",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "dragon",
+    "es": "dragón",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "delfin",
+    "es": "delfín",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "tiburon",
+    "es": "tiburón",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "coral",
+    "es": "coral",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "bogavante",
+    "es": "bogavante",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "calamar",
+    "es": "calamar",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "escorpion",
+    "es": "escorpión",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "bouquet",
+    "es": "bouquet",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "flor",
+    "es": "flor",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "girasol",
+    "es": "girasol",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "tulipan",
+    "es": "tulipán",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "planton",
+    "es": "plantón",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "crecer",
+    "es": "crecer",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "perenne",
+    "es": "perenne",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "cactus",
+    "es": "cactus",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "arroz",
+    "es": "arroz",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "trebol",
+    "es": "trébol",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "suerte",
+    "es": "suerte",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "anidacion",
+    "es": "anidación",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "champinon",
+    "es": "champiñón",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "uvas",
+    "es": "uvas",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "melon",
+    "es": "melón",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "limon",
+    "es": "limón",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "melocoton",
+    "es": "melocotón",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "cerezas",
+    "es": "cerezas",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "arandanos",
+    "es": "arándanos",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "kiwi",
+    "es": "kiwi",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "tomate",
+    "es": "tomate",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "aguacate",
+    "es": "aguacate",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "chile",
+    "es": "chile",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "brocoli",
+    "es": "brócoli",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "alubias",
+    "es": "alubias",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "cruasan",
+    "es": "cruasán",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "baguete",
+    "es": "baguete",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "bretzel",
+    "es": "bretzel",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "bagel",
+    "es": "bagel",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "tortitas",
+    "es": "tortitas",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "gofre",
+    "es": "gofre",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "carne",
+    "es": "carne",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "beicon",
+    "es": "beicon",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "sandwich",
+    "es": "sándwich",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "tamal",
+    "es": "tamal",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "falafel",
+    "es": "falafel",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "cocinar",
+    "es": "cocinar",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "fondue",
+    "es": "fondue",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "cereal",
+    "es": "cereal",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "palomitas",
+    "es": "palomitas",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "ramen",
+    "es": "ramen",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "espagueti",
+    "es": "espagueti",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "sushi",
+    "es": "sushi",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "pastel",
+    "es": "pastel",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "festival",
+    "es": "festival",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "dumpling",
+    "es": "dumpling",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "donut",
+    "es": "dónut",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "flan",
+    "es": "flan",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "dulce",
+    "es": "dulce",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "biberon",
+    "es": "biberón",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "sake",
+    "es": "sake",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "tetrabrik",
+    "es": "tetrabrik",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "mate",
+    "es": "mate",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "palillos",
+    "es": "palillos",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "nieve",
+    "es": "nieve",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "camping",
+    "es": "camping",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "nacional",
+    "es": "nacional",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "casas",
+    "es": "casas",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "correos",
+    "es": "correos",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "hospital",
+    "es": "hospital",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "hotel",
+    "es": "hotel",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "amor",
+    "es": "amor",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "fuente",
+    "es": "fuente",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "estrellas",
+    "es": "estrellas",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "ciudad",
+    "es": "ciudad",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "amanecer",
+    "es": "amanecer",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "atardecer",
+    "es": "atardecer",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "noche",
+    "es": "noche",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "termas",
+    "es": "termas",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "tobogan",
+    "es": "tobogán",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "vagon",
+    "es": "vagón",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "tren",
+    "es": "tren",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "estacion",
+    "es": "estación",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "monorrail",
+    "es": "monorraíl",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "autobus",
+    "es": "autobús",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "trolebus",
+    "es": "trolebús",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "minibus",
+    "es": "minibús",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "camion",
+    "es": "camión",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "taxi",
+    "es": "taxi",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "automovil",
+    "es": "automóvil",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "tractor",
+    "es": "tractor",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "carreras",
+    "es": "carreras",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "scooter",
+    "es": "scooter",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "mototaxi",
+    "es": "mototaxi",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "patinete",
+    "es": "patinete",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "monopatin",
+    "es": "monopatín",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "patines",
+    "es": "patines",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "barril",
+    "es": "barril",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "luces",
+    "es": "luces",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "obras",
+    "es": "obras",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "ferri",
+    "es": "ferri",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "avion",
+    "es": "avión",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "cable",
+    "es": "cable",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "satelite",
+    "es": "satélite",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "cohete",
+    "es": "cohete",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "ovni",
+    "es": "ovni",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "botones",
+    "es": "botones",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "equipaje",
+    "es": "equipaje",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "creciente",
+    "es": "creciente",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "brillante",
+    "es": "brillante",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "nube",
+    "es": "nube",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "ciclon",
+    "es": "ciclón",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "arcoiris",
+    "es": "arcoíris",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "paraguas",
+    "es": "paraguas",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "gotas",
+    "es": "gotas",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "chispas",
+    "es": "chispas",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "bambu",
+    "es": "bambú",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "banderin",
+    "es": "banderín",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "entradas",
+    "es": "entradas",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "tique",
+    "es": "tique",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "bronce",
+    "es": "bronce",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "balon",
+    "es": "balón",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "beisbol",
+    "es": "béisbol",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "deporte",
+    "es": "deporte",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "bolos",
+    "es": "bolos",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "criquet",
+    "es": "críquet",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "lacrosse",
+    "es": "lacrosse",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "badminton",
+    "es": "bádminton",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "bucear",
+    "es": "bucear",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "esquis",
+    "es": "esquís",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "joystick",
+    "es": "joystick",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "juguete",
+    "es": "juguete",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "bailar",
+    "es": "bailar",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "ajedrez",
+    "es": "ajedrez",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "comodin",
+    "es": "comodín",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "actuacion",
+    "es": "actuación",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "arte",
+    "es": "arte",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "gafas",
+    "es": "gafas",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "vaqueros",
+    "es": "vaqueros",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "guantes",
+    "es": "guantes",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "sari",
+    "es": "sari",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "banador",
+    "es": "bañador",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "bikini",
+    "es": "bikini",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "mujer",
+    "es": "mujer",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "birrete",
+    "es": "birrete",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "diamante",
+    "es": "diamante",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "altavoz",
+    "es": "altavoz",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "control",
+    "es": "control",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "auricular",
+    "es": "auricular",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "saxofon",
+    "es": "saxofón",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "trombon",
+    "es": "trombón",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "acordeon",
+    "es": "acordeón",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "violin",
+    "es": "violín",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "tambor",
+    "es": "tambor",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "tamboril",
+    "es": "tamboril",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "maracas",
+    "es": "maracas",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "celular",
+    "es": "celular",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "corriente",
+    "es": "corriente",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "ordenador",
+    "es": "ordenador",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "minidisc",
+    "es": "minidisc",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "disquete",
+    "es": "disquete",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "aceite",
+    "es": "aceite",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "azul",
+    "es": "azul",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "noticias",
+    "es": "noticias",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "botin",
+    "es": "botín",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "billete",
+    "es": "billete",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "sobre",
+    "es": "sobre",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "paquete",
+    "es": "paquete",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "buzon",
+    "es": "buzón",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "lapiz",
+    "es": "lápiz",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "pincel",
+    "es": "pincel",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "maletin",
+    "es": "maletín",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "fichas",
+    "es": "fichas",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "bloc",
+    "es": "bloc",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "clip",
+    "es": "clip",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "tijeras",
+    "es": "tijeras",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "llave",
+    "es": "llave",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "punal",
+    "es": "puñal",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "bumeran",
+    "es": "bumerán",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "engranaje",
+    "es": "engranaje",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "baston",
+    "es": "bastón",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "eslabon",
+    "es": "eslabón",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "iman",
+    "es": "imán",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "alambique",
+    "es": "alambique",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "bacterias",
+    "es": "bacterias",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "ascensor",
+    "es": "ascensor",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "champu",
+    "es": "champú",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "burbujas",
+    "es": "burbujas",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "extintor",
+    "es": "extintor",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  },
+  {
+    "id": "ataud",
+    "es": "ataúd",
+    "guessedGender": "m",
+    "reason": "gender-heuristic-low-confidence"
+  }
+]

@@ -6,7 +6,7 @@ Demo: https://phrasecraft.pages.dev (Cloudflare Pages, preview por PR). Para el 
 
 ## Como funciona
 
-- Palabras aleatorias con `crypto.getRandomValues` y muestreo por rechazo, sin duplicados. Entropia exacta `bitsDistinct(n,k)`; por defecto el menor `k` con >= 70 bits (con lista ~1296, `k=7`).
+- Palabras aleatorias con `crypto.getRandomValues` y muestreo por rechazo, sin duplicados. Entropia exacta `bitsDistinct(n,k)`; por defecto el menor `k` con >= 70 bits (lista `es-v0-draft`: 507 palabras dibujables, `k=8` ≈ 72 bits).
 - La escena y la frase no anaden entropia ni son secretas: son ayudas de memoria (principio de Kerckhoffs, el atacante conoce metodo y lista).
 - Un unico sprite SVG (`public/icons/es.sprite.svg`) que se descarga siempre completo e igual para todos, precacheado por el service worker. Nada derivado de tus palabras viaja por red.
 - Contrasena real en ASCII sin tildes para teclear; la tilde solo es etiqueta visual. Practica en 5 etapas solo en memoria, con `spellcheck off`.
