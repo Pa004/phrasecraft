@@ -31,6 +31,7 @@ let k = $state(minWordCount(list.length, 70));
 let compat = $state(false);
 
 let mode: PasswordMode = $derived(compat ? "compat" : "standard");
+let ready = $derived(sprite === "ready");
 let liveBits = $derived(
 	compat ? bitsCompat(list.length, k, 2) : bitsDistinct(list.length, k),
 );
@@ -52,23 +53,23 @@ function lock(): void {
 
 <SpriteProvider bind:status={sprite} />
 
-{#if sprite === "loading"}
-	<button type="button" disabled>Cargando escena…</button>
-{:else if sprite === "ready"}
-	{#if !result}
-		<div class="controls">
-			<label>
-				Palabras: {k}
-				<input type="range" min="4" max="12" step="1" bind:value={k} />
-			</label>
-			<label>
-				<input type="checkbox" bind:checked={compat} />
-				Modo compatibilidad
-			</label>
-			<p>Entropía: <strong>{liveBits.toFixed(1)} bits</strong></p>
-		</div>
-		<button type="button" class="primary" onclick={doGenerate}>Generar para practicar</button>
-	{:else if !practicing}
+{#if !result}
+	<div class="controls">
+		<label>
+			Palabras: {k}
+			<input type="range" min="4" max="12" step="1" bind:value={k} disabled={!ready} />
+		</label>
+		<label>
+			<input type="checkbox" bind:checked={compat} disabled={!ready} />
+			Modo compatibilidad
+		</label>
+		<p>Entropía: <strong>{liveBits.toFixed(1)} bits</strong></p>
+	</div>
+	<button type="button" class="primary" disabled={!ready} onclick={doGenerate}>
+		Generar para practicar
+	</button>
+	<p class="loadnote" aria-live="polite">{ready ? "" : "Cargando escena…"}</p>
+{:else if !practicing}
 		<p>Escena lista con {result.words.length} palabras.</p>
 		<button type="button" class="primary" onclick={() => ((practicing = true), (runId += 1))}>Practicar</button>
 		<button type="button" onclick={doGenerate}>Generar otra</button>
@@ -78,7 +79,6 @@ function lock(): void {
 			<Practice words={result.words} password={result.text} {story} {layout} />
 		{/key}
 	{/if}
-{/if}
 
 <style>
 	.controls {
@@ -90,5 +90,9 @@ function lock(): void {
 		font-size: 1.1rem;
 		padding: 0.8rem 1.4rem;
 		min-height: 44px;
+	}
+	.loadnote {
+		min-height: 1.5em;
+		margin: 0.25rem 0 0;
 	}
 </style>

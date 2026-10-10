@@ -1,0 +1,6 @@
+{
+  "http://localhost:53280/": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1791597089339-36321.report.html",
+  "http://localhost:53280/practicar/": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1791597090137-76737.report.html",
+  "http://localhost:53280/seguridad/": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1791597091143-32260.report.html",
+  "http://localhost:53280/estudio/": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1791597092036-49338.report.html"
+}

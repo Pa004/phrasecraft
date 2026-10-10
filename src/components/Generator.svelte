@@ -48,6 +48,7 @@ let strength = $derived(
 			: "Débil",
 );
 let masked = $derived(result ? "•".repeat(result.text.length) : "");
+let ready = $derived(sprite === "ready");
 
 onMount(() => {
 	return () => {
@@ -112,27 +113,26 @@ async function copy(): Promise<void> {
 	<h2 id="gen-title">Genera tu escena</h2>
 	<SpriteProvider bind:status={sprite} />
 
-	{#if sprite === "loading"}
-		<button type="button" disabled>Cargando escena…</button>
-	{:else if sprite === "ready"}
-		<div class="controls">
-			<label>
-				Palabras: {k}
-				<input type="range" min="4" max="12" step="1" bind:value={k} />
-			</label>
-			<label class="switch">
-				<input type="checkbox" bind:checked={compat} />
-				Modo compatibilidad (mayúsculas, dígitos y símbolo)
-			</label>
-			<p title="Calculado asumiendo que quien ataca conoce el método y la lista de palabras.">
-				Entropía: <strong>{liveBits.toFixed(1)} bits</strong> — {strength}
-			</p>
-			{#if compat && liveBits < 60}
-				<p role="alert">Atención: por debajo de 60 bits. Úsalo solo si el sitio lo exige.</p>
-			{/if}
-		</div>
-		<button type="button" class="primary" onclick={doGenerate}>Generar mi escena</button>
-	{/if}
+	<div class="controls">
+		<label>
+			Palabras: {k}
+			<input type="range" min="4" max="12" step="1" bind:value={k} disabled={!ready} />
+		</label>
+		<label class="switch">
+			<input type="checkbox" bind:checked={compat} disabled={!ready} />
+			Modo compatibilidad (mayúsculas, dígitos y símbolo)
+		</label>
+		<p title="Calculado asumiendo que quien ataca conoce el método y la lista de palabras.">
+			Entropía: <strong>{liveBits.toFixed(1)} bits</strong> — {strength}
+		</p>
+		{#if compat && liveBits < 60}
+			<p role="alert">Atención: por debajo de 60 bits. Úsalo solo si el sitio lo exige.</p>
+		{/if}
+	</div>
+	<button type="button" class="primary" disabled={!ready} onclick={doGenerate}>
+		Generar mi escena
+	</button>
+	<p class="loadnote" aria-live="polite">{ready ? "" : "Cargando escena…"}</p>
 
 	{#if result}
 		<AutoLock active={true} onLock={lock} />
@@ -175,6 +175,10 @@ async function copy(): Promise<void> {
 		font-size: 1.25rem;
 		padding: 0.9rem 1.6rem;
 		min-height: 44px;
+	}
+	.loadnote {
+		min-height: 1.5em;
+		margin: 0.25rem 0 0;
 	}
 	.story {
 		font-size: 1.1rem;

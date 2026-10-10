@@ -28,7 +28,13 @@ onMount(() => {
 </script>
 
 {#if status === "ready"}
-	<svg width="0" height="0" aria-hidden="true" focusable="false">
+	<svg
+		width="0"
+		height="0"
+		aria-hidden="true"
+		focusable="false"
+		style="position:absolute;width:0;height:0;overflow:hidden"
+	>
 		<defs>{@html markup}</defs>
 	</svg>
 {:else if status === "error"}
