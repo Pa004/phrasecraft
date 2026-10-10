@@ -15,15 +15,18 @@ import type {
 } from "../lib/password/types.js";
 import { LAYOUTS, type LayoutName } from "../lib/scene/layout.js";
 import { buildStory } from "../lib/story/templates.js";
+import Practice from "./Practice.svelte";
 import Scene from "./Scene.svelte";
+import SpriteProvider from "./SpriteProvider.svelte";
 
 const list = wordsData as WordEntry[];
 const listVersion: string = (metaData as { listVersion: string }).listVersion;
 const DEFAULT_K = minWordCount(list.length, 70);
 
 let sprite: "loading" | "ready" | "error" = $state("loading");
-let spriteMarkup = $state("");
 let result: PasswordResult | null = $state(null);
+let practicing = $state(false);
+let runId = $state(0);
 let story = $state("");
 let layout: LayoutName = $state("arco");
 let k = $state(DEFAULT_K);
@@ -45,22 +48,7 @@ let strength = $derived(
 );
 let masked = $derived(result ? "•".repeat(result.text.length) : "");
 
-async function ensureSprite(): Promise<void> {
-	sprite = "loading";
-	try {
-		const res = await fetch("/icons/es.sprite.svg", { cache: "force-cache" });
-		if (!res.ok) throw new Error("sprite no disponible");
-		// El sprite se inyecta una vez en el DOM: los <use href="#id"> no
-		// generan peticiones al generar. Sanitizado en build-sprite.mjs.
-		spriteMarkup = await res.text();
-		sprite = "ready";
-	} catch {
-		sprite = "error";
-	}
-}
-
 onMount(() => {
-	void ensureSprite();
 	return () => {
 		if (clearTimer) clearTimeout(clearTimer);
 	};
@@ -74,6 +62,7 @@ function doGenerate(): void {
 	if (clearTimer) clearTimeout(clearTimer);
 	const r = generate(list, k, mode, undefined, listVersion);
 	result = r;
+	practicing = false;
 	story = buildStory(r.words);
 	layout = pickLayout();
 	shown = false;
@@ -111,13 +100,11 @@ async function copy(): Promise<void> {
 
 <section aria-labelledby="gen-title">
 	<h2 id="gen-title">Genera tu escena</h2>
+	<SpriteProvider bind:status={sprite} />
 
 	{#if sprite === "loading"}
 		<button type="button" disabled>Cargando escena…</button>
-	{:else if sprite === "error"}
-		<p role="alert">No se pudo cargar la escena. Revisa tu conexión y reintenta.</p>
-		<button type="button" onclick={ensureSprite}>Reintentar</button>
-	{:else}
+	{:else if sprite === "ready"}
 		<div class="controls">
 			<label>
 				Palabras: {k}
@@ -138,9 +125,6 @@ async function copy(): Promise<void> {
 	{/if}
 
 	{#if result}
-		<svg width="0" height="0" aria-hidden="true" focusable="false">
-			<defs>{@html spriteMarkup}</defs>
-		</svg>
 		<div aria-live="polite">
 			<Scene words={result.words} {layout} />
 			<p class="story">{story}</p>
@@ -156,6 +140,15 @@ async function copy(): Promise<void> {
 				</div>
 				<p class="warn">Esta escena <strong>es</strong> tu contraseña: no la captures ni la compartas.</p>
 				{#if notice}<p>{notice}</p>{/if}
+				{#if !practicing}
+					<button type="button" class="primary" onclick={() => ((practicing = true), (runId += 1))}>
+						Practicar esta escena
+					</button>
+				{:else}
+					{#key runId}
+						<Practice words={result.words} password={result.text} {story} {layout} />
+					{/key}
+				{/if}
 			</div>
 		</div>
 	{/if}

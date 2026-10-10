@@ -1,16 +1,21 @@
 ---
+import PracticeStandalone from "../components/PracticeStandalone.svelte";
 ---
 <html lang="es">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Practica tu escena en 5 etapas. Todo en tu navegador, nada se guarda." />
 		<title>Practicar — phrasecraft</title>
 	</head>
 	<body>
-		<main>
+		<header>
 			<h1>Practicar</h1>
-			<p>El modo práctica en 5 etapas llega en la Fase 6.</p>
-			<p><a href="/">Volver</a></p>
+			<nav aria-label="Principal"><a href="/">Generar</a></nav>
+		</header>
+		<main>
+			<PracticeStandalone client:load />
+			<p><small>Nada de lo que escribas aquí sale de tu navegador.</small></p>
 		</main>
 	</body>
 </html>
