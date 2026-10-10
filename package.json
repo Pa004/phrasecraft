@@ -1,0 +1,35 @@
+{
+  "name": "phrasecraft",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20.9.0" },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "biome check . && astro check && vitest run && node scripts/validate-wordlist.mjs",
+    "lint": "biome check .",
+    "typecheck": "astro check",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "words:build": "node scripts/build-wordlist.mjs",
+    "words:validate": "node scripts/validate-wordlist.mjs",
+    "sprite:build": "node scripts/build-sprite.mjs"
+  },
+  "dependencies": {
+    "@astrojs/svelte": "^7.0.0",
+    "astro": "^5.0.0",
+    "svelte": "^5.0.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.9.0",
+    "@biomejs/biome": "^1.9.0",
+    "@lhci/cli": "^0.14.0",
+    "@pandacss/dev": "^0.5.0",
+    "@playwright/test": "^1.49.0",
+    "@vite-pwa/astro": "^1.0.0",
+    "typescript": "^5.6.0",
+    "vitest": "^3.0.0"
+  }
+}

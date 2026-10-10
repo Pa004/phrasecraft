@@ -1,0 +1,31 @@
+:root {
+  --paper: #faf7f0;
+  --ink: #1a1a2e;
+  --accent: #e4582e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1a1a2e;
+    --ink: #faf7f0;
+  }
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: system-ui, sans-serif;
+}
+
+.scene-icon {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scene-icon { animation: opacity 0.3s ease; }
+}
