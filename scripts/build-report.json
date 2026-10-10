@@ -10,6 +10,7 @@
   "levenshtein": 57,
   "phonetic": 0,
   "denylisted": 9,
-  "kept": 507,
-  "reviewQueue": 206
+  "kept": 501,
+  "excludedNoFluent": 6,
+  "reviewQueue": 203
 }

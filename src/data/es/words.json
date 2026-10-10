@@ -1093,17 +1093,6 @@
     ]
   },
   {
-    "id": "botin",
-    "es": "botín",
-    "ascii": "botin",
-    "gender": "m",
-    "animate": false,
-    "icon": "1fa8e",
-    "tags": [
-      "objeto"
-    ]
-  },
-  {
     "id": "botones",
     "es": "botones",
     "ascii": "botones",
@@ -1900,17 +1889,6 @@
     ]
   },
   {
-    "id": "chirivia",
-    "es": "chirivía",
-    "ascii": "chirivia",
-    "gender": "f",
-    "animate": false,
-    "icon": "1fadc",
-    "tags": [
-      "comida"
-    ]
-  },
-  {
     "id": "chispas",
     "es": "chispas",
     "ascii": "chispas",
@@ -2391,17 +2369,6 @@
     ]
   },
   {
-    "id": "deshojado",
-    "es": "deshojado",
-    "ascii": "deshojado",
-    "gender": "m",
-    "animate": false,
-    "icon": "1fabe",
-    "tags": [
-      "naturaleza"
-    ]
-  },
-  {
     "id": "desierto",
     "es": "desierto",
     "ascii": "desierto",
@@ -2844,18 +2811,6 @@
     "icon": "1f9c6",
     "tags": [
       "comida"
-    ]
-  },
-  {
-    "id": "fenix",
-    "es": "fénix",
-    "ascii": "fenix",
-    "gender": "m",
-    "animate": true,
-    "icon": "1f426-200d-1f525",
-    "tags": [
-      "naturaleza",
-      "animal"
     ]
   },
   {
@@ -4278,18 +4233,6 @@
     ]
   },
   {
-    "id": "orca",
-    "es": "orca",
-    "ascii": "orca",
-    "gender": "f",
-    "animate": true,
-    "icon": "1facd",
-    "tags": [
-      "naturaleza",
-      "animal"
-    ]
-  },
-  {
     "id": "ordenador",
     "es": "ordenador",
     "ascii": "ordenador",
@@ -5484,17 +5427,6 @@
     "icon": "1f68e",
     "tags": [
       "lugar"
-    ]
-  },
-  {
-    "id": "trombon",
-    "es": "trombón",
-    "ascii": "trombon",
-    "gender": "m",
-    "animate": false,
-    "icon": "1fa8a",
-    "tags": [
-      "objeto"
     ]
   },
   {
