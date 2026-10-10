@@ -13,7 +13,10 @@ export function nextStage(s: Exclude<Stage, "done">): Stage {
 }
 
 /** Dos posiciones distintas para tapar en la etapa 2 (no criptográfico). */
-export function pickHidden(n: number, rand: () => number = Math.random): [number, number] {
+export function pickHidden(
+	n: number,
+	rand: () => number = Math.random,
+): [number, number] {
 	if (n < 2) throw new RangeError("se necesitan al menos 2 palabras");
 	const a = Math.floor(rand() * n);
 	let b = Math.floor(rand() * n);
