@@ -15,6 +15,7 @@ import type {
 } from "../lib/password/types.js";
 import { LAYOUTS, type LayoutName } from "../lib/scene/layout.js";
 import { buildStory } from "../lib/story/templates.js";
+import AutoLock from "./AutoLock.svelte";
 import Practice from "./Practice.svelte";
 import Scene from "./Scene.svelte";
 import SpriteProvider from "./SpriteProvider.svelte";
@@ -74,6 +75,15 @@ function newStory(): void {
 	story = buildStory(result.words);
 }
 
+function lock(): void {
+	if (clearTimer) clearTimeout(clearTimer);
+	result = null;
+	practicing = false;
+	story = "";
+	shown = false;
+	notice = "Bloqueado por inactividad o al ocultar la página. Genera de nuevo.";
+}
+
 async function copy(): Promise<void> {
 	if (!result) return;
 	try {
@@ -125,6 +135,7 @@ async function copy(): Promise<void> {
 	{/if}
 
 	{#if result}
+		<AutoLock active={true} onLock={lock} />
 		<div aria-live="polite">
 			<Scene words={result.words} {layout} />
 			<p class="story">{story}</p>
