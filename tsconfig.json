@@ -1,9 +1,9 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "compilerOptions": {
-    "strict": true,
-    "noUncheckedIndexedAccess": true,
-    "noConsole": false
-  },
-  "include": ["src", "scripts"]
+	"extends": "astro/tsconfigs/strict",
+	"compilerOptions": {
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"noConsole": false
+	},
+	"include": ["src", "scripts"]
 }

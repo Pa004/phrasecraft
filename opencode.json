@@ -1,8 +1,8 @@
 {
-  "instructions": [
-    "Stack fijado: Astro 5 + Svelte 5 islands (client:visible), Panda CSS, Deno 2 tasks, Biome 2, Cloudflare Pages, Fluent Emoji flat. Lee README.md como unica doc en-repo.",
-    "Oro: 0 peticiones tras Generar; sprite unico siempre completo; solo crypto.getRandomValues en src/lib/password; sin console en src; nunca guardar la real en storage/URL/title/logs.",
-    "Comandos: npm run dev/build/preview/check. check = biome + astro check + vitest + words:validate. Trabaja por ramas phase-N-*. Commits Conventional Commits.",
-    "Prohibido: motion, react-router, Tailwind, Twemoji, Vercel, dangerouslySetInnerHTML, scripts/fuentes de terceros."
-  ]
+	"instructions": [
+		"Stack fijado: Astro 5 + Svelte 5 islands (client:visible), Panda CSS, Deno 2 tasks, Biome 2, Cloudflare Pages, Fluent Emoji flat. Lee README.md como unica doc en-repo.",
+		"Oro: 0 peticiones tras Generar; sprite unico siempre completo; solo crypto.getRandomValues en src/lib/password; sin console en src; nunca guardar la real en storage/URL/title/logs.",
+		"Comandos: npm run dev/build/preview/check. check = biome + astro check + vitest + words:validate. Trabaja por ramas phase-N-*. Commits Conventional Commits.",
+		"Prohibido: motion, react-router, Tailwind, Twemoji, Vercel, dangerouslySetInnerHTML, scripts/fuentes de terceros."
+	]
 }

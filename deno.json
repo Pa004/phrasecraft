@@ -1,9 +1,9 @@
 {
-  "tasks": {
-    "dev": "deno run --allow-all npm:astro dev",
-    "build": "deno run --allow-all npm:astro build",
-    "check": "deno lint && deno fmt --check && deno run --allow-all npm:astro check && deno run --allow-all npm:vitest run && deno run --allow-read scripts/validate-wordlist.mjs",
-    "words:build": "deno run --allow-read --allow-write scripts/build-wordlist.mjs",
-    "words:validate": "deno run --allow-read scripts/validate-wordlist.mjs"
-  }
+	"tasks": {
+		"dev": "deno run --allow-all npm:astro dev",
+		"build": "deno run --allow-all npm:astro build",
+		"check": "deno lint && deno fmt --check && deno run --allow-all npm:astro check && deno run --allow-all npm:vitest run && deno run --allow-read scripts/validate-wordlist.mjs",
+		"words:build": "deno run --allow-read --allow-write scripts/build-wordlist.mjs",
+		"words:validate": "deno run --allow-read scripts/validate-wordlist.mjs"
+	}
 }
