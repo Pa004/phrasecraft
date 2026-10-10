@@ -66,7 +66,12 @@ for (const w of words) {
 		continue;
 	}
 	const attrs = sym.attrs.replace(/id="[^"]+"/, `id="${w.icon}"`);
-	parts.push(`<symbol${attrs}>${sym.body}</symbol>`);
+	// Higiene para inyección en DOM ({@html} en Svelte): sin scripts ni handlers.
+	const clean = sym.body
+		.replace(/<script[\s\S]*?<\/script>/gi, "")
+		.replace(/\son[a-z]+\s*=\s*("[^"]*"|'[^']*')/gi, "")
+		.replace(/href\s*=\s*"(javascript:[^"]*)"/gi, 'href="#"');
+	parts.push(`<symbol${attrs}>${clean}</symbol>`);
 }
 
 if (missing.length > 0) {
