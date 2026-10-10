@@ -14,6 +14,7 @@ import type {
 } from "../lib/password/types.js";
 import { LAYOUTS, type LayoutName } from "../lib/scene/layout.js";
 import { buildStory } from "../lib/story/templates.js";
+import AutoLock from "./AutoLock.svelte";
 import Practice from "./Practice.svelte";
 import SpriteProvider from "./SpriteProvider.svelte";
 
@@ -41,6 +42,12 @@ function doGenerate(): void {
 	layout = LAYOUTS[Math.floor(Math.random() * LAYOUTS.length)]!;
 	practicing = false;
 }
+
+function lock(): void {
+	result = null;
+	practicing = false;
+	story = "";
+}
 </script>
 
 <SpriteProvider bind:status={sprite} />
@@ -66,6 +73,7 @@ function doGenerate(): void {
 		<button type="button" class="primary" onclick={() => ((practicing = true), (runId += 1))}>Practicar</button>
 		<button type="button" onclick={doGenerate}>Generar otra</button>
 	{:else}
+		<AutoLock active={true} onLock={lock} />
 		{#key runId}
 			<Practice words={result.words} password={result.text} {story} {layout} />
 		{/key}

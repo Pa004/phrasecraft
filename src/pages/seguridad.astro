@@ -4,14 +4,47 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Modelo de amenazas de phrasecraft y cómo verificar cada afirmación." />
 		<title>Seguridad — phrasecraft</title>
 	</head>
 	<body>
-		<main>
+		<header>
 			<h1>Seguridad</h1>
-			<p>El modelo de amenazas y cómo verificar cada afirmación llegan en la Fase 7.</p>
-			<p>Reglas que ya cumple esta versión: un único sprite siempre completo, cero peticiones tras Generar, nada en almacenamiento ni URL, solo <code>crypto.getRandomValues</code>.</p>
-			<p><a href="/">Volver</a></p>
+			<nav aria-label="Principal"><a href="/">Generar</a> <a href="/practicar">Practicar</a></nav>
+		</header>
+		<main>
+			<section aria-labelledby="defiende">
+				<h2 id="defiende">Qué se defiende</h2>
+				<ul>
+					<li><strong>Registros de red:</strong> un único sprite SVG idéntico para todos, precacheado. Nada derivado de tus palabras viaja por red. Test automatizado: 0 peticiones tras pulsar Generar.</li>
+					<li><strong>Miradas ajenas:</strong> contraseña oculta por defecto, revelado por palabra en práctica.</li>
+					<li><strong>XSS:</strong> sin HTML inyectado de terceros, CSP estricta, sin scripts externos. El sprite se sanitiza en build (sin scripts ni handlers).</li>
+					<li><strong>Persistencia accidental:</strong> nada en <code>localStorage</code>, cookies, historial ni URL. Solo el modo estudio guarda una huella hash de una desechable.</li>
+					<li><strong>Sesgo:</strong> muestreo por rechazo sobre <code>crypto.getRandomValues</code>. Prohibido <code>Math.random</code> en el núcleo (regla automatizada).</li>
+				</ul>
+			</section>
+			<section aria-labelledby="nodefiende">
+				<h2 id="nodefiende">Qué NO se promete</h2>
+				<ul>
+					<li>Dispositivo con malware o keyloggers, extensiones maliciosas.</li>
+					<li>Capturas de pantalla o pantalla compartida (se avisa en la app).</li>
+					<li>Borrado garantizado de memoria en JavaScript (no es fiable; el auto-bloqueo a los 5 minutos y la limpieza al ocultar la página son mitigación, no garantía).</li>
+				</ul>
+			</section>
+			<section aria-labelledby="verifica">
+				<h2 id="verifica">Cómo verificarlo tú</h2>
+				<ol>
+					<li>DevTools → Network → pulsa Generar: <strong>0 peticiones</strong>.</li>
+					<li><code>node scripts/validate-wordlist.mjs</code> valida la lista (colisiones, fonética, denylist, iconos).</li>
+					<li>Compara el hash del build publicado en cada release con tu build local.</li>
+					<li>Lee el código: el núcleo cabe en <code>src/lib/password/</code>.</li>
+				</ol>
+				<p>Principio de Kerckhoffs: el atacante conoce el método y la lista. La seguridad viene solo de la aleatoriedad. La escena y la frase no añaden entropía.</p>
+			</section>
+			<section aria-labelledby="atrib">
+				<h2 id="atrib">Atribución</h2>
+				<p>Iconos: Fluent Emoji, © Microsoft, MIT (vía <code>@fluentui-emoji/sprite</code>). Nombres base de emoji en build-time: <code>emojibase-data</code> (ver su licencia). Evitamos decir: inquebrantable, 100 % seguro, imposible de hackear.</p>
+			</section>
 		</main>
 	</body>
 </html>

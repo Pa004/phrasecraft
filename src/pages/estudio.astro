@@ -1,16 +1,20 @@
 ---
+import Study from "../components/Study.svelte";
 ---
 <html lang="es">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Estudio de recuerdo con contraseña desechable. Solo se guarda una huella hash." />
 		<title>Estudio — phrasecraft</title>
 	</head>
 	<body>
-		<main>
+		<header>
 			<h1>Estudio de recuerdo</h1>
-			<p>El modo estudio con contraseña desechable llega en la Fase 7.</p>
-			<p><a href="/">Volver</a></p>
+			<nav aria-label="Principal"><a href="/">Generar</a></nav>
+		</header>
+		<main>
+			<Study client:load />
 		</main>
 	</body>
 </html>
