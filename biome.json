@@ -2,6 +2,8 @@
 	"$schema": "https://biomejs.dev/schemas/1.9.0/schema.json",
 	"files": {
 		"ignore": [
+			".astro/**",
+			"dist/**",
 			"src/data/**",
 			"public/**",
 			"src/styles/panda/**",
@@ -17,5 +19,11 @@
 			"style": { "noNonNullAssertion": "off" }
 		}
 	},
-	"javascript": { "formatter": { "quoteStyle": "double" } }
+	"javascript": { "formatter": { "quoteStyle": "double" } },
+	"overrides": [
+		{
+			"include": ["*.svelte"],
+			"linter": { "rules": { "style": { "useConst": "off" } } }
+		}
+	]
 }
