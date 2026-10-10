@@ -9,3 +9,9 @@ export function minWordCount(n: number, target = 70): number {
   while (bitsDistinct(n, k) < target) k++;
   return k;
 }
+
+export const SYMBOLS = "!?#$%&*+=@";
+
+export function bitsCompat(n: number, k: number, digits = 2): number {
+  return bitsDistinct(n, k) + digits * Math.log2(10) + Math.log2(SYMBOLS.length);
+}
