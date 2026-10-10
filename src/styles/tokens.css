@@ -5,6 +5,13 @@
 }
 
 @media (prefers-color-scheme: dark) {
+	/* Antes que el <style> que Astro inyecta en body: evita el salto de layout al hidratar islas. */
+	astro-island,
+	astro-slot,
+	astro-static-slot {
+		display: contents;
+	}
+
 	:root {
 		--paper: #1a1a2e;
 		--ink: #faf7f0;

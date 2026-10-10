@@ -3,6 +3,7 @@
 	"files": {
 		"ignore": [
 			".astro/**",
+			".lighthouseci/**",
 			"dist/**",
 			"coverage/**",
 			"test-results/**",

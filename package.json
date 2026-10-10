@@ -15,6 +15,7 @@
 		"typecheck": "astro check",
 		"test": "vitest run",
 		"test:e2e": "playwright test",
+		"lhci": "lhci autorun",
 		"words:build": "node scripts/build-wordlist.mjs",
 		"words:validate": "node scripts/validate-wordlist.mjs",
 		"sprite:build": "node scripts/build-sprite.mjs"
