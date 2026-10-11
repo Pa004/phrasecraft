@@ -33,7 +33,7 @@ onMount(() => {
 		height="0"
 		aria-hidden="true"
 		focusable="false"
-		style="position:absolute;width:0;height:0;overflow:hidden"
+		class="sprite-store"
 	>
 		<defs>{@html markup}</defs>
 	</svg>

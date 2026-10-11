@@ -1,3 +1,18 @@
+/* Antes que el <style> que Astro inyecta en body: evita el salto de layout al hidratar islas. */
+astro-island,
+astro-slot,
+astro-static-slot {
+	display: contents;
+}
+
+/* Contenedor del sprite inyectado: fuera del flujo para CLS = 0. */
+.sprite-store {
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+
 :root {
 	--paper: #faf7f0;
 	--ink: #1a1a2e;
@@ -5,13 +20,6 @@
 }
 
 @media (prefers-color-scheme: dark) {
-	/* Antes que el <style> que Astro inyecta en body: evita el salto de layout al hidratar islas. */
-	astro-island,
-	astro-slot,
-	astro-static-slot {
-		display: contents;
-	}
-
 	:root {
 		--paper: #1a1a2e;
 		--ink: #faf7f0;
