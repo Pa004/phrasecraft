@@ -151,10 +151,10 @@ onMount(() => {
 		<li>No la escribas en papel ni la fotografíes.</li>
 	</ul>
 	<label>
-		<input type="checkbox" bind:checked={consent} />
+		<input type="checkbox" class="switch-3d" bind:checked={consent} />
 		Lo entiendo y quiero participar
 	</label>
-	<button type="button" disabled={!consent || sprite !== "ready" || !list} onclick={doGenerate}>
+	<button type="button" class="btn-3d" disabled={!consent || sprite !== "ready" || !list} onclick={doGenerate}>
 		Generar desechable
 	</button>
 {:else}
@@ -166,7 +166,7 @@ onMount(() => {
 	<section aria-labelledby="recall-title">
 		<h2 id="recall-title">Prueba de recuerdo</h2>
 		{#if !testing}
-			<button type="button" onclick={() => (testing = true)}>Probar recuerdo</button>
+			<button type="button" class="btn-3d" onclick={() => (testing = true)}>Probar recuerdo</button>
 		{:else}
 			<form
 				onsubmit={(e) => {
@@ -176,9 +176,9 @@ onMount(() => {
 			>
 				<label>
 					Escribe la desechable
-					<input name="st-recall" bind:value={recall} {...inputAttrs} />
+					<input class="field-3d" name="st-recall" bind:value={recall} {...inputAttrs} />
 				</label>
-				<button type="submit">Comprobar recuerdo</button>
+				<button type="submit" class="btn-3d">Comprobar recuerdo</button>
 			</form>
 		{/if}
 		<p aria-live="polite">{feedback}</p>
@@ -188,9 +188,9 @@ onMount(() => {
 			<h2 id="export-title">Resultado para enviar</h2>
 			<pre data-testid="study-export">{buildStudyExport(record)}</pre>
 			<div class="row">
-				<button type="button" onclick={copyExport}>Copiar resultado</button>
-				<button type="button" onclick={downloadICS}>Descargar .ics</button>
-				<button type="button" onclick={wipe}>Borrar huella</button>
+				<button type="button" class="btn-3d-secondary" onclick={copyExport}>Copiar resultado</button>
+				<button type="button" class="btn-3d-secondary" onclick={downloadICS}>Descargar .ics</button>
+				<button type="button" class="btn-3d-secondary" onclick={wipe}>Borrar huella</button>
 			</div>
 		</section>
 	{/if}
