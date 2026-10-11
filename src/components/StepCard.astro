@@ -1,0 +1,44 @@
+---
+interface Props {
+	n: string;
+	title: string;
+	text: string;
+}
+
+const { n, title, text } = Astro.props;
+---
+
+<li class="step">
+	<span class="step-n" aria-hidden="true">{n}</span>
+	<strong>{title}</strong>
+	<span>{text}</span>
+</li>
+
+<style>
+	.step {
+		display: grid;
+		gap: 0.35rem;
+		align-content: start;
+		padding: 1rem;
+		border-radius: 1.25rem;
+		border: 2px solid var(--surface-border);
+		background: var(--surface);
+		box-shadow: var(--shadow-2);
+		list-style: none;
+	}
+	.step-n {
+		width: 2.2rem;
+		height: 2.2rem;
+		display: grid;
+		place-items: center;
+		border-radius: 50%;
+		background: linear-gradient(180deg, var(--accent), var(--accent-dark));
+		border: 2px solid var(--accent-edge);
+		color: #fff;
+		font-weight: 800;
+		font-size: 1.1rem;
+		box-shadow:
+			0 3px 0 var(--accent-edge),
+			var(--shadow-1);
+	}
+</style>
