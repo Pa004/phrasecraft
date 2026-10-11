@@ -183,7 +183,9 @@ let schedule = $derived(reviewSchedule(new Date()));
 		</div>
 		{#if showPhrase}<p>{story}</p>{/if}
 
-		{#if stage === 1}
+		{#key stage}
+			<div class="stage-in">
+				{#if stage === 1}
 			<Scene {words} {layout} />
 			<p>Observa la escena con calma: {countdown} s (puedes saltar).</p>
 			<button type="button" class="primary" onclick={advance}>Listo</button>
@@ -255,8 +257,10 @@ let schedule = $derived(reviewSchedule(new Date()));
 					<input name="pc-final" bind:value={input5} {...inputAttrs} />
 				</label>
 				<button type="submit">Comprobar</button>
-			</form>
-		{/if}
+				</form>
+			{/if}
+			</div>
+		{/key}
 		<p aria-live="polite">{feedback}</p>
 	{:else}
 		<h3>¡Completado!</h3>
@@ -301,6 +305,8 @@ let schedule = $derived(reviewSchedule(new Date()));
 		border-radius: 0.5rem;
 		display: grid;
 		place-items: center;
+		background: var(--paper);
+		box-shadow: var(--shadow-1);
 	}
 	.tile svg {
 		width: 80%;

@@ -1,6 +1,7 @@
 <script lang="ts">
 import type { WordEntry } from "../lib/password/types.js";
 import { type LayoutName, layoutPositions } from "../lib/scene/layout.js";
+import { tilt } from "../lib/ui/tilt.js";
 
 interface Props {
 	words: WordEntry[];
@@ -19,31 +20,52 @@ let label = $derived(
 );
 </script>
 
-<svg
-	viewBox={`0 0 ${W} ${H}`}
-	role="img"
-	aria-label={label}
-	class="scene"
-	aria-hidden="false"
->
-	<rect class="sky" x="0" y="0" width={W} height={H} />
-	<ellipse class="hill far" cx={W * 0.2} cy={H * 1.05} rx={W * 0.45} ry={H * 0.45} />
-	<ellipse class="hill near" cx={W * 0.85} cy={H * 1.1} rx={W * 0.5} ry={H * 0.4} />
-	{#each words as word, i (word.id)}
-		{@const spot = spots[i]!}
-		{@const cx = spot.x * W}
-		{@const cy = spot.y * H}
-		<g class="pop" style={`animation-delay: ${i * 250}ms`}>
-			<g class="float" style={`animation-delay: ${(i * 670) % 4000}ms`}>
-				<use href={`#${word.icon}`} x={cx - SIZE / 2} y={cy - SIZE / 2} width={SIZE} height={SIZE} />
-				<circle class="badge" cx={cx + SIZE / 2 - 14} cy={cy - SIZE / 2 + 14} r="22" />
-				<text class="badge-num" x={cx + SIZE / 2 - 14} y={cy - SIZE / 2 + 14} text-anchor="middle" dominant-baseline="central">{i + 1}</text>
+<div class="tilt-stage" use:tilt={{ max: 7 }} data-testid="scene-tilt">
+	<svg
+		viewBox={`0 0 ${W} ${H}`}
+		role="img"
+		aria-label={label}
+		class="scene scene-plane"
+		aria-hidden="false"
+	>
+		<rect class="sky" x="0" y="0" width={W} height={H} />
+		<ellipse class="hill far" cx={W * 0.2} cy={H * 1.05} rx={W * 0.45} ry={H * 0.45} />
+		<ellipse class="hill near" cx={W * 0.85} cy={H * 1.1} rx={W * 0.5} ry={H * 0.4} />
+		{#each words as word, i (word.id)}
+			{@const spot = spots[i]!}
+			{@const cx = spot.x * W}
+			{@const cy = spot.y * H}
+			{@const depth = Math.round(spot.z * 70)}
+			{@const shadowRx = Math.round(SIZE * 0.5 * (0.75 + 0.5 * spot.z))}
+			<ellipse
+				class="ground-shadow"
+				cx={cx}
+				cy={cy + SIZE / 2 + 10}
+				rx={shadowRx}
+				ry="14"
+				opacity={(0.16 + 0.14 * spot.z).toFixed(2)}
+			/>
+			<g class="depth" style={`--lift: ${depth}px`}>
+				<g class="pop" style={`animation-delay: ${i * 250}ms`}>
+					<g class="float" style={`animation-delay: ${(i * 670) % 4000}ms`}>
+						<use href={`#${word.icon}`} x={cx - SIZE / 2} y={cy - SIZE / 2} width={SIZE} height={SIZE} />
+						<circle class="badge" cx={cx + SIZE / 2 - 14} cy={cy - SIZE / 2 + 14} r="22" />
+						<text class="badge-num" x={cx + SIZE / 2 - 14} y={cy - SIZE / 2 + 14} text-anchor="middle" dominant-baseline="central">{i + 1}</text>
+					</g>
+				</g>
 			</g>
-		</g>
-	{/each}
-</svg>
+		{/each}
+	</svg>
+</div>
 
 <style>
+	.tilt-stage {
+		perspective: 1200px;
+	}
+	.tilt-stage > svg {
+		transition: transform 0.25s ease-out;
+		transform-style: preserve-3d;
+	}
 	.scene {
 		width: 100%;
 		height: auto;
@@ -58,9 +80,11 @@ let label = $derived(
 	}
 	.hill.far {
 		fill: #7fb069;
+		transform: translateZ(-70px);
 	}
 	.hill.near {
 		fill: #4a7c59;
+		transform: translateZ(-30px);
 	}
 	@media (prefers-color-scheme: dark) {
 		.hill.far {
@@ -69,6 +93,18 @@ let label = $derived(
 		.hill.near {
 			fill: #1d2f27;
 		}
+	}
+	.ground-shadow {
+		fill: #000;
+	}
+	@media (prefers-color-scheme: dark) {
+		.ground-shadow {
+			fill: #000;
+			opacity: 0.5;
+		}
+	}
+	.depth {
+		transform: translateZ(var(--lift, 0px));
 	}
 	.pop {
 		opacity: 0;
@@ -102,11 +138,13 @@ let label = $derived(
 	}
 	.badge {
 		fill: var(--accent);
+		transform: translateZ(50px);
 	}
 	.badge-num {
 		fill: #fff;
 		font-size: 26px;
 		font-weight: 700;
+		transform: translateZ(50px);
 	}
 	@media (prefers-reduced-motion: reduce) {
 		.pop {
@@ -114,6 +152,9 @@ let label = $derived(
 		}
 		.float {
 			animation: none;
+		}
+		.tilt-stage > svg {
+			transition: none;
 		}
 	}
 	@keyframes fade-in {
