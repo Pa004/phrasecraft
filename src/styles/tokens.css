@@ -5,6 +5,50 @@ astro-static-slot {
 	display: contents;
 }
 
+/* Barra de progreso de práctica (solo cambia el ancho del relleno). */
+.progress {
+	height: 14px;
+	border-radius: 999px;
+	background: var(--surface-border);
+	box-shadow: inset 0 2px 4px rgb(26 26 46 / 0.25);
+	overflow: hidden;
+}
+
+.progress-fill {
+	height: 100%;
+	border-radius: 999px;
+	background: linear-gradient(180deg, var(--accent), var(--accent-dark));
+	transition: width 0.3s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.progress-fill {
+		transition: none;
+	}
+}
+
+/* Navegación principal: chips táctiles. */
+.nav-chip {
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	margin: 0.15rem;
+	border-radius: 999px;
+	border: 2px solid var(--surface-border);
+	background: var(--surface);
+	color: var(--ink);
+	font-weight: 600;
+	text-decoration: none;
+	box-shadow: var(--shadow-1);
+}
+
+.nav-chip:hover {
+	border-color: var(--accent);
+}
+
+.main-nav {
+	margin: 0.75rem 0;
+}
+
 /* Contenedor del sprite inyectado: fuera del flujo para CLS = 0. */
 .sprite-store {
 	position: absolute;
@@ -17,6 +61,10 @@ astro-static-slot {
 	--paper: #faf7f0;
 	--ink: #1a1a2e;
 	--accent: #e4582e;
+	--accent-dark: #b23c14;
+	--accent-edge: #7e2a0e;
+	--surface: #ffffff;
+	--surface-border: #e8e0d0;
 	--shadow-1: 0 1px 2px rgb(26 26 46 / 0.12), 0 2px 8px rgb(26 26 46 / 0.1);
 	--shadow-2: 0 2px 4px rgb(26 26 46 / 0.14), 0 8px 24px rgb(26 26 46 / 0.16);
 	--shadow-3: 0 4px 8px rgb(26 26 46 / 0.16), 0 16px 40px rgb(26 26 46 / 0.22);
@@ -26,6 +74,11 @@ astro-static-slot {
 	:root {
 		--paper: #1a1a2e;
 		--ink: #faf7f0;
+		--surface: #23233a;
+		--surface-border: #38385c;
+		--shadow-1: 0 1px 2px rgb(0 0 0 / 0.4), 0 2px 8px rgb(0 0 0 / 0.35);
+		--shadow-2: 0 2px 4px rgb(0 0 0 / 0.45), 0 10px 28px rgb(0 0 0 / 0.5);
+		--shadow-3: 0 4px 8px rgb(0 0 0 / 0.5), 0 18px 44px rgb(0 0 0 / 0.55);
 	}
 }
 
@@ -33,6 +86,200 @@ body {
 	background: var(--paper);
 	color: var(--ink);
 	font-family: system-ui, sans-serif;
+}
+
+/* Botón chunky: bisel físico que colapsa al presionar. Texto blanco sobre
+   gradiente oscuro (contraste ≥ 4.5 en ambos modos). */
+.btn-3d {
+	appearance: none;
+	border: 2px solid var(--accent-edge);
+	border-radius: 14px;
+	background: linear-gradient(180deg, var(--accent) 0%, var(--accent-dark) 100%);
+	color: #fff;
+	font-weight: 700;
+	min-height: 48px;
+	padding: 0.7rem 1.4rem;
+	cursor: pointer;
+	box-shadow: 0 5px 0 var(--accent-edge), var(--shadow-2);
+	transition: transform 0.08s ease-out, box-shadow 0.08s ease-out;
+}
+
+.btn-3d:hover:not(:disabled) {
+	filter: brightness(1.06);
+}
+
+.btn-3d:active:not(:disabled) {
+	transform: translateY(4px);
+	box-shadow: 0 1px 0 var(--accent-edge), var(--shadow-1);
+}
+
+.btn-3d:disabled {
+	cursor: not-allowed;
+	filter: grayscale(0.6);
+	opacity: 0.65;
+	box-shadow: var(--shadow-1);
+}
+
+.btn-3d-secondary {
+	appearance: none;
+	border: 2px solid var(--surface-border);
+	border-radius: 12px;
+	background: var(--surface);
+	color: var(--ink);
+	font-weight: 600;
+	min-height: 44px;
+	padding: 0.55rem 1rem;
+	cursor: pointer;
+	box-shadow: 0 4px 0 var(--surface-border), var(--shadow-1);
+	transition: transform 0.08s ease-out, box-shadow 0.08s ease-out;
+}
+
+.btn-3d-secondary:active:not(:disabled) {
+	transform: translateY(3px);
+	box-shadow: 0 1px 0 var(--surface-border), var(--shadow-1);
+}
+
+.btn-3d-secondary:disabled {
+	cursor: not-allowed;
+	opacity: 0.6;
+	box-shadow: var(--shadow-1);
+}
+
+.btn-3d:focus-visible,
+.btn-3d-secondary:focus-visible {
+	outline: 3px solid var(--accent);
+	outline-offset: 2px;
+}
+
+/* Tarjeta elevada con superficie contrastada y highlight superior. */
+.card-3d {
+	background: var(--surface);
+	border: 2px solid var(--surface-border);
+	border-radius: 1.25rem;
+	box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.12), var(--shadow-3);
+}
+
+/* Slider custom (input nativo: teclado y lector intactos). */
+input[type="range"].slider-3d {
+	appearance: none;
+	-webkit-appearance: none;
+	height: 12px;
+	border-radius: 999px;
+	background: var(--surface-border);
+	box-shadow: inset 0 2px 4px rgb(26 26 46 / 0.25);
+	min-height: 0;
+	padding: 0;
+}
+
+input[type="range"].slider-3d::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: radial-gradient(
+		circle at 35% 30%,
+		var(--accent),
+		var(--accent-dark) 75%
+	);
+	border: 2px solid var(--accent-edge);
+	box-shadow: 0 3px 0 var(--accent-edge), var(--shadow-1);
+	cursor: pointer;
+}
+
+input[type="range"].slider-3d::-moz-range-thumb {
+	width: 26px;
+	height: 26px;
+	border-radius: 50%;
+	background: radial-gradient(
+		circle at 35% 30%,
+		var(--accent),
+		var(--accent-dark) 75%
+	);
+	border: 2px solid var(--accent-edge);
+	box-shadow: 0 3px 0 var(--accent-edge), var(--shadow-1);
+	cursor: pointer;
+}
+
+input[type="range"].slider-3d:disabled {
+	opacity: 0.6;
+}
+
+input[type="range"].slider-3d:focus-visible {
+	outline: 3px solid var(--accent);
+	outline-offset: 4px;
+}
+
+/* Switch custom sobre checkbox nativo. */
+.switch-3d {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 54px;
+	height: 30px;
+	border-radius: 999px;
+	background: var(--surface-border);
+	border: 2px solid var(--surface-border);
+	box-shadow: inset 0 2px 5px rgb(26 26 46 / 0.3);
+	cursor: pointer;
+	position: relative;
+	flex: none;
+}
+
+.switch-3d::after {
+	content: "";
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background: radial-gradient(circle at 35% 30%, #ffffff, #d8d2c2 80%);
+	box-shadow: 0 2px 0 rgb(26 26 46 / 0.35);
+	transition: left 0.15s ease-out;
+}
+
+.switch-3d:checked {
+	background: linear-gradient(180deg, var(--accent), var(--accent-dark));
+	border-color: var(--accent-edge);
+}
+
+.switch-3d:checked::after {
+	left: 23px;
+}
+
+.switch-3d:focus-visible {
+	outline: 3px solid var(--accent);
+	outline-offset: 2px;
+}
+
+.switch-3d:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+/* Campos de texto con profundidad interior. */
+.field-3d {
+	background: var(--surface);
+	border: 2px solid var(--surface-border);
+	border-radius: 10px;
+	box-shadow: inset 0 2px 5px rgb(26 26 46 / 0.18);
+	color: var(--ink);
+	min-height: 44px;
+	font-size: 1rem;
+	padding: 0.4rem 0.6rem;
+}
+
+.field-3d:focus {
+	outline: 3px solid var(--accent);
+	outline-offset: 1px;
+	border-color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.btn-3d,
+	.btn-3d-secondary,
+	.switch-3d::after {
+		transition: none;
+	}
 }
 
 /* Títulos con profundidad: misma rampa en las 4 páginas. */

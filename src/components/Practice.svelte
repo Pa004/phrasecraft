@@ -173,12 +173,22 @@ let schedule = $derived(reviewSchedule(new Date()));
 	<h2 id="practice-title">Practica tu escena</h2>
 
 	{#if !done}
+		<div
+			class="progress"
+			role="progressbar"
+			aria-label={`Etapa ${stage} de 5`}
+			aria-valuemin={1}
+			aria-valuemax={5}
+			aria-valuenow={stage}
+		>
+			<div class="progress-fill" style={`width: ${(stage / 5) * 100}%`}></div>
+		</div>
 		<p>Etapa {stage} de 5 · {STAGE_NAMES[stage as Exclude<Stage, "done">]}</p>
 		<div class="hint-row">
-			<button type="button" onclick={() => ((hints += 1), (showPhrase = !showPhrase))}>
+			<button type="button" class="btn-3d-secondary" onclick={() => ((hints += 1), (showPhrase = !showPhrase))}>
 				{showPhrase ? "Ocultar frase" : "Ver frase (pista)"}
 			</button>
-			<button type="button" onclick={() => ((hints += 1), (showFirst = true))}>Primera letra (pista)</button>
+			<button type="button" class="btn-3d-secondary" onclick={() => ((hints += 1), (showFirst = true))}>Primera letra (pista)</button>
 			<span>Pistas usadas: {hints} · Intentos: {attempts}</span>
 		</div>
 		{#if showPhrase}<p>{story}</p>{/if}
@@ -188,7 +198,7 @@ let schedule = $derived(reviewSchedule(new Date()));
 				{#if stage === 1}
 			<Scene {words} {layout} />
 			<p>Observa la escena con calma: {countdown} s (puedes saltar).</p>
-			<button type="button" class="primary" onclick={advance}>Listo</button>
+			<button type="button" class="primary btn-3d" onclick={advance}>Listo</button>
 		{:else if stage === 2}
 			<div class="grid">
 				{#each words as word, i (word.id)}
@@ -211,25 +221,25 @@ let schedule = $derived(reviewSchedule(new Date()));
 			>
 				<label
 					>Palabra {hidden[0]! + 1}
-					<input name="pc-w-a" bind:value={inputs2[0]} placeholder={showFirst ? words[hidden[0]]!.es[0] : ""} {...inputAttrs} />
+					<input class="field-3d" name="pc-w-a" bind:value={inputs2[0]} placeholder={showFirst ? words[hidden[0]]!.es[0] : ""} {...inputAttrs} />
 				</label>
 				<label
 					>Palabra {hidden[1]! + 1}
-					<input name="pc-w-b" bind:value={inputs2[1]} placeholder={showFirst ? words[hidden[1]]!.es[0] : ""} {...inputAttrs} />
+					<input class="field-3d" name="pc-w-b" bind:value={inputs2[1]} placeholder={showFirst ? words[hidden[1]]!.es[0] : ""} {...inputAttrs} />
 				</label>
-				<button type="submit">Comprobar</button>
+				<button type="submit" class="btn-3d">Comprobar</button>
 			</form>
 		{:else if stage === 3}
 			<ol>
 				{#each order as word, i (word.id)}
 					<li data-testid="order-item" data-word={word.es}>
 						<svg viewBox="0 0 110 110" aria-label={word.es}><use href={`#${word.icon}`} width="110" height="110" /></svg>
-						<button type="button" aria-label={`Subir ${word.es}`} disabled={i === 0} onclick={() => move(i, -1)}>Subir</button>
-						<button type="button" aria-label={`Bajar ${word.es}`} disabled={i === order.length - 1} onclick={() => move(i, 1)}>Bajar</button>
+						<button type="button" class="btn-3d-secondary" aria-label={`Subir ${word.es}`} disabled={i === 0} onclick={() => move(i, -1)}>Subir</button>
+						<button type="button" class="btn-3d-secondary" aria-label={`Bajar ${word.es}`} disabled={i === order.length - 1} onclick={() => move(i, 1)}>Bajar</button>
 					</li>
 				{/each}
 			</ol>
-			<button type="button" onclick={check3}>Comprobar orden</button>
+			<button type="button" class="btn-3d" onclick={check3}>Comprobar orden</button>
 		{:else if stage === 4}
 			<form
 				onsubmit={(e) => {
@@ -240,10 +250,10 @@ let schedule = $derived(reviewSchedule(new Date()));
 				{#each words as word, i (word.id)}
 					<label
 						>Palabra {i + 1}
-						<input name={`pc-r-${i}`} bind:value={inputs4[i]} placeholder={showFirst ? word.es[0] : ""} {...inputAttrs} />
+						<input class="field-3d" name={`pc-r-${i}`} bind:value={inputs4[i]} placeholder={showFirst ? word.es[0] : ""} {...inputAttrs} />
 					</label>
 				{/each}
-				<button type="submit">Comprobar</button>
+				<button type="submit" class="btn-3d">Comprobar</button>
 			</form>
 		{:else if stage === 5}
 			<form
@@ -254,9 +264,9 @@ let schedule = $derived(reviewSchedule(new Date()));
 			>
 				<label
 					>Contraseña completa, tal como se genera
-					<input name="pc-final" bind:value={input5} {...inputAttrs} />
+					<input class="field-3d" name="pc-final" bind:value={input5} {...inputAttrs} />
 				</label>
-				<button type="submit">Comprobar</button>
+				<button type="submit" class="btn-3d">Comprobar</button>
 				</form>
 			{/if}
 			</div>
@@ -272,8 +282,8 @@ let schedule = $derived(reviewSchedule(new Date()));
 			{/each}
 		</ul>
 		<div class="row">
-			<button type="button" onclick={downloadICS}>Descargar recordatorio .ics</button>
-			<button type="button" onclick={enableReminders}>Activar avisos en este dispositivo</button>
+			<button type="button" class="btn-3d-secondary" onclick={downloadICS}>Descargar recordatorio .ics</button>
+			<button type="button" class="btn-3d-secondary" onclick={enableReminders}>Activar avisos en este dispositivo</button>
 		</div>
 		<p aria-live="polite">{feedback}</p>
 	{/if}

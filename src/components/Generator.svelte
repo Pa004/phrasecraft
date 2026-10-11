@@ -125,10 +125,10 @@ async function copy(): Promise<void> {
 	<div class="controls">
 		<label>
 			Palabras: {k}
-			<input type="range" min="4" max="12" step="1" bind:value={k} disabled={!ready} />
+			<input type="range" class="slider-3d" min="4" max="12" step="1" bind:value={k} disabled={!ready} />
 		</label>
 		<label class="switch">
-			<input type="checkbox" bind:checked={compat} disabled={!ready} />
+			<input type="checkbox" class="switch-3d" bind:checked={compat} disabled={!ready} />
 			Modo compatibilidad (mayúsculas, dígitos y símbolo)
 		</label>
 		<p
@@ -140,7 +140,7 @@ async function copy(): Promise<void> {
 			<p role="alert">Atención: por debajo de 60 bits. Úsalo solo si el sitio lo exige.</p>
 		{/if}
 	</div>
-	<button type="button" class="primary" disabled={!ready} onclick={doGenerate}>
+	<button type="button" class="primary btn-3d" disabled={!ready} onclick={doGenerate}>
 		Generar mi escena
 	</button>
 	<p class="loadnote" aria-live="polite">{ready ? "" : "Cargando escena…"}</p>
@@ -150,20 +150,20 @@ async function copy(): Promise<void> {
 		<div aria-live="polite">
 			<Scene words={result.words} {layout} />
 			<p class="story">{story}</p>
-			<div class="card">
+			<div class="card card-3d">
 				<code aria-label={shown ? "Contraseña generada" : "Contraseña oculta"}>{shown ? result.text : masked}</code>
 				<div class="row">
-					<button type="button" aria-pressed={shown} onclick={() => (shown = !shown)}>
+					<button type="button" class="btn-3d-secondary" aria-pressed={shown} onclick={() => (shown = !shown)}>
 						{shown ? "Ocultar" : "Mostrar"}
 					</button>
-					<button type="button" onclick={copy}>Copiar</button>
-					<button type="button" onclick={newStory}>Otra historia</button>
-					<button type="button" onclick={doGenerate}>Generar otra</button>
+					<button type="button" class="btn-3d-secondary" onclick={copy}>Copiar</button>
+					<button type="button" class="btn-3d-secondary" onclick={newStory}>Otra historia</button>
+					<button type="button" class="btn-3d-secondary" onclick={doGenerate}>Generar otra</button>
 				</div>
 				<p class="warn">Esta escena <strong>es</strong> tu contraseña: no la captures ni la compartas.</p>
 				{#if notice}<p>{notice}</p>{/if}
 				{#if !practicing}
-					<button type="button" class="primary" onclick={() => ((practicing = true), (runId += 1))}>
+					<button type="button" class="primary btn-3d" onclick={() => ((practicing = true), (runId += 1))}>
 						Practicar esta escena
 					</button>
 				{:else}
@@ -185,24 +185,21 @@ async function copy(): Promise<void> {
 	.primary {
 		font-size: 1.25rem;
 		padding: 0.9rem 1.6rem;
-		min-height: 44px;
 	}
 	.loadnote {
 		min-height: 1.5em;
 		margin: 0.25rem 0 0;
 	}
 	.story {
-		font-size: 1.1rem;
-		line-height: 1.6;
+		font-size: 1.25rem;
+		line-height: 1.7;
+		max-width: 40rem;
 	}
 	.card {
 		display: grid;
 		gap: 0.75rem;
 		margin-top: 1rem;
 		padding: 1rem;
-		border-radius: 1rem;
-		background: var(--paper);
-		box-shadow: var(--shadow-2);
 	}
 	.card code {
 		font-size: 1.1rem;
@@ -212,14 +209,6 @@ async function copy(): Promise<void> {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.5rem;
-	}
-	.row button {
-		min-height: 44px;
-		box-shadow: var(--shadow-1);
-	}
-	.row button:active {
-		transform: translateY(1px);
-		box-shadow: none;
 	}
 	.warn {
 		border-left: 4px solid var(--accent);

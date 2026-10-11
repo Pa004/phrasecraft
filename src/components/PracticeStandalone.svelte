@@ -69,22 +69,22 @@ function lock(): void {
 	<div class="controls">
 		<label>
 			Palabras: {k}
-			<input type="range" min="4" max="12" step="1" bind:value={k} disabled={!ready} />
+			<input type="range" class="slider-3d" min="4" max="12" step="1" bind:value={k} disabled={!ready} />
 		</label>
 		<label>
-			<input type="checkbox" bind:checked={compat} disabled={!ready} />
+			<input type="checkbox" class="switch-3d" bind:checked={compat} disabled={!ready} />
 			Modo compatibilidad
 		</label>
 		<p>Entropía: <strong>{liveBits.toFixed(1)} bits</strong></p>
 	</div>
-	<button type="button" class="primary" disabled={!ready} onclick={doGenerate}>
+	<button type="button" class="primary btn-3d" disabled={!ready} onclick={doGenerate}>
 		Generar para practicar
 	</button>
 	<p class="loadnote" aria-live="polite">{ready ? "" : "Cargando escena…"}</p>
 {:else if !practicing}
 		<p>Escena lista con {result.words.length} palabras.</p>
-		<button type="button" class="primary" onclick={() => ((practicing = true), (runId += 1))}>Practicar</button>
-		<button type="button" onclick={doGenerate}>Generar otra</button>
+		<button type="button" class="primary btn-3d" onclick={() => ((practicing = true), (runId += 1))}>Practicar</button>
+		<button type="button" class="btn-3d-secondary" onclick={doGenerate}>Generar otra</button>
 	{:else}
 		<AutoLock active={true} onLock={lock} />
 		{#key runId}
