@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { SYMBOLS } from "./entropy";
 import {
+	capitalizeAscii,
 	formatCompatBase,
 	formatStandard,
 	randomDigits,
@@ -28,5 +29,8 @@ describe("format", () => {
 	it("deberia generar 2 digitos y 1 simbolo del set", () => {
 		expect(randomDigits(2)).toMatch(/^\d{2}$/);
 		expect(SYMBOLS).toContain(randomSymbol());
+	});
+	it("capitaliza vacio sin romper", () => {
+		expect(capitalizeAscii("")).toBe("");
 	});
 });

@@ -4,6 +4,17 @@ Una escena absurda para recordar **una sola** contraseña de verdad: tu maestra 
 
 Demo: https://phrasecraft.pages.dev (Cloudflare Pages, preview por PR). Para el resto de tus cuentas, usa un gestor de contraseñas.
 
+![Demo: generar una escena](public/demo.gif)
+
+## Metricas verificadas (CI en verde)
+
+- Entropia por defecto: `k=8` ≈ 72 bits (`es-v0-draft`, 501 palabras).
+- 0 peticiones tras Generar + 0 dependientes de las palabras (e2e con `serviceWorkers: block`).
+- Lighthouse CI ≥ 0.95 en Rendimiento, Accesibilidad, Buenas prácticas y SEO en `/`, `/practicar`, `/seguridad`, `/estudio`; LCP < 2 s, CLS = 0.
+- Cobertura `src/lib/**`: 100 % líneas y funciones.
+- axe-core: 0 violaciones críticas/serias en `/` y `/practicar`.
+- Presupuestos: JS inicial 42 KB gzip (≤ 150), sprite 197 KB brotli (≤ 600), `words.json` 8.3 KB gzip (≤ 40).
+
 ## Como funciona
 
 - Palabras aleatorias con `crypto.getRandomValues` y muestreo por rechazo, sin duplicados. Entropia exacta `bitsDistinct(n,k)`; por defecto el menor `k` con >= 70 bits (lista `es-v0-draft`: 501 palabras dibujables, `k=8` ≈ 72 bits).
@@ -23,13 +34,23 @@ Demo: https://phrasecraft.pages.dev (Cloudflare Pages, preview por PR). Para el 
 
 Se defiende: logs servidor/CDN (sprite unico), shoulder-surfing (oculto por defecto + reveal por palabra), XSS (sin `dangerouslySetInnerHTML`, CSP estricta), persistencia accidental (nada en storage/cookies/historial), sesgo (rechazo). Fuera de alcance: malware/keyloggers, extensiones maliciosas, capturas compartidas, borrado garantizado de memoria JS. Al copiar se intenta borrar a los 30 s (best-effort). Auto-bloqueo a los 5 min + limpieza en `pagehide`.
 
-## Estudio de recuerdo (pendiente Fase 9)
+## Estudio de recuerdo (protocolo abierto, resultados pendientes)
 
-Con contrasena desechable en `/estudio` (solo se guarda `{salt, hash, createdAt}` con SHA-256, nunca la real). Meta: >= 10 voluntarios, % recuerdo a 24 h y 7 d publicado aqui con limitaciones (n pequeno, no representativo).
+Con contrasena desechable en `/estudio` (solo se guarda `{salt, hash, createdAt}` con SHA-256, nunca la real).
+
+Protocolo: >= 10 voluntarios, instrucciones identicas, 5 minutos de practica con la app. Medidas: recuerdo completo (todas), parcial (>= 5 de 8), intentos, tiempo al primer acierto. Pruebas a 24 h y 7 d desde "Copiar resultado" (JSON sin datos personales).
+
+| Medida | 24 h | 7 d |
+|---|---|---|
+| Recuerdo completo | — | — |
+| Recuerdo parcial | — | — |
+| Intentos medios | — | — |
+
+Limitaciones: n pequeno, no representativo, sin grupo control. No afirma generalidad.
 
 ## Stack (fijado, innova vs perfil)
 
-Astro 5 + Svelte 5 islands (`client:visible`), Panda CSS tokens, animacion CSS + View Transitions (sin `motion`), Deno 2 tasks + Biome 2, Cloudflare Pages + `_headers`, Fluent Emoji flat MIT (`@fluentui-emoji/sprite`), Vitest + Playwright + axe-core + LHCI. Fuente variable autoalojada (1 sola). Runtime UI: Svelte + Astro, iconos UI `lucide-svelte`. Ver `package.json` y `deno.json`.
+Astro 5 + Svelte 5 islands (`client:load`, hidratación parcial), Panda CSS tokens, animación solo CSS (`transform`/`opacity`, respeta `prefers-reduced-motion`, sin `motion`), Deno 2 tasks + Biome 2, Cloudflare Pages + `_headers`, Fluent Emoji flat MIT (`@fluentui-emoji/sprite`), Vitest + Playwright + axe-core + LHCI. Pila de sistema (sin fuentes externas). Ver `package.json` y `deno.json`.
 
 ## Comandos
 
@@ -42,6 +63,16 @@ Astro 5 + Svelte 5 islands (`client:visible`), Panda CSS tokens, animacion CSS +
 ## Ramas
 
 `main` protegida. Una rama por fase (`phase-0-scaffold`, `phase-1-crypto`, ...). Preview Cloudflare por PR. Merge solo con `check` verde. Commits Conventional Commits (`feat:`, `fix:`, `test:`, `docs:`, `chore:`).
+
+## Release y deploy
+
+Hash SHA-256 del `dist/` de referencia (21 ficheros, build local): `b1768079841739f4db3971266733ab1c5a235cb64c564aeeebb42369c1044152`. Para verificar: `npm ci && npm run build` y comparar.
+
+Deploy (pendiente, lo hace el dueño con su cuenta):
+
+1. Cloudflare Dashboard → Pages → conectar repo `Pa004/phrasecraft`, build `npm run build`, salida `dist`.
+2. Las cabeceras de `public/_headers` (CSP, `immutable` para iconos) aplican solas.
+3. Publicar el hash del build desplegado en cada release de GitHub.
 
 ## Licencias y atribucion
 
