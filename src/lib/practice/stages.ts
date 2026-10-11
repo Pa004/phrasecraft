@@ -21,7 +21,7 @@ export function pickHidden(
 	const a = Math.floor(rand() * n);
 	let b = Math.floor(rand() * n);
 	while (b === a) b = Math.floor(rand() * n);
-	return a < b ? [a, b] : [b, a];
+	return [Math.min(a, b), Math.max(a, b)];
 }
 
 /** Mezcla Fisher-Yates para la etapa 3 (no criptográfico). */

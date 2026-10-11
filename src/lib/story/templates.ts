@@ -28,10 +28,8 @@ function pickUsable(
 	rand: Rand,
 ): VerbEntry {
 	const usable = bank.filter((v) => !v.needsAnimateSubject || subject.animate);
-	const pool =
-		usable.length > 0 ? usable : bank.filter((v) => !v.needsAnimateSubject);
-	const fallback = pool.length > 0 ? pool : bank;
-	return fallback[rand(fallback.length)]!;
+	// Contrato: cada banco tiene verbos neutros (ver verbs.test.ts), usable nunca queda vacío.
+	return usable[rand(usable.length)]!;
 }
 
 function transitiveClause(s: WordEntry, o: WordEntry, rand: Rand): string {

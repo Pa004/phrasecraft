@@ -29,6 +29,8 @@ describe("banco de verbos", () => {
 		expect(TRANSITIVE.length).toBeGreaterThanOrEqual(40);
 		expect(INTRANSITIVE.length).toBeGreaterThanOrEqual(20);
 		for (const v of INTRANSITIVE) expect(v.prep).toBeTruthy();
+		expect(TRANSITIVE.some((v) => !v.needsAnimateSubject)).toBe(true);
+		expect(INTRANSITIVE.some((v) => !v.needsAnimateSubject)).toBe(true);
 	});
 	it("sin violencia ni denylist", () => {
 		for (const v of [...TRANSITIVE, ...INTRANSITIVE]) {

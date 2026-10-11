@@ -48,4 +48,9 @@ describe("pickDistinctIndices", () => {
 	it("deberia lanzar cuando k > n", () => {
 		expect(() => pickDistinctIndices(3, 4)).toThrow(RangeError);
 	});
+	it("deberia validar n y k", () => {
+		expect(() => pickDistinctIndices(0, 0)).toThrow(RangeError);
+		expect(() => pickDistinctIndices(5, -1)).toThrow(RangeError);
+		expect(pickDistinctIndices(5, 0)).toEqual([]);
+	});
 });

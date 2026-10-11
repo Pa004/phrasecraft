@@ -48,6 +48,11 @@ describe("buildStory", () => {
 		expect(text[0]).toBe(text[0]!.toUpperCase());
 	});
 
+	it("aleatoriedad por defecto sin semilla", () => {
+		const text = buildStory(SEVEN.slice(0, 3));
+		expect(text.endsWith(".")).toBe(true);
+	});
+
 	it("200 semillas fijas generan historias estables", () => {
 		for (let seed = 0; seed < 200; seed++) {
 			expect(buildStory(SEVEN, { rand: mulberry32(seed) })).toMatchSnapshot();

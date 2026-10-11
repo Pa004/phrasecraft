@@ -55,6 +55,14 @@ describe("contracciones", () => {
 			"de la mesa",
 		);
 	});
+	it("preposiciones sueltas a/de con masculino", () => {
+		expect(nounPhrase(w("volcán", "m"), { definite: true, prep: "a" })).toBe(
+			"al volcán",
+		);
+		expect(nounPhrase(w("lápiz", "m"), { definite: false, prep: "de" })).toBe(
+			"de un lápiz",
+		);
+	});
 });
 
 describe("finishSentence", () => {

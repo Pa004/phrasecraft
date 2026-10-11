@@ -14,4 +14,11 @@ describe("ics", () => {
 		expect(ics).not.toContain("camion");
 		expect(ics.split("\r\n").length).toBeGreaterThan(8);
 	});
+	it("resumen por defecto sin datos sensibles", () => {
+		const ics = buildReminderICS({ date: new Date("2026-01-03T10:00:00Z") });
+		expect(ics).toContain("SUMMARY:Repasa tu escena");
+		expect(ics).toContain(
+			"DESCRIPTION:Repasa tu escena mentalmente. Sin contraseñas aquí.",
+		);
+	});
 });
