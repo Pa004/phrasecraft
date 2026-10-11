@@ -2,6 +2,7 @@ node_modules/
 dist/
 .astro/
 .lighthouseci/
+lhci*.txt
 coverage/
 playwright-report/
 test-results/
