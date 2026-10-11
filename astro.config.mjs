@@ -4,6 +4,8 @@ import { defineConfig } from "astro/config";
 
 export default defineConfig({
 	output: "static",
+	// Nunca CSS en línea: la CSP bloquea <style> y el despliegue quedaría sin estilos.
+	build: { inlineStylesheets: "never" },
 	integrations: [
 		svelte(),
 		AstroPWA({
