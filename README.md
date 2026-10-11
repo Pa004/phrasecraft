@@ -28,7 +28,7 @@ Demo: https://phrasecraft.pages.dev (Cloudflare Pages, preview por PR). Para el 
 1. Abre DevTools > Network, pulsa Generar: **0 peticiones** tras generar. Todas las peticiones son mismo origen.
 2. `npm run build` y compara el hash publicado en cada release con tu build local.
 3. `node scripts/validate-wordlist.mjs`: falla si hay ascii duplicado, longitud fuera de 4-9, Levenshtein < 2, colision fonetica o falta icono.
-4. CSP en `public/_headers` (sin `unsafe-inline`), `Referrer-Policy: no-referrer`. Sin scripts ni fuentes de terceros.
+4. CSP en `public/_headers` (sin `unsafe-inline`; los 2 scripts inline de Astro van pineados por hash y `security:check-csp` lo verifica en CI tras el build). Sin scripts ni fuentes de terceros.
 
 ## Modelo de amenazas (resumen)
 

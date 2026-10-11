@@ -21,6 +21,7 @@ jobs:
       - run: npx vitest run
       - run: node scripts/validate-wordlist.mjs
       - run: npm run build
+      - run: npm run security:check-csp
   e2e:
     runs-on: ubuntu-latest
     steps:
