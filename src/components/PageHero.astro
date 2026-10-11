@@ -1,0 +1,50 @@
+---
+interface Props {
+	badge: string;
+	title: string;
+	sub: string;
+	ctaHref?: string;
+	ctaLabel?: string;
+}
+
+const { badge, title, sub, ctaHref, ctaLabel } = Astro.props;
+---
+
+<div class="hero">
+	<p class="hero-badge">{badge}</p>
+	<h1 class="title-3d">{title}</h1>
+	<p class="hero-sub">{sub}</p>
+	<slot name="stats" />
+	{ctaHref && ctaLabel && (
+		<p>
+			<a class="btn-3d hero-cta" href={ctaHref}>{ctaLabel}</a>
+		</p>
+	)}
+	<slot />
+</div>
+
+<style>
+	.hero {
+		padding: 2.5rem 0 1.5rem;
+		max-width: 44rem;
+	}
+	.hero-badge {
+		display: inline-block;
+		font-size: 0.85rem;
+		font-weight: 700;
+		padding: 0.35rem 0.9rem;
+		border-radius: 999px;
+		border: 2px solid var(--surface-border);
+		background: var(--surface);
+		box-shadow: var(--shadow-1);
+	}
+	.hero-sub {
+		font-size: 1.2rem;
+		line-height: 1.6;
+	}
+	.hero-cta {
+		display: inline-block;
+		text-decoration: none;
+		font-size: 1.15rem;
+	}
+</style>

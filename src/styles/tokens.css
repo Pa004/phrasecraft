@@ -41,8 +41,40 @@ astro-static-slot {
 	box-shadow: var(--shadow-1);
 }
 
+/* Navegación principal: chips táctiles. */
 .nav-chip:hover {
 	border-color: var(--accent);
+}
+
+/* Rejillas de sistema: pasos y bento (los <li> viven en componentes con scope). */
+.steps,
+.bento {
+	display: grid;
+	gap: 0.75rem;
+	padding: 0;
+	margin: 1rem 0;
+	list-style: none;
+}
+
+.stats {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin: 1rem 0;
+	padding: 0;
+	list-style: none;
+}
+
+@media (min-width: 720px) {
+	.steps {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.bento {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.bento > .wide {
+		grid-column: 1 / -1;
+	}
 }
 
 .main-nav {

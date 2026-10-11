@@ -1,5 +1,12 @@
 ---
+import BgField from "../components/BgField.svelte";
+import Board from "../components/Board.astro";
+import FeatureBento from "../components/FeatureBento.astro";
+import Footer from "../components/Footer.astro";
 import Generator from "../components/Generator.svelte";
+import PageHero from "../components/PageHero.astro";
+import StatBadge from "../components/StatBadge.astro";
+import StepCard from "../components/StepCard.astro";
 import "../styles/tokens.css";
 ---
 <html lang="es">
@@ -15,9 +22,21 @@ import "../styles/tokens.css";
 		<title>phrasecraft — una escena, una contraseña maestra</title>
 	</head>
 	<body>
+		<BgField client:idle />
 		<header>
-			<h1 class="title-3d">phrasecraft</h1>
-			<p>Una escena absurda para recordar una sola contraseña de verdad: tu maestra del gestor, tu equipo, tu disco.</p>
+			<PageHero
+				badge="100% privado · sin cuentas · sin rastreo"
+				title="phrasecraft"
+				sub="Una escena absurda para recordar una sola contraseña de verdad: tu maestra del gestor, tu equipo, tu disco."
+				ctaHref="#generar"
+				ctaLabel="Generar mi escena"
+			>
+				<ul class="stats" slot="stats" aria-label="Datos clave">
+					<StatBadge value="72 bits" label="de entropía por defecto" />
+					<StatBadge value="0" label="peticiones de red al generar" />
+					<StatBadge value="5" label="etapas para memorizarla" />
+				</ul>
+			</PageHero>
 			<nav class="main-nav" aria-label="Principal">
 				<a class="nav-chip" href="/practicar">Practicar</a>
 				<a class="nav-chip" href="/seguridad">Seguridad</a>
@@ -25,17 +44,34 @@ import "../styles/tokens.css";
 			</nav>
 		</header>
 		<main>
-			<Generator client:load />
+			<Board title="Tablero de escena" id="generar">
+				<Generator client:load />
+			</Board>
+			<section aria-labelledby="como">
+				<h2 id="como">Cómo funciona</h2>
+				<ol class="steps">
+					<StepCard n="1" title="Genera" text="Un clic crea palabras al azar unidas por una frase absurda y una escena numerada." />
+					<StepCard n="2" title="Practica" text="5 etapas guiadas en minutos, todo en tu navegador y sin guardar nada." />
+					<StepCard n="3" title="Recuerda" text="Una sola contraseña maestra para lo importante; repásala a 1, 3 y 7 días." />
+				</ol>
+			</section>
+			<section aria-labelledby="confia">
+				<h2 id="confia">Por qué confiar</h2>
+				<ul class="bento">
+					<FeatureBento title="Privacidad real" text="Al pulsar Generar no sale ninguna petición de red: un único sprite idéntico para todos, precacheado." />
+					<FeatureBento title="Seguridad honesta" text="Kerckhoffs: el atacante conoce el método y la lista. La fuerza viene solo de la aleatoriedad." />
+					<FeatureBento title="Memoria guiada" text="Escena + frase + repaso espaciado: tres anclas en vez de una lista de palabras." />
+					<FeatureBento title="Abierto y offline" text="Código abierto, PWA instalable y usable sin conexión. Sin cuentas ni rastreo." span />
+				</ul>
+			</section>
 			<section aria-labelledby="uso">
 				<h2 id="uso">Úsala bien</h2>
 				<ul>
 					<li>Úsala para tu contraseña maestra. Para el resto de tus cuentas, usa un gestor de contraseñas.</li>
-					<li>Todo ocurre en tu navegador: al pulsar Generar no sale ninguna petición de red.</li>
+					<li>Esta escena <strong>es</strong> tu contraseña: no la captures ni la compartas.</li>
 				</ul>
 			</section>
 		</main>
-		<footer>
-			<p><small>Sin cuentas, sin rastreo. Código abierto.</small></p>
-		</footer>
+		<Footer />
 	</body>
 </html>
