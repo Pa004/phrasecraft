@@ -123,7 +123,7 @@ onMount(() => {
 	};
 
 	const io = new IntersectionObserver(([entry]) => {
-		if (entry && entry.isIntersecting) start();
+		if (entry?.isIntersecting) start();
 		else stop();
 	});
 	io.observe(el);
