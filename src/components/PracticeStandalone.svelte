@@ -20,6 +20,7 @@ import Practice from "./Practice.svelte";
 import SpriteProvider from "./SpriteProvider.svelte";
 
 const listVersion: string = (metaData as { listVersion: string }).listVersion;
+const COUNT = (metaData as { count: number }).count;
 
 let list: WordEntry[] | null = $state(null);
 let sprite: "loading" | "ready" | "error" = $state("loading");
@@ -28,17 +29,13 @@ let story = $state("");
 let layout: LayoutName = $state("arco");
 let practicing = $state(false);
 let runId = $state(0);
-let k = $state(8);
+let k = $state(minWordCount(COUNT, 70));
 let compat = $state(false);
 
 let mode: PasswordMode = $derived(compat ? "compat" : "standard");
 let ready = $derived(sprite === "ready" && list !== null);
 let liveBits = $derived(
-	list
-		? compat
-			? bitsCompat(list.length, k, 2)
-			: bitsDistinct(list.length, k)
-		: 0,
+	compat ? bitsCompat(COUNT, k, 2) : bitsDistinct(COUNT, k),
 );
 
 onMount(() => {
@@ -78,7 +75,7 @@ function lock(): void {
 			<input type="checkbox" bind:checked={compat} disabled={!ready} />
 			Modo compatibilidad
 		</label>
-		<p class="bits">Entropía: <strong>{liveBits.toFixed(1)} bits</strong></p>
+		<p>Entropía: <strong>{liveBits.toFixed(1)} bits</strong></p>
 	</div>
 	<button type="button" class="primary" disabled={!ready} onclick={doGenerate}>
 		Generar para practicar
@@ -109,9 +106,5 @@ function lock(): void {
 	.loadnote {
 		min-height: 1.5em;
 		margin: 0.25rem 0 0;
-	}
-	.bits {
-		min-height: 1.6em;
-		margin: 0.5rem 0;
 	}
 </style>

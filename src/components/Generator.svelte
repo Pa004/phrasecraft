@@ -21,6 +21,7 @@ import Scene from "./Scene.svelte";
 import SpriteProvider from "./SpriteProvider.svelte";
 
 const listVersion: string = (metaData as { listVersion: string }).listVersion;
+const COUNT = (metaData as { count: number }).count;
 
 let list: WordEntry[] | null = $state(null);
 let sprite: "loading" | "ready" | "error" = $state("loading");
@@ -29,7 +30,7 @@ let practicing = $state(false);
 let runId = $state(0);
 let story = $state("");
 let layout: LayoutName = $state("arco");
-let k = $state(8);
+let k = $state(minWordCount(COUNT, 70));
 let compat = $state(false);
 let shown = $state(false);
 let notice = $state("");
@@ -37,11 +38,7 @@ let clearTimer: ReturnType<typeof setTimeout> | undefined;
 
 let mode: PasswordMode = $derived(compat ? "compat" : "standard");
 let liveBits = $derived(
-	list
-		? compat
-			? bitsCompat(list.length, k, 2)
-			: bitsDistinct(list.length, k)
-		: 0,
+	compat ? bitsCompat(COUNT, k, 2) : bitsDistinct(COUNT, k),
 );
 let strength = $derived(
 	liveBits >= 70
@@ -135,7 +132,6 @@ async function copy(): Promise<void> {
 			Modo compatibilidad (mayúsculas, dígitos y símbolo)
 		</label>
 		<p
-			class="bits"
 			title="Calculado asumiendo que quien ataca conoce el método y la lista de palabras."
 		>
 			Entropía: <strong>{liveBits.toFixed(1)} bits</strong> — {strength}
@@ -194,11 +190,6 @@ async function copy(): Promise<void> {
 	.loadnote {
 		min-height: 1.5em;
 		margin: 0.25rem 0 0;
-	}
-	/* Reserva 2 líneas: el texto de bits cambia al cargar la lista. */
-	.bits {
-		min-height: 3.2em;
-		margin: 0.5rem 0;
 	}
 	.story {
 		font-size: 1.1rem;
