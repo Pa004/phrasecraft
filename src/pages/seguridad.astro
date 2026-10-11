@@ -1,4 +1,10 @@
 ---
+import BgField from "../components/BgField.svelte";
+import Board from "../components/Board.astro";
+import FeatureBento from "../components/FeatureBento.astro";
+import Footer from "../components/Footer.astro";
+import PageHero from "../components/PageHero.astro";
+import StepCard from "../components/StepCard.astro";
 import "../styles/tokens.css";
 ---
 <html lang="es">
@@ -10,19 +16,30 @@ import "../styles/tokens.css";
 		<title>Seguridad — phrasecraft</title>
 	</head>
 	<body>
+		<BgField client:idle />
 		<header>
-			<h1 class="title-3d">Seguridad</h1>
-			<nav class="main-nav" aria-label="Principal"><a class="nav-chip" href="/">Generar</a> <a class="nav-chip" href="/practicar">Practicar</a></nav>
+			<PageHero
+				badge="Modelo de amenazas"
+				title="Seguridad"
+				sub="Qué defendemos, qué no prometemos y cómo comprobarlo tú mismo, sin creernos."
+				ctaHref="/"
+				ctaLabel="Generar mi escena"
+			/>
+			<nav class="main-nav" aria-label="Principal">
+				<a class="nav-chip" href="/">Generar</a>
+				<a class="nav-chip" href="/practicar">Practicar</a>
+				<a class="nav-chip" href="/estudio">Estudio</a>
+			</nav>
 		</header>
 		<main>
 			<section aria-labelledby="defiende">
 				<h2 id="defiende">Qué se defiende</h2>
-				<ul>
-					<li><strong>Registros de red:</strong> un único sprite SVG idéntico para todos, precacheado. Nada derivado de tus palabras viaja por red. Test automatizado: 0 peticiones tras pulsar Generar.</li>
-					<li><strong>Miradas ajenas:</strong> contraseña oculta por defecto, revelado por palabra en práctica.</li>
-					<li><strong>XSS:</strong> sin HTML inyectado de terceros, CSP estricta, sin scripts externos. El sprite se sanitiza en build (sin scripts ni handlers).</li>
-					<li><strong>Persistencia accidental:</strong> nada en <code>localStorage</code>, cookies, historial ni URL. Solo el modo estudio guarda una huella hash de una desechable.</li>
-					<li><strong>Sesgo:</strong> muestreo por rechazo sobre <code>crypto.getRandomValues</code>. Prohibido <code>Math.random</code> en el núcleo (regla automatizada).</li>
+				<ul class="bento">
+					<FeatureBento title="Registros de red" text="Un único sprite SVG idéntico para todos, precacheado. Nada derivado de tus palabras viaja por red. Test: 0 peticiones tras Generar." />
+					<FeatureBento title="Miradas ajenas" text="Contraseña oculta por defecto, revelado por palabra en práctica y auto-bloqueo a los 5 minutos." />
+					<FeatureBento title="XSS" text="Sin HTML inyectado de terceros, CSP estricta con scripts pineados por hash, sprite sanitizado en build." />
+					<FeatureBento title="Persistencia accidental" text="Nada en almacenamiento, cookies, historial ni URL. Solo el estudio guarda una huella hash de una desechable." />
+					<FeatureBento title="Sesgo estadístico" text="Muestreo por rechazo sobre crypto.getRandomValues. Math.random prohibido en el núcleo por regla automatizada." span />
 				</ul>
 			</section>
 			<section aria-labelledby="nodefiende">
@@ -30,23 +47,22 @@ import "../styles/tokens.css";
 				<ul>
 					<li>Dispositivo con malware o keyloggers, extensiones maliciosas.</li>
 					<li>Capturas de pantalla o pantalla compartida (se avisa en la app).</li>
-					<li>Borrado garantizado de memoria en JavaScript (no es fiable; el auto-bloqueo a los 5 minutos y la limpieza al ocultar la página son mitigación, no garantía).</li>
+					<li>Borrado garantizado de memoria en JavaScript (no es fiable; el auto-bloqueo y la limpieza al ocultar la página son mitigación).</li>
 				</ul>
 			</section>
-			<section aria-labelledby="verifica">
-				<h2 id="verifica">Cómo verificarlo tú</h2>
-				<ol>
-					<li>DevTools → Network → pulsa Generar: <strong>0 peticiones</strong>.</li>
-					<li><code>node scripts/validate-wordlist.mjs</code> valida la lista (colisiones, fonética, denylist, iconos).</li>
-					<li>Compara el hash del build publicado en cada release con tu build local.</li>
-					<li>Lee el código: el núcleo cabe en <code>src/lib/password/</code>.</li>
+			<Board title="Verifícalo tú">
+				<ol class="steps">
+					<StepCard n="1" title="Network" text="DevTools → Network → pulsa Generar: 0 peticiones." />
+					<StepCard n="2" title="Lista" text="node scripts/validate-wordlist.mjs valida colisiones, fonética y denylist." />
+					<StepCard n="3" title="Build" text="Compara el hash publicado en cada release con tu build local." />
 				</ol>
-				<p>Principio de Kerckhoffs: el atacante conoce el método y la lista. La seguridad viene solo de la aleatoriedad. La escena y la frase no añaden entropía.</p>
-			</section>
+				<p>Principio de Kerckhoffs: el atacante conoce el método y la lista. La seguridad viene solo de la aleatoriedad.</p>
+			</Board>
 			<section aria-labelledby="atrib">
 				<h2 id="atrib">Atribución</h2>
-				<p>Iconos: Fluent Emoji, © Microsoft, MIT (vía <code>@fluentui-emoji/sprite</code>). Nombres base de emoji en build-time: <code>emojibase-data</code> (ver su licencia). Evitamos decir: inquebrantable, 100 % seguro, imposible de hackear.</p>
+				<p>Iconos: Fluent Emoji, © Microsoft, MIT (vía <code>@fluentui-emoji/sprite</code>). Nombres base en build-time: <code>emojibase-data</code>. Evitamos decir: inquebrantable, 100 % seguro, imposible de hackear.</p>
 			</section>
 		</main>
+		<Footer />
 	</body>
 </html>
