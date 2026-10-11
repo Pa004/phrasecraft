@@ -188,6 +188,10 @@ async function copy(): Promise<void> {
 		display: grid;
 		gap: 0.75rem;
 		margin-top: 1rem;
+		padding: 1rem;
+		border-radius: 1rem;
+		background: var(--paper);
+		box-shadow: var(--shadow-2);
 	}
 	.card code {
 		font-size: 1.1rem;
@@ -200,6 +204,11 @@ async function copy(): Promise<void> {
 	}
 	.row button {
 		min-height: 44px;
+		box-shadow: var(--shadow-1);
+	}
+	.row button:active {
+		transform: translateY(1px);
+		box-shadow: none;
 	}
 	.warn {
 		border-left: 4px solid var(--accent);

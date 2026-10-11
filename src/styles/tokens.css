@@ -17,6 +17,9 @@ astro-static-slot {
 	--paper: #faf7f0;
 	--ink: #1a1a2e;
 	--accent: #e4582e;
+	--shadow-1: 0 1px 2px rgb(26 26 46 / 0.12), 0 2px 8px rgb(26 26 46 / 0.1);
+	--shadow-2: 0 2px 4px rgb(26 26 46 / 0.14), 0 8px 24px rgb(26 26 46 / 0.16);
+	--shadow-3: 0 4px 8px rgb(26 26 46 / 0.16), 0 16px 40px rgb(26 26 46 / 0.22);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,6 +33,47 @@ body {
 	background: var(--paper);
 	color: var(--ink);
 	font-family: system-ui, sans-serif;
+}
+
+/* Títulos con profundidad: misma rampa en las 4 páginas. */
+.title-3d {
+	text-shadow: 0 1px 0 rgb(26 26 46 / 0.12), 0 2px 0 rgb(26 26 46 / 0.08), 0 4px
+		12px rgb(26 26 46 / 0.18);
+}
+
+@media (prefers-color-scheme: dark) {
+	.title-3d {
+		text-shadow: 0 1px 0 rgb(0 0 0 / 0.4), 0 2px 0 rgb(0 0 0 / 0.3), 0 4px 14px
+			rgb(0 0 0 / 0.5);
+	}
+}
+
+/* Entrada de etapa con profundidad (práctica). Sin movimiento con reduced-motion. */
+.stage-in {
+	animation: stage-in 0.45s ease-out;
+}
+
+@keyframes stage-in {
+	from {
+		opacity: 0;
+		transform: perspective(900px) translateZ(70px);
+	}
+	to {
+		opacity: 1;
+		transform: perspective(900px) translateZ(0);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.stage-in {
+		animation: fade-in 0.25s ease-out;
+	}
+}
+
+@keyframes fade-in {
+	to {
+		opacity: 1;
+	}
 }
 
 .scene-icon {
