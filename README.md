@@ -13,7 +13,7 @@ Demo: https://phrasecraft.pages.dev (Cloudflare Pages, preview por PR). Para el 
 - Lighthouse CI ≥ 0.95 en Rendimiento, Accesibilidad, Buenas prácticas y SEO en `/`, `/practicar`, `/seguridad`, `/estudio`; LCP < 2 s, CLS = 0.
 - Cobertura `src/lib/**`: 100 % líneas y funciones.
 - axe-core: 0 violaciones críticas/serias en `/` y `/practicar`.
-- Presupuestos: JS inicial 42 KB gzip (≤ 150), sprite 197 KB brotli (≤ 600), `words.json` 8.3 KB gzip (≤ 40).
+- Presupuestos: JS inicial 35 KB gzip (≤ 150; la lista va como asset aparte precacheado), sprite 197 KB brotli (≤ 600), `words.json` 8.3 KB gzip (≤ 40).
 
 ## Como funciona
 
