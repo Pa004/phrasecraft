@@ -1,6 +1,6 @@
 <script lang="ts">
+import { onMount } from "svelte";
 import metaData from "../data/es/meta.json";
-import wordsData from "../data/es/words.json";
 import {
 	bitsCompat,
 	bitsDistinct,
@@ -14,29 +14,44 @@ import type {
 } from "../lib/password/types.js";
 import { LAYOUTS, type LayoutName } from "../lib/scene/layout.js";
 import { buildStory } from "../lib/story/templates.js";
+import { loadWords } from "../lib/words.js";
 import AutoLock from "./AutoLock.svelte";
 import Practice from "./Practice.svelte";
 import SpriteProvider from "./SpriteProvider.svelte";
 
-const list = wordsData as WordEntry[];
 const listVersion: string = (metaData as { listVersion: string }).listVersion;
 
+let list: WordEntry[] | null = $state(null);
 let sprite: "loading" | "ready" | "error" = $state("loading");
 let result: PasswordResult | null = $state(null);
 let story = $state("");
 let layout: LayoutName = $state("arco");
 let practicing = $state(false);
 let runId = $state(0);
-let k = $state(minWordCount(list.length, 70));
+let k = $state(8);
 let compat = $state(false);
 
 let mode: PasswordMode = $derived(compat ? "compat" : "standard");
-let ready = $derived(sprite === "ready");
+let ready = $derived(sprite === "ready" && list !== null);
 let liveBits = $derived(
-	compat ? bitsCompat(list.length, k, 2) : bitsDistinct(list.length, k),
+	list
+		? compat
+			? bitsCompat(list.length, k, 2)
+			: bitsDistinct(list.length, k)
+		: 0,
 );
 
+onMount(() => {
+	loadWords()
+		.then((w) => {
+			list = w;
+			k = minWordCount(w.length, 70);
+		})
+		.catch(() => {});
+});
+
 function doGenerate(): void {
+	if (!list) return;
 	const r = generate(list, k, mode, undefined, listVersion);
 	result = r;
 	story = buildStory(r.words);
@@ -63,7 +78,7 @@ function lock(): void {
 			<input type="checkbox" bind:checked={compat} disabled={!ready} />
 			Modo compatibilidad
 		</label>
-		<p>Entropía: <strong>{liveBits.toFixed(1)} bits</strong></p>
+		<p class="bits">Entropía: <strong>{liveBits.toFixed(1)} bits</strong></p>
 	</div>
 	<button type="button" class="primary" disabled={!ready} onclick={doGenerate}>
 		Generar para practicar
@@ -94,5 +109,9 @@ function lock(): void {
 	.loadnote {
 		min-height: 1.5em;
 		margin: 0.25rem 0 0;
+	}
+	.bits {
+		min-height: 1.6em;
+		margin: 0.5rem 0;
 	}
 </style>

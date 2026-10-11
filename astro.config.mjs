@@ -12,7 +12,10 @@ export default defineConfig({
 			registerType: "autoUpdate",
 			manifest: false,
 			workbox: {
-				globPatterns: ["**/*.{js,css,html,svg,woff2}", "icons/es.sprite.svg"],
+				globPatterns: [
+					"**/*.{js,css,html,svg,woff2,json}",
+					"icons/es.sprite.svg",
+				],
 			},
 		}),
 	],

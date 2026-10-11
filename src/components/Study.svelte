@@ -1,6 +1,6 @@
 <script lang="ts">
+import { onMount } from "svelte";
 import metaData from "../data/es/meta.json";
-import wordsData from "../data/es/words.json";
 import { buildReminderICS } from "../lib/ics.js";
 import { minWordCount } from "../lib/password/entropy.js";
 import { generate } from "../lib/password/generate.js";
@@ -19,14 +19,15 @@ import {
 	saveStudy,
 } from "../lib/study/export.js";
 import { randomSaltHex, sha256Hex } from "../lib/study/hash.js";
+import { loadWords } from "../lib/words.js";
 import Practice from "./Practice.svelte";
 import SpriteProvider from "./SpriteProvider.svelte";
 
-const list = wordsData as WordEntry[];
 const listVersion: string = (metaData as { listVersion: string }).listVersion;
-const K = minWordCount(list.length, 70);
 const MODE: PasswordMode = "standard";
 
+let list: WordEntry[] | null = $state(null);
+let kWords = $state(8);
 let sprite: "loading" | "ready" | "error" = $state("loading");
 let consent = $state(false);
 let result: PasswordResult | null = $state(null);
@@ -47,7 +48,8 @@ const inputAttrs = {
 };
 
 async function doGenerate(): Promise<void> {
-	const r = generate(list, K, MODE, undefined, listVersion);
+	if (!list) return;
+	const r = generate(list, kWords, MODE, undefined, listVersion);
 	const salt = randomSaltHex();
 	const hash = await sha256Hex(salt, r.text);
 	record = {
@@ -55,7 +57,7 @@ async function doGenerate(): Promise<void> {
 		hash,
 		createdAtISO: new Date().toISOString(),
 		listVersion,
-		k: K,
+		k: kWords,
 		checks: [],
 	};
 	try {
@@ -126,6 +128,17 @@ function wipe(): void {
 	result = null;
 	feedback = "Huella borrada de este dispositivo.";
 }
+
+onMount(() => {
+	loadWords()
+		.then((w) => {
+			list = w;
+			kWords = minWordCount(w.length, 70);
+		})
+		.catch(() => {
+			feedback = "No se pudo cargar la lista de palabras. Recarga la página.";
+		});
+});
 </script>
 
 <SpriteProvider bind:status={sprite} />
@@ -141,7 +154,7 @@ function wipe(): void {
 		<input type="checkbox" bind:checked={consent} />
 		Lo entiendo y quiero participar
 	</label>
-	<button type="button" disabled={!consent || sprite !== "ready"} onclick={doGenerate}>
+	<button type="button" disabled={!consent || sprite !== "ready" || !list} onclick={doGenerate}>
 		Generar desechable
 	</button>
 {:else}
