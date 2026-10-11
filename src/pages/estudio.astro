@@ -1,4 +1,9 @@
 ---
+import BgField from "../components/BgField.svelte";
+import Board from "../components/Board.astro";
+import Footer from "../components/Footer.astro";
+import PageHero from "../components/PageHero.astro";
+import StepCard from "../components/StepCard.astro";
 import Study from "../components/Study.svelte";
 import "../styles/tokens.css";
 ---
@@ -11,12 +16,32 @@ import "../styles/tokens.css";
 		<title>Estudio — phrasecraft</title>
 	</head>
 	<body>
+		<BgField client:idle />
 		<header>
-			<h1 class="title-3d">Estudio de recuerdo</h1>
-			<nav class="main-nav" aria-label="Principal"><a class="nav-chip" href="/">Generar</a></nav>
+			<PageHero
+				badge="Voluntario · sin datos personales"
+				title="Estudio de recuerdo"
+				sub="Ayúdanos a medir si las escenas se recuerdan a 24 h y 7 días, con una contraseña desechable."
+			/>
+			<nav class="main-nav" aria-label="Principal">
+				<a class="nav-chip" href="/">Generar</a>
+				<a class="nav-chip" href="/practicar">Practicar</a>
+				<a class="nav-chip" href="/seguridad">Seguridad</a>
+			</nav>
 		</header>
 		<main>
-			<Study client:load />
+			<section aria-labelledby="pasos">
+				<h2 id="pasos">Cómo participar</h2>
+				<ol class="steps">
+					<StepCard n="1" title="Consiente" text="Lee el consentimiento y genera tu desechable. Nunca uses tu contraseña real." />
+					<StepCard n="2" title="Practica" text="Completa las 5 etapas como siempre, con calma." />
+					<StepCard n="3" title="Vuelve" text="A las 24 h y 7 días, haz la prueba de recuerdo y envíanos el resultado." />
+				</ol>
+			</section>
+			<Board title="Tablero de estudio" id="estudio">
+				<Study client:load />
+			</Board>
 		</main>
+		<Footer />
 	</body>
 </html>

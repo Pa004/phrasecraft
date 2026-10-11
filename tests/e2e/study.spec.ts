@@ -41,6 +41,6 @@ test("/seguridad expone modelo de amenazas y verificación", async ({
 		page.getByRole("heading", { name: /qué no se promete/i }),
 	).toBeVisible();
 	await expect(
-		page.getByRole("heading", { name: /cómo verificarlo/i }),
+		page.getByRole("heading", { name: /verifícalo tú/i }),
 	).toBeVisible();
 });

@@ -27,6 +27,7 @@ onMount(() => {
 	let raf = 0;
 	let running = false;
 	let scrollY = window.scrollY;
+	let interacted = false;
 
 	const spawn = (): Star => ({
 		x: Math.random(),
@@ -94,7 +95,7 @@ onMount(() => {
 	};
 
 	const start = (): void => {
-		if (running || mq.matches || document.hidden) return;
+		if (running || mq.matches || document.hidden || !interacted) return;
 		running = true;
 		raf = requestAnimationFrame(tick);
 	};
@@ -108,11 +109,27 @@ onMount(() => {
 		scrollY = window.scrollY;
 		if (mq.matches) draw(0);
 	};
+	// El loop solo arranca con interacción real: el canvas a viewport completo
+	// contaminaría el LCP si animara durante la carga. Estático hasta entonces.
+	const onFirstInteract = (): void => {
+		interacted = true;
+		unbindInteract();
+		start();
+	};
+	const unbindInteract = (): void => {
+		window.removeEventListener("pointerdown", onFirstInteract);
+		window.removeEventListener("wheel", onFirstInteract);
+		window.removeEventListener("keydown", onFirstInteract);
+		window.removeEventListener("touchstart", onFirstInteract);
+	};
+	window.addEventListener("pointerdown", onFirstInteract);
+	window.addEventListener("wheel", onFirstInteract);
+	window.addEventListener("keydown", onFirstInteract);
+	window.addEventListener("touchstart", onFirstInteract);
 	const onVis = (): void => {
 		if (document.hidden) stop();
 		else {
 			draw(0);
-			start();
 		}
 	};
 	const onMotion = (): void => {
@@ -123,7 +140,7 @@ onMount(() => {
 	};
 
 	const io = new IntersectionObserver(([entry]) => {
-		if (entry?.isIntersecting) start();
+		if (entry?.isIntersecting) draw(0);
 		else stop();
 	});
 	io.observe(el);
@@ -136,6 +153,7 @@ onMount(() => {
 	start();
 	return () => {
 		stop();
+		unbindInteract();
 		io.disconnect();
 		ro.disconnect();
 		window.removeEventListener("scroll", onScroll);
