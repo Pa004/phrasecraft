@@ -18,7 +18,8 @@
 		"lhci": "lhci autorun",
 		"words:build": "node scripts/build-wordlist.mjs",
 		"words:validate": "node scripts/validate-wordlist.mjs",
-		"sprite:build": "node scripts/build-sprite.mjs"
+		"sprite:build": "node scripts/build-sprite.mjs",
+		"security:check-csp": "node scripts/check-csp.mjs"
 	},
 	"dependencies": {
 		"@astrojs/svelte": "^7.0.0",
