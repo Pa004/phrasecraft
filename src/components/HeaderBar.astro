@@ -1,15 +1,27 @@
 ---
-interface Props {
-	current: string;
+interface NavLink {
+	href: string;
+	label: string;
 }
 
-const { current } = Astro.props;
-const links = [
-	{ href: "/", label: "Generar" },
-	{ href: "/practicar", label: "Practicar" },
-	{ href: "/seguridad", label: "Seguridad" },
-	{ href: "/estudio", label: "Estudio" },
-];
+interface Props {
+	current?: string;
+	links?: NavLink[];
+	ctaHref?: string;
+	ctaLabel?: string;
+}
+
+const {
+	current = "",
+	links = [
+		{ href: "/", label: "Generar" },
+		{ href: "/practicar", label: "Practicar" },
+		{ href: "/seguridad", label: "Seguridad" },
+		{ href: "/estudio", label: "Estudio" },
+	],
+	ctaHref,
+	ctaLabel,
+} = Astro.props;
 ---
 
 <div class="topbar">
@@ -24,6 +36,9 @@ const links = [
 			) : (
 				<a class="nav-chip" href={l.href}>{l.label}</a>
 			),
+		)}
+		{ctaHref && ctaLabel && (
+			<a class="btn-3d nav-cta" href={ctaHref}>{ctaLabel}</a>
 		)}
 	</nav>
 </div>
@@ -71,11 +86,19 @@ const links = [
 	.topbar nav {
 		display: flex;
 		flex-wrap: wrap;
+		align-items: center;
 		gap: 0.4rem;
 	}
 	.nav-chip.current {
 		background: var(--accent);
 		border-color: var(--edge);
 		color: var(--btn-ink);
+	}
+	.nav-cta {
+		font-size: 1rem;
+		min-height: 44px;
+		padding: 0.5rem 1.1rem;
+		text-decoration: none;
+		display: inline-block;
 	}
 </style>

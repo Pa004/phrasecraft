@@ -25,20 +25,29 @@ import "../styles/tokens.css";
 	<body>
 		<BgField client:idle />
 		<header>
-			<HeaderBar current="/" />
-			<PageHero
-				badge="100% privado · sin cuentas · sin rastreo"
-				title="phrasecraft"
-				sub="Una escena absurda para recordar una sola contraseña de verdad: tu maestra del gestor, tu equipo, tu disco."
+			<HeaderBar
+				current="/"
+				links={[
+					{ href: "#como", label: "Cómo funciona" },
+					{ href: "#confia", label: "Confianza" },
+				]}
 				ctaHref="#generar"
-				ctaLabel="Generar mi escena"
+				ctaLabel="Crear contraseña"
+			/>
+			<PageHero
+				badge="100% local · nada sale de tu navegador"
+				title="Contraseñas que sí recuerdas y nadie adivina."
+				marks={["sí recuerdas"]}
+				sub="Palabras cotidianas en español unidas en una escena absurda. Más largas, más fuertes y mucho más fáciles de recordar que un código críptico."
+				ctaHref="#generar"
+				ctaLabel="Crear contraseña"
 				cta2Href="#como"
-				cta2Label="Cómo funciona"
+				cta2Label="Ver cómo funciona"
 			>
 				<ul class="stats" slot="stats" aria-label="Datos clave">
-					<StatBadge value="72 bits" label="de entropía por defecto" />
-					<StatBadge value="0" label="peticiones de red al generar" />
-					<StatBadge value="5" label="etapas para memorizarla" />
+					<StatBadge value="72 bits" label="ENTROPÍA REAL" />
+					<StatBadge value="501 palabras" label="LISTA EN ESPAÑOL" />
+					<StatBadge value="0 servidores" label="TODO LOCAL" />
 				</ul>
 			</PageHero>
 		</header>

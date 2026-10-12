@@ -7,16 +7,51 @@ interface Props {
 	ctaLabel?: string;
 	cta2Href?: string;
 	cta2Label?: string;
+	marks?: string[];
 }
 
-const { badge, title, sub, ctaHref, ctaLabel, cta2Href, cta2Label } =
-	Astro.props;
+const {
+	badge,
+	title,
+	sub,
+	ctaHref,
+	ctaLabel,
+	cta2Href,
+	cta2Label,
+	marks = [],
+} = Astro.props;
+
+function marked(text: string): { hit: boolean; text: string }[] {
+	let parts: { hit: boolean; text: string }[] = [{ hit: false, text }];
+	for (const m of marks) {
+		parts = parts.flatMap((p) => {
+			if (p.hit || !p.text.includes(m)) return [p];
+			const [head, ...tail] = p.text.split(m);
+			const out: { hit: boolean; text: string }[] = [];
+			if (head) out.push({ hit: false, text: head });
+			tail.forEach((t, i) => {
+				out.push({ hit: true, text: m });
+				if (t || i < tail.length - 1) out.push({ hit: false, text: t });
+			});
+			return out;
+		});
+	}
+	return parts.filter((p) => p.text.length > 0);
+}
 ---
 
 <div class="hero">
 	<p class="hero-badge">{badge}</p>
-	<h1 class="title-3d">{title}</h1>
-	<p class="hero-sub">{sub}</p>
+	<h1 class="title-3d hero-display">
+		{marked(title).map((p) =>
+			p.hit ? <span class="marker">{p.text}</span> : p.text,
+		)}
+	</h1>
+	<p class="hero-sub">
+		{marked(sub).map((p) =>
+			p.hit ? <span class="marker">{p.text}</span> : p.text,
+		)}
+	</p>
 	<slot name="stats" />
 	{(ctaHref && ctaLabel) || (cta2Href && cta2Label) ? (
 		<p class="hero-ctas">
@@ -50,6 +85,11 @@ const { badge, title, sub, ctaHref, ctaLabel, cta2Href, cta2Label } =
 		font-size: 1.25rem;
 		line-height: 1.65;
 		max-width: 40rem;
+	}
+	.hero-display {
+		font-size: clamp(2.4rem, 6vw, 4rem);
+		line-height: 1.08;
+		margin: 0.75rem 0;
 	}
 	.hero-ctas {
 		display: flex;
