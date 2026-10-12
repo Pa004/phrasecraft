@@ -46,6 +46,11 @@ astro-static-slot {
 	border-color: var(--accent);
 }
 
+.nav-chip:focus-visible {
+	outline: 4px solid var(--accent-dark);
+	outline-offset: 2px;
+}
+
 /* Rejillas de sistema: pasos y bento (los <li> viven en componentes con scope). */
 .steps,
 .bento {
@@ -346,6 +351,96 @@ input[type="range"] {
 .interruptor small {
 	opacity: 0.8;
 	font-size: 0.83rem;
+}
+
+/* Chips de palabras (resultado real y demo fija del hero). */
+.wchips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	align-items: center;
+	padding: 0;
+	margin: 0.75rem 0;
+	list-style: none;
+}
+
+.wchip {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	font-family: var(--font-display);
+	font-weight: 800;
+	font-size: 1.1rem;
+	line-height: 1.25;
+	border: 3px solid var(--edge);
+	border-radius: 16px;
+	padding: 4px 14px;
+	box-shadow: 2px 2px 0 var(--hard);
+	color: var(--ink);
+	background: var(--surface);
+}
+
+.wchip:nth-child(4n + 1) {
+	background: var(--accent);
+	color: var(--btn-ink);
+}
+
+.wchip:nth-child(4n + 3) {
+	background: var(--surface-2);
+}
+
+.wchip-n {
+	display: grid;
+	place-items: center;
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 50%;
+	background: var(--edge);
+	color: var(--paper);
+	font-size: 0.85rem;
+	font-weight: 800;
+}
+
+/* Hero en 2 columnas en escritorio: texto + demo. */
+.hero-grid {
+	display: grid;
+	gap: 1.5rem;
+	align-items: center;
+}
+
+@media (min-width: 960px) {
+	.hero-grid {
+		grid-template-columns: 1.1fr 0.9fr;
+	}
+}
+
+/* Bloque de fuerza en lenguaje humano + explainer plegable. */
+.fuerza {
+	font-size: 1.1rem;
+}
+
+.fuerza .bits-detalle {
+	font-size: 0.95rem;
+	opacity: 0.85;
+}
+
+details.bits-que {
+	margin-top: 0.4rem;
+}
+
+details.bits-que summary {
+	cursor: pointer;
+	font-weight: 700;
+	min-height: 44px;
+	display: inline-flex;
+	align-items: center;
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+details.bits-que p {
+	max-width: 40rem;
+	line-height: 1.6;
 }
 
 /* Campos de texto con borde grueso y profundidad interior. */

@@ -32,8 +32,8 @@ onMount(() => {
 			pts.push({
 				x: Math.random() * w,
 				y: Math.random() * h,
-				vx: (Math.random() - 0.5) * 0.22,
-				vy: (Math.random() - 0.5) * 0.22,
+				vx: (Math.random() - 0.5) * 0.66,
+				vy: (Math.random() - 0.5) * 0.66,
 				r: 1 + Math.random() * 2.2,
 				accent: Math.random() < 0.22,
 			});
@@ -64,7 +64,7 @@ onMount(() => {
 				const dy = a.y - b.y;
 				const d = Math.sqrt(dx * dx + dy * dy);
 				if (d < 130) {
-					ctx.strokeStyle = `rgba(90,60,35,${(0.14 * (1 - d / 130)).toFixed(3)})`;
+					ctx.strokeStyle = `rgba(90,60,35,${(0.24 * (1 - d / 130)).toFixed(3)})`;
 					ctx.beginPath();
 					ctx.moveTo(a.x, a.y);
 					ctx.lineTo(b.x, b.y);
@@ -73,7 +73,7 @@ onMount(() => {
 			}
 		}
 		for (const p of pts) {
-			ctx.fillStyle = p.accent ? "rgba(214,110,40,.75)" : "rgba(90,60,35,.30)";
+			ctx.fillStyle = p.accent ? "rgba(214,110,40,.9)" : "rgba(90,60,35,.5)";
 			ctx.beginPath();
 			ctx.arc(p.x, p.y, p.r, 0, 6.2832);
 			ctx.fill();
@@ -100,6 +100,13 @@ onMount(() => {
 		raf = 0;
 	};
 
+	const kick = (): void => {
+		if (!running && !mq.matches && !document.hidden) {
+			running = true;
+			raf = requestAnimationFrame(tick);
+		}
+	};
+
 	sizeCanvas();
 	window.addEventListener("resize", sizeCanvas);
 	if (mq.matches) {
@@ -107,29 +114,30 @@ onMount(() => {
 	} else {
 		document.addEventListener("visibilitychange", () => {
 			if (document.hidden) {
-				running = false;
-			} else if (!mq.matches) {
-				running = true;
-				requestAnimationFrame(tick);
+				stop();
+			} else {
+				kick();
 			}
 		});
 		if ("IntersectionObserver" in window) {
 			new IntersectionObserver((entries) => {
 				const vis = entries[0]?.isIntersecting;
 				if (!vis) {
-					running = false;
-				} else if (!document.hidden && !mq.matches) {
-					if (!running) {
-						running = true;
-						requestAnimationFrame(tick);
-					}
+					stop();
+				} else {
+					kick();
 				}
 			}).observe(document.querySelector("main") ?? el);
 		}
 		requestAnimationFrame(tick);
+		// Guardián: si la cadena rAF se rompe (pestaña en segundo plano,
+		// throttling agresivo), se reanima solo cada 2 s.
+		const heartbeat = setInterval(kick, 2000);
 	}
+
 	return () => {
 		stop();
+		clearInterval(heartbeat);
 		window.removeEventListener("resize", sizeCanvas);
 	};
 });

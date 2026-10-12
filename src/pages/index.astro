@@ -1,6 +1,7 @@
 ---
 import BgField from "../components/BgField.svelte";
 import Board from "../components/Board.astro";
+import DemoCard from "../components/DemoCard.astro";
 import FeatureBento from "../components/FeatureBento.astro";
 import Footer from "../components/Footer.astro";
 import Generator from "../components/Generator.svelte";
@@ -35,22 +36,25 @@ import "../styles/tokens.css";
 				ctaHref="#generar"
 				ctaLabel="Crear contraseña"
 			/>
-			<PageHero
-				badge="100% local · nada sale de tu navegador"
-				title="Contraseñas que sí recuerdas y nadie adivina."
-				marks={["sí recuerdas"]}
-				sub="Palabras cotidianas en español unidas en una escena absurda. Más largas, más fuertes y mucho más fáciles de recordar que un código críptico."
-				ctaHref="#generar"
-				ctaLabel="Crear contraseña"
-				cta2Href="#como"
-				cta2Label="Ver cómo funciona"
-			>
-				<ul class="stats" slot="stats" aria-label="Datos clave">
-					<StatBadge value="72 bits" label="ENTROPÍA REAL" />
-					<StatBadge value="501 palabras" label="LISTA EN ESPAÑOL" />
-					<StatBadge value="0 servidores" label="TODO LOCAL" />
-				</ul>
-			</PageHero>
+			<div class="hero-grid">
+				<PageHero
+					badge="100% local · nada sale de tu navegador"
+					title="Contraseñas que sí recuerdas y nadie adivina."
+					marks={["sí recuerdas"]}
+					sub="Palabras cotidianas en español unidas en una escena absurda. Más largas, más fuertes y mucho más fáciles de recordar que un código críptico."
+					ctaHref="#generar"
+					ctaLabel="Crear contraseña"
+					cta2Href="#como"
+					cta2Label="Ver cómo funciona"
+				>
+					<ul class="stats" slot="stats" aria-label="Datos clave">
+						<StatBadge value="72 bits" label="ENTROPÍA REAL" />
+						<StatBadge value="501 palabras" label="LISTA EN ESPAÑOL" />
+						<StatBadge value="0 servidores" label="TODO LOCAL" />
+					</ul>
+				</PageHero>
+				<DemoCard />
+			</div>
 		</header>
 		<main id="contenido">
 			<Board title="Tablero de escena" id="generar" pill="501 palabras">
@@ -70,7 +74,7 @@ import "../styles/tokens.css";
 					<FeatureBento title="Privacidad real" text="Al pulsar Generar no sale ninguna petición de red: un único sprite idéntico para todos, precacheado." featured />
 					<FeatureBento title="Seguridad honesta" text="Kerckhoffs: el atacante conoce el método y la lista. La fuerza viene solo de la aleatoriedad." />
 					<FeatureBento title="Memoria guiada" text="Escena + frase + repaso espaciado: tres anclas en vez de una lista de palabras." />
-					<FeatureBento title="Abierto y offline" text="Código abierto, PWA instalable y usable sin conexión. Sin cuentas ni rastreo." span />
+					<FeatureBento title="Abierto y offline" text="Código abierto, PWA instalable y usable sin conexión. Sin cuentas ni rastreo." />
 				</ul>
 			</section>
 			<section aria-labelledby="uso">
@@ -81,7 +85,5 @@ import "../styles/tokens.css";
 				</ul>
 			</section>
 		</main>
-		<Footer />
-		<script src="../scripts/board-tilt.ts"></script>
-	</body>
+		<Footer />	</body>
 </html>

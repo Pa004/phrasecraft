@@ -49,6 +49,9 @@ let strength = $derived(
 			? "Aceptable solo si el sitio limita la longitud"
 			: "Débil",
 );
+let strengthPlain = $derived(
+	liveBits >= 70 ? "muy alta" : liveBits >= 50 ? "media" : "baja",
+);
 let masked = $derived(result ? "•".repeat(result.text.length) : "");
 let ready = $derived(sprite === "ready" && list !== null);
 
@@ -137,11 +140,19 @@ async function copy(): Promise<void> {
 			<input type="checkbox" bind:checked={compat} disabled={!ready} />
 			<span><b>Modo compatibilidad</b><small>Mayúsculas, dígitos y símbolo para sitios exigentes</small></span>
 		</label>
-		<p
-			title="Calculado asumiendo que quien ataca conoce el método y la lista de palabras."
-		>
-			Entropía: <strong>{liveBits.toFixed(1)} bits</strong> — {strength}
-		</p>
+		<div class="fuerza">
+			Fuerza: <strong>{strengthPlain}</strong>
+			<span class="bits-detalle">({liveBits.toFixed(1)} bits de entropía)</span>
+			<details class="bits-que">
+				<summary>¿Qué significa?</summary>
+				<p>
+					Los bits miden cuántas combinaciones tendría que probar un atacante que ya conoce
+					este método y la lista de palabras. Con {liveBits.toFixed(0)} bits hay unas
+					2<sup>{Math.round(liveBits)}</sup> posibilidades: más bits, más intentos necesarios.
+					70 o más es lo recomendado para una contraseña maestra.
+				</p>
+			</details>
+		</div>
 		{#if compat && liveBits < 60}
 			<p role="alert">Atención: por debajo de 60 bits. Úsalo solo si el sitio lo exige.</p>
 		{/if}
