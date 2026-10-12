@@ -19,6 +19,8 @@ import AutoLock from "./AutoLock.svelte";
 import Practice from "./Practice.svelte";
 import Scene from "./Scene.svelte";
 import SpriteProvider from "./SpriteProvider.svelte";
+import StrengthMeter from "./StrengthMeter.svelte";
+import WordChips from "./WordChips.svelte";
 
 const listVersion: string = (metaData as { listVersion: string }).listVersion;
 const COUNT = (metaData as { count: number }).count;
@@ -151,6 +153,8 @@ async function copy(): Promise<void> {
 			<Scene words={result.words} {layout} />
 			<p class="story">{story}</p>
 			<div class="card card-3d">
+				<StrengthMeter bits={result.bits} />
+				<WordChips words={result.words} />
 				<code aria-label={shown ? "Contraseña generada" : "Contraseña oculta"}>{shown ? result.text : masked}</code>
 				<div class="row">
 					<button type="button" class="btn-3d-secondary" aria-pressed={shown} onclick={() => (shown = !shown)}>

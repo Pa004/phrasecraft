@@ -2,6 +2,7 @@
 import BgField from "../components/BgField.svelte";
 import Board from "../components/Board.astro";
 import Footer from "../components/Footer.astro";
+import HeaderBar from "../components/HeaderBar.astro";
 import PageHero from "../components/PageHero.astro";
 import PracticeStandalone from "../components/PracticeStandalone.svelte";
 import "../styles/tokens.css";
@@ -17,16 +18,12 @@ import "../styles/tokens.css";
 	<body>
 		<BgField client:idle />
 		<header>
+			<HeaderBar current="/practicar" />
 			<PageHero
 				badge="5 etapas · todo en memoria"
 				title="Practicar"
 				sub="Mira, completa, ordena, recuerda y escríbela sin pistas. Nada de lo que escribas sale de tu navegador."
 			/>
-			<nav class="main-nav" aria-label="Principal">
-				<a class="nav-chip" href="/">Generar</a>
-				<a class="nav-chip" href="/seguridad">Seguridad</a>
-				<a class="nav-chip" href="/estudio">Estudio</a>
-			</nav>
 		</header>
 		<main>
 			<Board title="Tablero de práctica" id="practicar">

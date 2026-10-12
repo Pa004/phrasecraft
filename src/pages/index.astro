@@ -4,6 +4,7 @@ import Board from "../components/Board.astro";
 import FeatureBento from "../components/FeatureBento.astro";
 import Footer from "../components/Footer.astro";
 import Generator from "../components/Generator.svelte";
+import HeaderBar from "../components/HeaderBar.astro";
 import PageHero from "../components/PageHero.astro";
 import StatBadge from "../components/StatBadge.astro";
 import StepCard from "../components/StepCard.astro";
@@ -24,12 +25,15 @@ import "../styles/tokens.css";
 	<body>
 		<BgField client:idle />
 		<header>
+			<HeaderBar current="/" />
 			<PageHero
 				badge="100% privado · sin cuentas · sin rastreo"
 				title="phrasecraft"
 				sub="Una escena absurda para recordar una sola contraseña de verdad: tu maestra del gestor, tu equipo, tu disco."
 				ctaHref="#generar"
 				ctaLabel="Generar mi escena"
+				cta2Href="#como"
+				cta2Label="Cómo funciona"
 			>
 				<ul class="stats" slot="stats" aria-label="Datos clave">
 					<StatBadge value="72 bits" label="de entropía por defecto" />
@@ -37,11 +41,6 @@ import "../styles/tokens.css";
 					<StatBadge value="5" label="etapas para memorizarla" />
 				</ul>
 			</PageHero>
-			<nav class="main-nav" aria-label="Principal">
-				<a class="nav-chip" href="/practicar">Practicar</a>
-				<a class="nav-chip" href="/seguridad">Seguridad</a>
-				<a class="nav-chip" href="/estudio">Estudio</a>
-			</nav>
 		</header>
 		<main>
 			<Board title="Tablero de escena" id="generar">

@@ -3,6 +3,7 @@ import BgField from "../components/BgField.svelte";
 import Board from "../components/Board.astro";
 import FeatureBento from "../components/FeatureBento.astro";
 import Footer from "../components/Footer.astro";
+import HeaderBar from "../components/HeaderBar.astro";
 import PageHero from "../components/PageHero.astro";
 import StepCard from "../components/StepCard.astro";
 import "../styles/tokens.css";
@@ -18,6 +19,7 @@ import "../styles/tokens.css";
 	<body>
 		<BgField client:idle />
 		<header>
+			<HeaderBar current="/seguridad" />
 			<PageHero
 				badge="Modelo de amenazas"
 				title="Seguridad"
@@ -25,11 +27,6 @@ import "../styles/tokens.css";
 				ctaHref="/"
 				ctaLabel="Generar mi escena"
 			/>
-			<nav class="main-nav" aria-label="Principal">
-				<a class="nav-chip" href="/">Generar</a>
-				<a class="nav-chip" href="/practicar">Practicar</a>
-				<a class="nav-chip" href="/estudio">Estudio</a>
-			</nav>
 		</header>
 		<main>
 			<section aria-labelledby="defiende">
