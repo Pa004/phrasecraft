@@ -150,9 +150,9 @@ onMount(() => {
 		<li>Usa la contraseña <strong>desechable</strong> generada aquí. Nunca tu contraseña real.</li>
 		<li>No la escribas en papel ni la fotografíes.</li>
 	</ul>
-	<label>
-		<input type="checkbox" class="switch-3d" bind:checked={consent} />
-		Lo entiendo y quiero participar
+	<label class="interruptor">
+		<input type="checkbox" bind:checked={consent} />
+		<span><b>Lo entiendo y quiero participar</b><small>Voluntario, sin datos personales</small></span>
 	</label>
 	<button type="button" class="btn-3d" disabled={!consent || sprite !== "ready" || !list} onclick={doGenerate}>
 		Generar desechable

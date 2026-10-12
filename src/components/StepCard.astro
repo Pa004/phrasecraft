@@ -16,29 +16,55 @@ const { n, title, text } = Astro.props;
 
 <style>
 	.step {
-		display: grid;
-		gap: 0.35rem;
-		align-content: start;
-		padding: 1rem;
-		border-radius: 1.25rem;
-		border: 2px solid var(--surface-border);
 		background: var(--surface);
-		box-shadow: var(--shadow-2);
+		border: 3px solid var(--edge);
+		border-radius: 16px;
+		box-shadow: 4px 4px 0 var(--hard);
+		padding: 20px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
 		list-style: none;
 	}
+	.step:nth-child(2) {
+		transform: translateY(8px);
+	}
+	.step:nth-child(3) {
+		transform: translateY(16px);
+	}
+	@media (max-width: 720px) {
+		.step:nth-child(2),
+		.step:nth-child(3) {
+			transform: none;
+		}
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.step:nth-child(2),
+		.step:nth-child(3) {
+			transform: none;
+		}
+	}
 	.step-n {
-		width: 2.2rem;
-		height: 2.2rem;
+		width: 44px;
+		height: 44px;
+		border-radius: 16px;
+		border: 3px solid var(--edge);
+		background: var(--accent);
+		color: var(--btn-ink);
+		font-family: var(--font-display);
+		font-weight: 800;
+		font-size: 1.3rem;
 		display: grid;
 		place-items: center;
-		border-radius: 50%;
-		background: linear-gradient(180deg, var(--accent), var(--accent-dark));
-		border: 2px solid var(--accent-edge);
-		color: #fff;
-		font-weight: 800;
-		font-size: 1.1rem;
-		box-shadow:
-			0 3px 0 var(--accent-edge),
-			var(--shadow-1);
+		box-shadow: 2px 2px 0 var(--hard);
+	}
+	.step strong {
+		font-family: var(--font-display);
+		font-size: 1.12rem;
+	}
+	.step span:last-child {
+		opacity: 0.85;
+		font-size: 0.95rem;
 	}
 </style>

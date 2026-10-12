@@ -67,13 +67,16 @@ function lock(): void {
 
 {#if !result}
 	<div class="controls">
-		<label>
-			Palabras: {k}
-			<input type="range" class="slider-3d" min="4" max="12" step="1" bind:value={k} disabled={!ready} />
-		</label>
-		<label>
-			<input type="checkbox" class="switch-3d" bind:checked={compat} disabled={!ready} />
-			Modo compatibilidad
+		<fieldset>
+			<legend>Número de palabras</legend>
+			<div class="deslizador">
+				<input type="range" id="pract-k" min="4" max="12" step="1" bind:value={k} disabled={!ready} aria-label="Número de palabras" />
+				<output for="pract-k">{k}</output>
+			</div>
+		</fieldset>
+		<label class="interruptor">
+			<input type="checkbox" bind:checked={compat} disabled={!ready} />
+			<span><b>Modo compatibilidad</b><small>Mayúsculas, dígitos y símbolo</small></span>
 		</label>
 		<p>Entropía: <strong>{liveBits.toFixed(1)} bits</strong></p>
 	</div>

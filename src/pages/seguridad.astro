@@ -18,6 +18,7 @@ import "../styles/tokens.css";
 	</head>
 	<body>
 		<BgField client:idle />
+		<a class="skip" href="#contenido">Saltar al contenido</a>
 		<header>
 			<HeaderBar current="/seguridad" ctaHref="/" ctaLabel="Crear contraseña" />
 			<PageHero
@@ -28,7 +29,7 @@ import "../styles/tokens.css";
 				ctaLabel="Generar mi escena"
 			/>
 		</header>
-		<main>
+		<main id="contenido">
 			<section aria-labelledby="defiende">
 				<h2 id="defiende">Qué se defiende</h2>
 				<ul class="bento">

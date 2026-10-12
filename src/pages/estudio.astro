@@ -18,6 +18,7 @@ import "../styles/tokens.css";
 	</head>
 	<body>
 		<BgField client:idle />
+		<a class="skip" href="#contenido">Saltar al contenido</a>
 		<header>
 			<HeaderBar current="/estudio" ctaHref="/" ctaLabel="Crear contraseña" />
 			<PageHero
@@ -26,7 +27,7 @@ import "../styles/tokens.css";
 				sub="Ayúdanos a medir si las escenas se recuerdan a 24 h y 7 días, con una contraseña desechable."
 			/>
 		</header>
-		<main>
+		<main id="contenido">
 			<section aria-labelledby="pasos">
 				<h2 id="pasos">Cómo participar</h2>
 				<ol class="steps">
@@ -35,7 +36,7 @@ import "../styles/tokens.css";
 					<StepCard n="3" title="Vuelve" text="A las 24 h y 7 días, haz la prueba de recuerdo y envíanos el resultado." />
 				</ol>
 			</section>
-			<Board title="Tablero de estudio" id="estudio">
+			<Board title="Tablero de estudio" id="estudio" pill="desechable">
 				<Study client:load />
 			</Board>
 		</main>
