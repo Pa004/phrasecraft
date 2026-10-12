@@ -41,7 +41,7 @@ function marked(text: string): { hit: boolean; text: string }[] {
 ---
 
 <div class="hero">
-	<p class="hero-badge">{badge}</p>
+	<p class="hero-badge"><span class="dot" aria-hidden="true"><i></i></span>{badge}</p>
 	<h1 class="title-3d hero-display">
 		{marked(title).map((p) =>
 			p.hit ? <span class="marker">{p.text}</span> : p.text,
@@ -72,24 +72,49 @@ function marked(text: string): { hit: boolean; text: string }[] {
 		max-width: 44rem;
 	}
 	.hero-badge {
-		display: inline-block;
-		font-size: 0.85rem;
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		font-size: 0.84rem;
 		font-weight: 700;
-		padding: 0.35rem 0.9rem;
+		padding: 8px 16px 8px 10px;
 		border-radius: 999px;
 		border: 3px solid var(--edge);
 		background: var(--surface);
-		box-shadow: 3px 3px 0 var(--hard);
+		box-shadow: 4px 4px 0 var(--hard);
+	}
+	.dot {
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		background: var(--accent);
+		border: 2px solid var(--edge);
+		flex: none;
+		display: grid;
+		place-items: center;
+	}
+	.dot i {
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background: var(--edge);
+		display: block;
 	}
 	.hero-sub {
-		font-size: 1.25rem;
-		line-height: 1.65;
-		max-width: 40rem;
+		font-size: 1.14rem;
+		font-weight: 500;
+		line-height: 1.6;
+		max-width: 56ch;
+		margin: 0 0 20px;
+		opacity: 0.85;
 	}
 	.hero-display {
-		font-size: clamp(2.4rem, 6vw, 4rem);
-		line-height: 1.08;
-		margin: 0.75rem 0;
+		font-size: clamp(2.5rem, 5.4vw, 3.9rem);
+		line-height: 1;
+		letter-spacing: -0.03em;
+		margin: 16px 0 12px;
+		max-width: 20ch;
+		text-wrap: balance;
 	}
 	.hero-ctas {
 		display: flex;

@@ -27,31 +27,41 @@ let pct = $derived(Math.max(4, Math.min(100, (bits / 90) * 100)));
 
 <style>
 	.meter {
-		display: grid;
-		grid-template-columns: auto 1fr auto;
-		align-items: center;
-		gap: 0.6rem;
-		padding: 0.6rem 0.8rem;
-		border-radius: 16px;
 		border: 3px solid var(--edge);
+		border-radius: 16px;
 		background: var(--surface);
-		box-shadow: 3px 3px 0 var(--hard);
+		padding: 16px 20px;
+		display: flex;
+		gap: 16px;
+		align-items: center;
+		flex-wrap: wrap;
+		box-shadow: 4px 4px 0 var(--hard);
 		font-weight: 700;
 	}
+	.meter-label {
+		font-family: var(--font-display);
+		font-size: 1.1rem;
+	}
 	.meter-track {
+		flex: 1 1 180px;
+		min-width: 140px;
 		display: block;
-		height: 14px;
+		height: 20px;
+		border: 3px solid var(--edge);
 		border-radius: 999px;
-		border: 2px solid var(--edge);
-		background: var(--surface-border);
-		box-shadow: inset 0 2px 4px rgb(26 26 46 / 0.3);
+		background: var(--paper);
 		overflow: hidden;
 	}
 	.meter-fill {
 		display: block;
 		height: 100%;
-		background: linear-gradient(180deg, var(--accent), var(--accent-dark));
+		background: var(--edge);
+		border-right: 3px solid var(--edge);
 		transition: width 0.3s ease-out;
+	}
+	.meter-bits {
+		font-size: 0.9rem;
+		font-weight: 600;
 	}
 	@media (prefers-reduced-motion: reduce) {
 		.meter-fill {

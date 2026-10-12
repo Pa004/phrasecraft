@@ -17,6 +17,7 @@ import "../styles/tokens.css";
 	</head>
 	<body>
 		<BgField client:idle />
+		<a class="skip" href="#contenido">Saltar al contenido</a>
 		<header>
 			<HeaderBar current="/practicar" ctaHref="/" ctaLabel="Crear contraseña" />
 			<PageHero
@@ -25,8 +26,8 @@ import "../styles/tokens.css";
 				sub="Mira, completa, ordena, recuerda y escríbela sin pistas. Nada de lo que escribas sale de tu navegador."
 			/>
 		</header>
-		<main>
-			<Board title="Tablero de práctica" id="practicar">
+		<main id="contenido">
+			<Board title="Tablero de práctica" id="practicar" pill="5 etapas">
 				<PracticeStandalone client:load />
 			</Board>
 		</main>

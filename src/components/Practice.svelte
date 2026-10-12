@@ -311,12 +311,12 @@ let schedule = $derived(reviewSchedule(new Date()));
 	.tile {
 		position: relative;
 		aspect-ratio: 1;
-		border: 1px solid currentColor;
-		border-radius: 0.5rem;
+		border: 3px solid var(--edge);
+		border-radius: 16px;
 		display: grid;
 		place-items: center;
-		background: var(--paper);
-		box-shadow: var(--shadow-1);
+		background: var(--surface);
+		box-shadow: 4px 4px 0 var(--hard);
 	}
 	.tile svg {
 		width: 80%;

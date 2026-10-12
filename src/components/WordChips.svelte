@@ -18,7 +18,8 @@ let { words }: Props = $props();
 	.chips {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 0.5rem;
+		gap: 8px;
+		align-items: center;
 		padding: 0;
 		margin: 0.75rem 0;
 		list-style: none;
@@ -27,12 +28,23 @@ let { words }: Props = $props();
 		display: inline-flex;
 		align-items: center;
 		gap: 0.4rem;
-		padding: 0.3rem 0.8rem 0.3rem 0.3rem;
-		border-radius: 999px;
-		border: 2px solid var(--edge);
-		background: var(--surface);
-		font-weight: 700;
+		font-family: var(--font-display);
+		font-weight: 800;
+		font-size: 1.1rem;
+		line-height: 1.25;
+		border: 3px solid var(--edge);
+		border-radius: 16px;
+		padding: 4px 14px;
 		box-shadow: 2px 2px 0 var(--hard);
+		color: var(--ink);
+		background: var(--surface);
+	}
+	.chip:nth-child(4n + 1) {
+		background: var(--accent);
+		color: var(--btn-ink);
+	}
+	.chip:nth-child(4n + 3) {
+		background: var(--surface-border);
 	}
 	.chip-n {
 		display: grid;
@@ -40,9 +52,8 @@ let { words }: Props = $props();
 		width: 1.5rem;
 		height: 1.5rem;
 		border-radius: 50%;
-		background: var(--accent);
-		border: 2px solid var(--edge);
-		color: var(--btn-ink);
+		background: var(--edge);
+		color: var(--paper);
 		font-size: 0.85rem;
 		font-weight: 800;
 	}

@@ -125,13 +125,17 @@ async function copy(): Promise<void> {
 	<SpriteProvider bind:status={sprite} />
 
 	<div class="controls">
-		<label>
-			Palabras: {k}
-			<input type="range" class="slider-3d" min="4" max="12" step="1" bind:value={k} disabled={!ready} />
-		</label>
-		<label class="switch">
-			<input type="checkbox" class="switch-3d" bind:checked={compat} disabled={!ready} />
-			Modo compatibilidad (mayúsculas, dígitos y símbolo)
+		<fieldset>
+			<legend>Número de palabras</legend>
+			<div class="deslizador">
+				<input type="range" id="gen-k" min="4" max="12" step="1" bind:value={k} disabled={!ready} aria-label="Número de palabras" aria-describedby="gen-k-ayuda" />
+				<output for="gen-k">{k}</output>
+			</div>
+			<p class="ayuda" id="gen-k-ayuda">8 por defecto ≈ 72 bits. Más palabras, más fuerza.</p>
+		</fieldset>
+		<label class="interruptor">
+			<input type="checkbox" bind:checked={compat} disabled={!ready} />
+			<span><b>Modo compatibilidad</b><small>Mayúsculas, dígitos y símbolo para sitios exigentes</small></span>
 		</label>
 		<p
 			title="Calculado asumiendo que quien ataca conoce el método y la lista de palabras."
@@ -153,15 +157,23 @@ async function copy(): Promise<void> {
 			<Scene words={result.words} {layout} />
 			<p class="story">{story}</p>
 			<div class="card card-3d">
-				<p class="secret-label">TU CONTRASEÑA</p>
-				<WordChips words={result.words} />
-				<p class="secret-line">
-					Tu contraseña: <code aria-label={shown ? "Contraseña generada" : "Contraseña oculta"}>{shown ? result.text : masked}</code>
-					— {result.text.length} caracteres.
-				</p>
-				<div class="row">
-					<button type="button" class="btn-3d" onclick={doGenerate}>Generar nueva escena</button>
-					<button type="button" class="btn-3d-secondary" onclick={copy}>Copiar</button>
+				<div class="frase-caja">
+					<p class="secret-label">TU CONTRASEÑA</p>
+					<WordChips words={result.words} />
+					<p class="secret-line">
+						Tu contraseña: <code aria-label={shown ? "Contraseña generada" : "Contraseña oculta"}>{shown ? result.text : masked}</code>
+						— {result.text.length} caracteres.
+					</p>
+				</div>
+				<div class="row acciones">
+					<button type="button" class="btn-3d" onclick={doGenerate}>
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.6-6.4" /><path d="M21 3v6h-6" /></svg>
+						Generar nueva escena
+					</button>
+					<button type="button" class="btn-3d-secondary" onclick={copy}>
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="4" /><path d="M5 15V5a2 2 0 0 1 2-2h10" /></svg>
+						Copiar
+					</button>
 					<button type="button" class="btn-3d-secondary" onclick={newStory}>Otra historia</button>
 					<button type="button" class="btn-3d-secondary" aria-pressed={shown} onclick={() => (shown = !shown)}>
 						{shown ? "Ocultar" : "Mostrar"}
@@ -214,19 +226,42 @@ async function copy(): Promise<void> {
 		overflow-wrap: anywhere;
 	}
 	.secret-label {
-		font-size: 0.8rem;
+		font-size: 0.76rem;
 		font-weight: 800;
-		letter-spacing: 0.12em;
-		margin: 0;
+		letter-spacing: 0.09em;
+		text-transform: uppercase;
+		opacity: 0.75;
+		margin: 0 0 12px;
 	}
 	.secret-line {
 		line-height: 1.6;
-		margin: 0;
+		margin: 12px 0 0;
 	}
-	.row {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem;
+	.secret-line strong {
+		color: var(--ink);
+	}
+	.frase-caja {
+		border: 3px solid var(--edge);
+		border-radius: 16px;
+		background: var(--paper);
+		padding: 20px;
+		box-shadow: inset 3px 3px 0 var(--surface-border);
+	}
+	.row.acciones {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 12px;
+	}
+	.row.acciones .btn-3d {
+		grid-column: 1 / -1;
+	}
+	@media (min-width: 720px) {
+		.row.acciones {
+			grid-template-columns: 1.4fr 1fr 1fr 1fr;
+		}
+		.row.acciones .btn-3d {
+			grid-column: auto;
+		}
 	}
 	.warn {
 		border-left: 4px solid var(--accent);

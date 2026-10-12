@@ -3,33 +3,43 @@ interface Props {
 	title: string;
 	text: string;
 	span?: boolean;
+	featured?: boolean;
 }
 
-const { title, text, span = false } = Astro.props;
+const { title, text, span = false, featured = false } = Astro.props;
 ---
 
-<li class:list={["cell", { wide: span }]}>
+<li class:list={["cell", { wide: span, featured }]}>
 	<strong>{title}</strong>
 	<span>{text}</span>
 </li>
 
 <style>
 	.cell {
+		background: var(--surface);
+		border: 3px solid var(--edge);
+		border-radius: 16px;
+		box-shadow: 4px 4px 0 var(--hard);
+		padding: 20px;
 		display: grid;
 		gap: 0.35rem;
 		align-content: start;
-		padding: 1rem;
-		border-radius: 1.25rem;
-		border: 2px solid var(--surface-border);
-		background: var(--surface);
-		box-shadow: var(--shadow-1);
 		list-style: none;
 	}
 	.cell strong {
-		font-size: 1.05rem;
+		font-family: var(--font-display);
+		font-size: 1.2rem;
 	}
 	.cell span {
-		font-size: 0.95rem;
+		font-size: 0.94rem;
 		line-height: 1.55;
+		opacity: 0.85;
+	}
+	.cell.featured {
+		background: var(--edge);
+		color: var(--paper);
+	}
+	.cell.featured span {
+		opacity: 0.85;
 	}
 </style>

@@ -2,47 +2,79 @@
 interface Props {
 	title: string;
 	id?: string;
+	pill?: string;
 }
 
-const { title, id } = Astro.props;
+const { title, id, pill } = Astro.props;
 ---
 
 <section class="board" aria-label={title} id={id}>
-	<div class="board-bar" aria-hidden="true">
-		<span></span><span></span><span></span>
+	<div class="diorama-bar">
+		<span class="luces" aria-hidden="true"><span></span><span></span><span></span></span>
+		<h2 class="board-title">{title}</h2>
+		{pill && <span class="pildora">{pill}</span>}
 	</div>
-	<h2 class="board-title">{title}</h2>
-	<slot />
+	<div class="diorama-cuerpo">
+		<slot />
+	</div>
 </section>
 
 <style>
 	.board {
-		border: 3px solid var(--surface-border);
-		border-radius: 1.5rem;
 		background: var(--surface);
-		box-shadow:
-			inset 0 2px 0 rgb(255 255 255 / 0.1),
-			var(--shadow-3);
-		padding: 1.25rem;
+		border: 5px solid var(--edge);
+		border-radius: 16px;
+		box-shadow: 12px 12px 0 var(--hard);
+		position: relative;
+		overflow: hidden;
 		margin: 1.5rem 0;
 	}
-	.board-bar {
+	.diorama-bar {
 		display: flex;
-		gap: 0.4rem;
-		margin-bottom: 0.75rem;
+		align-items: center;
+		gap: 10px;
+		padding: 12px 20px;
+		border-bottom: 3px solid var(--edge);
 	}
-	.board-bar span {
-		width: 12px;
-		height: 12px;
+	.luces {
+		display: flex;
+		gap: 8px;
+	}
+	.luces span {
+		width: 14px;
+		height: 14px;
 		border-radius: 50%;
-		background: var(--surface-border);
-		box-shadow: inset 0 1px 2px rgb(26 26 46 / 0.3);
+		border: 2.5px solid var(--edge);
+		display: block;
+		background: var(--surface);
 	}
-	.board-bar span:first-child {
+	.luces span:nth-child(1) {
 		background: var(--accent);
 	}
 	.board-title {
-		margin-top: 0;
-		font-size: 1.4rem;
+		font-family: var(--font-display);
+		margin: 0;
+		font-size: 1.2rem;
+		letter-spacing: -0.01em;
+	}
+	.pildora {
+		margin-left: auto;
+		font-size: 0.8rem;
+		font-weight: 800;
+		background: var(--accent);
+		color: var(--btn-ink);
+		border: 2.5px solid var(--edge);
+		border-radius: 999px;
+		padding: 6px 14px;
+	}
+	.diorama-cuerpo {
+		padding: 24px;
+		display: grid;
+		gap: 16px;
+	}
+	@media (max-width: 720px) {
+		.diorama-cuerpo {
+			padding: 16px;
+		}
 	}
 </style>
