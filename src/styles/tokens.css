@@ -84,41 +84,46 @@ astro-static-slot {
 	overflow: hidden;
 }
 
+/* Contenedor de página del mock: 1080px centrado con relleno lateral. */
+body > header,
+body > main,
+body > footer {
+	max-width: 1080px;
+	margin-inline: auto;
+	padding-inline: 20px;
+}
+
+body > main {
+	perspective: 1400px;
+}
+
 :root {
-	--paper: #faf7f0;
-	--ink: #1a1a2e;
-	--accent: #e4582e;
-	--accent-dark: #b23c14;
-	--accent-edge: #7e2a0e;
-	--surface: #ffffff;
-	--surface-border: #e8e0d0;
-	--edge: #2b1d12;
-	--btn-ink: #2b1503;
-	--hard: #2b1d12;
+	color-scheme: light;
+	--paper: oklch(96.5% 0.028 85);
+	--paper-2: oklch(92.5% 0.04 80);
+	--paper-3: oklch(99% 0.012 90);
+	--ink: oklch(25% 0.04 55);
+	--ink-2: oklch(42% 0.04 60);
+	--accent: oklch(66% 0.175 52);
+	--accent-deep: oklch(52% 0.15 45);
+	--accent-soft: oklch(92% 0.07 70);
+	--accent-dark: oklch(52% 0.15 45);
+	--accent-edge: oklch(25% 0.04 55);
+	--surface: oklch(99% 0.012 90);
+	--surface-2: oklch(92.5% 0.04 80);
+	--surface-border: oklch(92.5% 0.04 80);
+	--edge: oklch(25% 0.04 55);
+	--btn-ink: oklch(25% 0.04 55);
+	--hard: oklch(25% 0.04 55);
 	--hard-sm: 3px 3px 0 var(--hard);
 	--shadow-1: 0 1px 2px rgb(26 26 46 / 0.12), 0 2px 8px rgb(26 26 46 / 0.1);
 	--shadow-2: 0 2px 4px rgb(26 26 46 / 0.14), 0 8px 24px rgb(26 26 46 / 0.16);
 	--shadow-3: 0 4px 8px rgb(26 26 46 / 0.16), 0 16px 40px rgb(26 26 46 / 0.22);
-	--hard-sm: 3px 3px 0 var(--edge);
 	--hard-md: 5px 5px 0 var(--edge);
 	--font-display: "Arial Rounded MT Bold", "Segoe UI Rounded", "SF Pro Rounded",
 		ui-rounded, "Nunito Rounded", system-ui, sans-serif;
 	--font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
 		Arial, sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--paper: #1a1a2e;
-		--ink: #faf7f0;
-		--surface: #23233a;
-		--surface-border: #38385c;
-		--edge: #efe6d4;
-		--hard: #000;
-		--shadow-1: 0 1px 2px rgb(0 0 0 / 0.4), 0 2px 8px rgb(0 0 0 / 0.35);
-		--shadow-2: 0 2px 4px rgb(0 0 0 / 0.45), 0 10px 28px rgb(0 0 0 / 0.5);
-		--shadow-3: 0 4px 8px rgb(0 0 0 / 0.5), 0 18px 44px rgb(0 0 0 / 0.55);
-	}
 }
 
 body {
@@ -128,20 +133,9 @@ body {
 }
 
 h1,
-h2,
-.title-3d {
+h2 {
 	font-family: var(--font-display);
-	letter-spacing: -0.01em;
-}
-
-.title-3d {
-	text-shadow: 0 2px 0 rgb(43 29 18 / 0.12);
-}
-
-@media (prefers-color-scheme: dark) {
-	.title-3d {
-		text-shadow: 0 2px 0 rgb(0 0 0 / 0.5);
-	}
+	letter-spacing: -0.02em;
 }
 
 /* Resaltado marcador para palabras clave del hero. */

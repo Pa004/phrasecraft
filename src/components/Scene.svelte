@@ -86,22 +86,8 @@ let label = $derived(
 		fill: #4a7c59;
 		transform: translateZ(-30px);
 	}
-	@media (prefers-color-scheme: dark) {
-		.hill.far {
-			fill: #2d4a3e;
-		}
-		.hill.near {
-			fill: #1d2f27;
-		}
-	}
 	.ground-shadow {
 		fill: #000;
-	}
-	@media (prefers-color-scheme: dark) {
-		.ground-shadow {
-			fill: #000;
-			opacity: 0.5;
-		}
 	}
 	.depth {
 		transform: translateZ(var(--lift, 0px));
