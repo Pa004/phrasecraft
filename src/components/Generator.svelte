@@ -153,17 +153,21 @@ async function copy(): Promise<void> {
 			<Scene words={result.words} {layout} />
 			<p class="story">{story}</p>
 			<div class="card card-3d">
-				<StrengthMeter bits={result.bits} />
+				<p class="secret-label">TU CONTRASEÑA</p>
 				<WordChips words={result.words} />
-				<code aria-label={shown ? "Contraseña generada" : "Contraseña oculta"}>{shown ? result.text : masked}</code>
+				<p class="secret-line">
+					Tu contraseña: <code aria-label={shown ? "Contraseña generada" : "Contraseña oculta"}>{shown ? result.text : masked}</code>
+					— {result.text.length} caracteres.
+				</p>
 				<div class="row">
+					<button type="button" class="btn-3d" onclick={doGenerate}>Generar nueva escena</button>
+					<button type="button" class="btn-3d-secondary" onclick={copy}>Copiar</button>
+					<button type="button" class="btn-3d-secondary" onclick={newStory}>Otra historia</button>
 					<button type="button" class="btn-3d-secondary" aria-pressed={shown} onclick={() => (shown = !shown)}>
 						{shown ? "Ocultar" : "Mostrar"}
 					</button>
-					<button type="button" class="btn-3d-secondary" onclick={copy}>Copiar</button>
-					<button type="button" class="btn-3d-secondary" onclick={newStory}>Otra historia</button>
-					<button type="button" class="btn-3d-secondary" onclick={doGenerate}>Generar otra</button>
 				</div>
+				<StrengthMeter bits={result.bits} extra={`${result.words.length} palabras · ${result.text.length} caracteres`} />
 				<p class="warn">Esta escena <strong>es</strong> tu contraseña: no la captures ni la compartas.</p>
 				{#if notice}<p>{notice}</p>{/if}
 				{#if !practicing}
@@ -208,6 +212,16 @@ async function copy(): Promise<void> {
 	.card code {
 		font-size: 1.1rem;
 		overflow-wrap: anywhere;
+	}
+	.secret-label {
+		font-size: 0.8rem;
+		font-weight: 800;
+		letter-spacing: 0.12em;
+		margin: 0;
+	}
+	.secret-line {
+		line-height: 1.6;
+		margin: 0;
 	}
 	.row {
 		display: flex;

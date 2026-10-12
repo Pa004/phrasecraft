@@ -1,9 +1,10 @@
 <script lang="ts">
 interface Props {
 	bits: number;
+	extra?: string;
 }
 
-let { bits }: Props = $props();
+let { bits, extra = "" }: Props = $props();
 
 let label = $derived(
 	bits >= 70 ? "Fuerte" : bits >= 50 ? "Aceptable" : "Débil",
@@ -21,7 +22,7 @@ let pct = $derived(Math.max(4, Math.min(100, (bits / 90) * 100)));
 >
 	<span class="meter-label">Fuerza: {label}</span>
 	<span class="meter-track"><span class="meter-fill" style={`width: ${pct}%`}></span></span>
-	<span class="meter-bits">{bits.toFixed(0)} bits</span>
+	<span class="meter-bits">{bits.toFixed(0)} bits{extra ? ` · ${extra}` : ""}</span>
 </div>
 
 <style>
