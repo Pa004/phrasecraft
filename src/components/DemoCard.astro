@@ -1,0 +1,52 @@
+---
+---
+
+<aside class="demo-card" aria-label="Ejemplo de escena generada">
+	<p class="demo-pill">Ejemplo con palabras fijas</p>
+	<ul class="wchips" aria-hidden="true">
+		<li class="wchip"><span class="wchip-n">1</span>pulpo</li>
+		<li class="wchip"><span class="wchip-n">2</span>luna</li>
+		<li class="wchip"><span class="wchip-n">3</span>tambor</li>
+	</ul>
+	<p class="demo-text"><code>pulpo-luna-tambor</code></p>
+	<p class="demo-note">Así se ve una escena real. La tuya usa palabras al azar.</p>
+</aside>
+
+<style>
+	.demo-card {
+		background: var(--surface);
+		border: 3px solid var(--edge);
+		border-radius: 16px;
+		box-shadow: 6px 6px 0 var(--hard);
+		padding: 20px;
+		transform: rotate(1.5deg);
+	}
+	.demo-pill {
+		display: inline-block;
+		margin: 0 0 0.5rem;
+		font-size: 0.8rem;
+		font-weight: 800;
+		background: var(--accent);
+		color: var(--btn-ink);
+		border: 2.5px solid var(--edge);
+		border-radius: 999px;
+		padding: 6px 14px;
+	}
+	.demo-text code {
+		font-size: 1.05rem;
+		overflow-wrap: anywhere;
+	}
+	.demo-note {
+		font-size: 0.9rem;
+		opacity: 0.85;
+		margin-bottom: 0;
+	}
+	@media (prefers-reduced-motion: no-preference) {
+		.demo-card {
+			transition: transform 0.2s ease-out;
+		}
+		.demo-card:hover {
+			transform: rotate(0deg) translateY(-2px);
+		}
+	}
+</style>
