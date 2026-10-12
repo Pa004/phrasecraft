@@ -16,7 +16,7 @@ import "../styles/tokens.css";
 		<title>Practicar — phrasecraft</title>
 	</head>
 	<body>
-		<BgField client:idle />
+		<BgField client:load />
 		<a class="skip" href="#contenido">Saltar al contenido</a>
 		<header>
 			<HeaderBar current="/practicar" ctaHref="/" ctaLabel="Crear contraseña" />
@@ -32,5 +32,6 @@ import "../styles/tokens.css";
 			</Board>
 		</main>
 		<Footer />
+		<script src="../scripts/board-tilt.ts"></script>
 	</body>
 </html>
