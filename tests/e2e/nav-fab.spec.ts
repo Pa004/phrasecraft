@@ -42,13 +42,14 @@ test("la cabecera abre a la izquierda un menú superpuesto con glass y descripci
 	]) {
 		await expect(menu.getByRole("link", { name: nombre })).toBeVisible();
 	}
-	for (const seccion of [
-		"Cómo funciona Genera, practica y recuerda en 3 pasos",
-		"Por qué confiar Privacidad real, código abierto",
-		"Úsala bien Tu escena es tu contraseña",
-	]) {
-		await expect(menu.getByRole("link", { name: seccion })).toBeVisible();
-	}
+	await expect(
+		menu.getByRole("link", {
+			name: "Cómo funciona Genera, practica y recuerda en 3 pasos",
+		}),
+	).toBeVisible();
+	await expect(
+		page.getByText("Úsala para tu contraseña maestra"),
+	).toBeVisible();
 	await page.keyboard.press("Escape");
 	await expect(menu).toBeHidden();
 	await expect(
@@ -86,10 +87,27 @@ test("un enlace de sección del menú salta al ancla y cierra el menú", async (
 	await page.getByRole("button", { name: "Abrir menú de navegación" }).click();
 	const menu = page.getByRole("navigation", { name: "Navegación" });
 	await menu
-		.getByRole("link", { name: "Úsala bien Tu escena es tu contraseña" })
+		.getByRole("link", {
+			name: "Cómo funciona Genera, practica y recuerda en 3 pasos",
+		})
 		.click();
 	await expect(menu).toBeHidden();
-	await expect(page).toHaveURL(/#uso$/);
+	await expect(page).toHaveURL(/#como$/);
+});
+
+test("la confianza vive en /seguridad y no en la home", async ({ page }) => {
+	await page.goto("/");
+	await expect(
+		page.getByRole("heading", { name: "Por qué confiar" }),
+	).toHaveCount(0);
+	await expect(page.getByText("sin cuentas ni rastreo")).toBeVisible();
+	await page.goto("/seguridad");
+	await expect(
+		page.getByRole("heading", { name: "Por qué confiar" }),
+	).toBeVisible();
+	await expect(
+		page.getByText("Al pulsar Generar no sale ninguna petición de red"),
+	).toBeVisible();
 });
 
 test("la escena generada aparece dentro de un modal con story y contraseña", async ({
