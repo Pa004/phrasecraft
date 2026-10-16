@@ -25,15 +25,15 @@ let pct = $derived(Math.max(4, Math.min(100, (bits / 90) * 100)));
 
 <style>
 	.meter {
-		border: 3px solid var(--edge);
-		border-radius: 16px;
-		background: var(--surface);
-		padding: 16px 20px;
+		border: 0;
+		border-radius: 0;
+		background: transparent;
+		box-shadow: none;
+		padding: 4px 2px;
 		display: flex;
-		gap: 16px;
+		gap: 12px;
 		align-items: center;
 		flex-wrap: wrap;
-		box-shadow: 4px 4px 0 var(--hard);
 		font-weight: 700;
 	}
 	.meter-label {
@@ -44,7 +44,7 @@ let pct = $derived(Math.max(4, Math.min(100, (bits / 90) * 100)));
 		flex: 1 1 180px;
 		min-width: 140px;
 		display: block;
-		height: 20px;
+		height: 14px;
 		border: 3px solid var(--edge);
 		border-radius: 999px;
 		background: var(--paper);

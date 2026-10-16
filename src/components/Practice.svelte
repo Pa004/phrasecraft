@@ -214,6 +214,7 @@ let schedule = $derived(reviewSchedule(new Date()));
 				{/each}
 			</div>
 			<form
+				class="par"
 				onsubmit={(e) => {
 					e.preventDefault();
 					check2();
@@ -242,6 +243,7 @@ let schedule = $derived(reviewSchedule(new Date()));
 			<button type="button" class="btn-3d" onclick={check3}>Comprobar orden</button>
 		{:else if stage === 4}
 			<form
+				class="par"
 				onsubmit={(e) => {
 					e.preventDefault();
 					check4();
@@ -336,6 +338,18 @@ let schedule = $derived(reviewSchedule(new Date()));
 		display: grid;
 		gap: 0.5rem;
 		max-width: 28rem;
+	}
+	form.par {
+		grid-template-columns: 1fr 1fr;
+		max-width: 36rem;
+	}
+	form.par button[type="submit"] {
+		grid-column: 1 / -1;
+	}
+	@media (max-width: 720px) {
+		form.par {
+			grid-template-columns: 1fr;
+		}
 	}
 	label {
 		display: grid;

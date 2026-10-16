@@ -36,8 +36,10 @@ let k = $state(minWordCount(COUNT, 70));
 let compat = $state(false);
 let shown = $state(false);
 let notice = $state("");
+let toast = $state("");
 let dialog: HTMLDialogElement | null = $state(null);
 let clearTimer: ReturnType<typeof setTimeout> | undefined;
+let toastTimer: ReturnType<typeof setTimeout> | undefined;
 
 let mode: PasswordMode = $derived(compat ? "compat" : "standard");
 let liveBits = $derived(
@@ -57,8 +59,17 @@ onMount(() => {
 		});
 	return () => {
 		if (clearTimer) clearTimeout(clearTimer);
+		if (toastTimer) clearTimeout(toastTimer);
 	};
 });
+
+function showToast(msg: string): void {
+	toast = msg;
+	if (toastTimer) clearTimeout(toastTimer);
+	toastTimer = setTimeout(() => {
+		toast = "";
+	}, 4500);
+}
 
 function pickLayout(): LayoutName {
 	return LAYOUTS[Math.floor(Math.random() * LAYOUTS.length)]!;
@@ -79,7 +90,8 @@ function doGenerate(): void {
 	story = buildStory(r.words);
 	layout = pickLayout();
 	shown = false;
-	notice = "Escena generada. La anterior no se guarda en ningún sitio.";
+	notice = "";
+	showToast("Escena generada. La anterior no se guarda en ningún sitio.");
 }
 
 function newStory(): void {
@@ -101,8 +113,9 @@ async function copy(): Promise<void> {
 	if (!result) return;
 	try {
 		await navigator.clipboard.writeText(result.text);
-		notice =
-			"Copiada. Se borrará del portapapeles en 30 s (si tu navegador lo permite).";
+		showToast(
+			"Copiada. Se borrará del portapapeles en 30 s (si tu navegador lo permite).",
+		);
 		if (clearTimer) clearTimeout(clearTimer);
 		const text = result.text;
 		clearTimer = setTimeout(() => {
@@ -114,8 +127,9 @@ async function copy(): Promise<void> {
 				.catch(() => {});
 		}, 30000);
 	} catch {
-		notice =
-			"No se pudo copiar automáticamente: muestra la contraseña y cópiala a mano.";
+		showToast(
+			"No se pudo copiar automáticamente: muestra la contraseña y cópiala a mano.",
+		);
 		shown = true;
 	}
 }
@@ -128,7 +142,7 @@ async function copy(): Promise<void> {
 	<button type="button" class="primary btn-3d" disabled={!ready} onclick={openModal}>
 		Generar mi escena
 	</button>
-	<p class="loadnote" aria-live="polite">{ready ? "" : "Cargando escena…"}</p>
+	<p class="loadnote" aria-live="polite">{notice || (ready ? "" : "Cargando escena…")}</p>
 
 	<dialog bind:this={dialog} class="gen-modal" aria-labelledby="gen-modal-title">
 		<div class="modal-cabeza">
@@ -136,7 +150,7 @@ async function copy(): Promise<void> {
 			<button type="button" class="cierre" aria-label="Cerrar" onclick={() => dialog?.close()}>X</button>
 		</div>
 		{#if !result}
-			<p class="loadnote" aria-live="polite">{notice || "Cargando escena…"}</p>
+			<p class="loadnote" aria-live="polite">Cargando escena…</p>
 		{/if}
 
 	{#if result}
@@ -171,7 +185,6 @@ async function copy(): Promise<void> {
 				</div>
 				<StrengthMeter bits={result.bits} />
 				<p class="warn">Esta escena <strong>es</strong> tu contraseña: no la captures ni la compartas.</p>
-				{#if notice}<p>{notice}</p>{/if}
 				<details class="ajustes">
 					<summary>Ajustar: {k} palabras{compat ? " · con mayúsculas y símbolos" : ""}</summary>
 					<div class="controls">
@@ -205,6 +218,7 @@ async function copy(): Promise<void> {
 			</div>
 		</div>
 	{/if}
+		<div class="toast-live" aria-live="polite">{#if toast}<p class="toast">{toast}</p>{/if}</div>
 	</dialog>
 </section>
 
@@ -223,14 +237,15 @@ async function copy(): Promise<void> {
 		margin: 0.25rem 0 0;
 	}
 	.gen-sub {
-		margin: 0.25rem 0 0.75rem;
+		margin: 0.25rem 0 0.5rem;
 		font-size: 0.98rem;
 		opacity: 0.85;
 	}
 	.story {
-		font-size: 1.25rem;
-		line-height: 1.7;
+		font-size: 1.15rem;
+		line-height: 1.6;
 		width: 100%;
+		margin: 0.5rem 0 0;
 	}
 	.gen-modal {
 		background: var(--surface);
@@ -238,7 +253,7 @@ async function copy(): Promise<void> {
 		border: 5px solid var(--edge);
 		border-radius: 16px;
 		box-shadow: 12px 12px 0 var(--hard);
-		padding: 24px;
+		padding: 16px;
 		width: min(960px, 94vw);
 		max-height: min(90vh, 90dvh);
 		overflow-y: auto;
@@ -255,7 +270,11 @@ async function copy(): Promise<void> {
 		align-items: center;
 		justify-content: space-between;
 		gap: 12px;
-		margin-bottom: 0.75rem;
+		margin-bottom: 0.5rem;
+	}
+	.gen-modal .btn-3d,
+	.gen-modal .btn-3d-secondary {
+		min-height: 48px;
 	}
 	.modal-cabeza h2 {
 		margin: 0;
@@ -302,9 +321,9 @@ async function copy(): Promise<void> {
 	}
 	.card {
 		display: grid;
-		gap: 0.75rem;
-		margin-top: 1rem;
-		padding: 1rem;
+		gap: 0.5rem;
+		margin-top: 0.75rem;
+		padding: 0.75rem;
 	}
 	.card code {
 		font-size: 1.1rem;
@@ -316,10 +335,10 @@ async function copy(): Promise<void> {
 		letter-spacing: 0.09em;
 		text-transform: uppercase;
 		opacity: 0.75;
-		margin: 0 0 12px;
+		margin: 0 0 8px;
 	}
 	.caption {
-		margin: 12px 0 0;
+		margin: 8px 0 0;
 		font-size: 0.9rem;
 		opacity: 0.8;
 	}
@@ -341,10 +360,11 @@ async function copy(): Promise<void> {
 		border: 0;
 	}
 	.ajustes {
-		border: 3px solid var(--edge);
-		border-radius: 12px;
-		padding: 4px 12px;
-		background: var(--surface);
+		border: 0;
+		border-top: 3px solid var(--edge);
+		border-radius: 0;
+		padding: 8px 2px 0;
+		background: none;
 	}
 	.ajustes summary {
 		cursor: pointer;
@@ -363,16 +383,16 @@ async function copy(): Promise<void> {
 		}
 	}
 	.frase-caja {
-		border: 3px solid var(--edge);
-		border-radius: 16px;
-		background: var(--paper);
-		padding: 20px;
-		box-shadow: inset 3px 3px 0 var(--surface-border);
+		border: 0;
+		border-radius: 0;
+		background: none;
+		padding: 4px 2px;
+		box-shadow: none;
 	}
 	.row.acciones {
 		display: grid;
 		grid-template-columns: 1fr;
-		gap: 12px;
+		gap: 8px;
 	}
 	.row.acciones .btn-3d {
 		grid-column: 1 / -1;
@@ -388,5 +408,42 @@ async function copy(): Promise<void> {
 	.warn {
 		border-left: 4px solid var(--accent);
 		padding-left: 0.75rem;
+	}
+	.toast-live:empty {
+		display: none;
+	}
+	.toast {
+		position: fixed;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 70;
+		margin: 0;
+		background: var(--edge);
+		color: var(--paper);
+		border: 3px solid var(--edge);
+		border-radius: 999px;
+		box-shadow: 4px 4px 0 rgb(0 0 0 / 0.35);
+		padding: 10px 20px;
+		font-weight: 700;
+		font-size: 0.95rem;
+		max-width: min(92vw, 32rem);
+		text-align: center;
+		animation: toast-in 0.25s ease-out;
+	}
+	@keyframes toast-in {
+		from {
+			transform: translate(-50%, 8px);
+			opacity: 0;
+		}
+		to {
+			transform: translate(-50%, 0);
+			opacity: 1;
+		}
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.toast {
+			animation: none;
+		}
 	}
 </style>
