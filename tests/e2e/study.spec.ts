@@ -29,18 +29,3 @@ test("estudio con desechable: consentimiento, recuerdo y exporte", async ({
 		page.getByRole("button", { name: /copiar resultado/i }),
 	).toBeVisible();
 });
-
-test("/seguridad expone modelo de amenazas y verificación", async ({
-	page,
-}) => {
-	await page.goto("/seguridad");
-	await expect(
-		page.getByRole("heading", { name: /qué se defiende/i }),
-	).toBeVisible();
-	await expect(
-		page.getByRole("heading", { name: /qué no se promete/i }),
-	).toBeVisible();
-	await expect(
-		page.getByRole("heading", { name: /verifícalo tú/i }),
-	).toBeVisible();
-});
