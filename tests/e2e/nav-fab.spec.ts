@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-test("la cabecera abre a la izquierda un menú en flujo con descripciones, y cierra con Esc", async ({
+test("la cabecera abre a la izquierda un menú superpuesto con glass y descripciones, y cierra con Esc", async ({
 	page,
 }) => {
 	await page.goto("/");
@@ -22,7 +22,14 @@ test("la cabecera abre a la izquierda un menú en flujo con descripciones, y cie
 	const headerBox = await page.locator("body > header").boundingBox();
 	if (menuBox === null || headerBox === null)
 		throw new Error("sin menú o sin header de página");
-	expect(menuBox.y + menuBox.height).toBeLessThanOrEqual(headerBox.y + 2);
+	expect(menuBox.y + menuBox.height).toBeGreaterThan(headerBox.y);
+	const glass = await page.evaluate(() => {
+		const el = document.querySelector(".fab-menu");
+		if (!el) return "none";
+		return getComputedStyle(el).backdropFilter;
+	});
+	expect(glass).not.toBe("none");
+	expect(glass).toContain("blur");
 	await expect(menu.getByText("En esta página")).toBeVisible();
 	await expect(menu.getByText("Páginas")).toBeVisible();
 	await expect(
