@@ -99,6 +99,7 @@ body > main {
 }
 
 body {
+	margin-bottom: 0;
 	background: var(--paper);
 	color: var(--ink);
 	font-family: var(--font-body);
