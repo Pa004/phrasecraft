@@ -1,11 +1,17 @@
 ---
-interface Props {
-	current?: string;
+interface NavLink {
+	href: string;
+	label: string;
 }
 
-const { current = "" } = Astro.props;
+interface Props {
+	current?: string;
+	sections?: NavLink[];
+}
 
-const links = [
+const { current = "", sections = [] } = Astro.props;
+
+const links: NavLink[] = [
 	{ href: "/", label: "Generar" },
 	{ href: "/practicar", label: "Practicar" },
 	{ href: "/seguridad", label: "Seguridad" },
@@ -24,7 +30,9 @@ const links = [
 	>
 		<span class="burg" aria-hidden="true"><span></span><span></span><span></span></span>
 	</button>
-	<nav id="fab-menu" class="fab-menu" aria-label="Accesos rápidos" hidden>
+	<nav id="fab-menu" class="fab-menu" aria-label="Navegación" hidden>
+		{sections.map((s) => <a class="fab-link" href={s.href}>{s.label}</a>)}
+		{sections.length > 0 && <div class="fab-sep" aria-hidden="true"></div>}
 		{
 			links.map((l) =>
 				l.href === current ? (
@@ -82,6 +90,10 @@ const links = [
 			if (e.target instanceof Node && !fab.contains(e.target)) close();
 		});
 
+		menu.addEventListener("click", (e) => {
+			if (e.target instanceof Element && e.target.closest("a")) close();
+		});
+
 		syncTop();
 		window.addEventListener("resize", syncTop);
 	});
@@ -90,12 +102,12 @@ const links = [
 <style>
 	.fab {
 		position: fixed;
-		left: 12px;
+		right: 12px;
 		top: var(--fab-top, 84px);
 		z-index: 40;
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: flex-end;
 		gap: 10px;
 	}
 	.fab-toggle {
@@ -161,6 +173,9 @@ const links = [
 		box-shadow: 6px 6px 0 var(--hard);
 		padding: 10px;
 		min-width: 152px;
+		max-height: calc(100vh - var(--fab-top, 84px) - 90px);
+		overflow-y: auto;
+		overscroll-behavior: contain;
 	}
 	.fab-link {
 		text-decoration: none;
@@ -186,5 +201,12 @@ const links = [
 		background: var(--accent);
 		color: var(--btn-ink);
 		border-color: var(--edge);
+	}
+	.fab-sep {
+		height: 3px;
+		border-radius: 2px;
+		background: var(--edge);
+		opacity: 0.12;
+		margin: 4px 6px;
 	}
 </style>

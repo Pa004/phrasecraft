@@ -24,15 +24,19 @@ import "../styles/tokens.css";
 	</head>
 	<body>
 	<BgField client:load />
-	<NavFab current="/" />
+	<NavFab
+		current="/"
+		sections={[
+			{ href: "#como", label: "Cómo funciona" },
+			{ href: "#confia", label: "Por qué confiar" },
+			{ href: "#uso", label: "Úsala bien" },
+		]}
+	/>
 	<a class="skip" href="#contenido">Saltar al contenido</a>
 	<header>
 		<HeaderBar
 			current="/"
-			links={[
-				{ href: "#como", label: "Cómo funciona" },
-				{ href: "#confia", label: "Confianza" },
-			]}
+			links={[]}
 			ctaHref="#generar"
 			ctaLabel="Crear contraseña"
 		/>
