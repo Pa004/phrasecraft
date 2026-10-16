@@ -37,6 +37,9 @@ let ready = $derived(sprite === "ready" && list !== null);
 let liveBits = $derived(
 	compat ? bitsCompat(COUNT, k, 2) : bitsDistinct(COUNT, k),
 );
+let strengthLabel = $derived(
+	liveBits >= 70 ? "Fuerte" : liveBits >= 50 ? "Aceptable" : "Débil",
+);
 
 onMount(() => {
 	loadWords()
@@ -76,9 +79,9 @@ function lock(): void {
 		</fieldset>
 		<label class="interruptor">
 			<input type="checkbox" bind:checked={compat} disabled={!ready} />
-			<span><b>Modo compatibilidad</b><small>Mayúsculas, dígitos y símbolo</small></span>
+			<span><b>Mayúsculas y símbolos</b><small>Solo si el sitio los exige</small></span>
 		</label>
-		<p>Entropía: <strong>{liveBits.toFixed(1)} bits</strong></p>
+		<p>Fuerza: <strong>{strengthLabel}</strong></p>
 	</div>
 	<button type="button" class="primary btn-3d" disabled={!ready} onclick={doGenerate}>
 		Generar para practicar

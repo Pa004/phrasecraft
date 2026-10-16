@@ -11,8 +11,8 @@ interface Props {
 let { words, layout }: Props = $props();
 
 const W = 1200;
-const H = 675;
-const SIZE = 110;
+const H = 520;
+const SIZE = $derived(words.length > 8 ? 88 : 110);
 
 let spots = $derived(layoutPositions(words.length, layout));
 let label = $derived(
