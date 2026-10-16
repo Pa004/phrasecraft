@@ -1,19 +1,28 @@
 import { expect, test } from "@playwright/test";
 
-test("el FAB abre a la izquierda un menú jerárquico con descripciones, y cierra con Esc", async ({
+test("la cabecera abre a la izquierda un menú en flujo con descripciones, y cierra con Esc", async ({
 	page,
 }) => {
 	await page.goto("/");
+	await expect(page.locator(".topbar")).toHaveCount(0);
+	const head = page.locator(".sitehead");
+	await expect(head.getByText("phrasecraft")).toBeVisible();
 	const fab = page.getByRole("button", {
 		name: "Abrir menú de navegación",
 	});
 	await expect(fab).toBeVisible();
 	const box = await fab.boundingBox();
-	expect(box?.x ?? 9999).toBeLessThan(100);
+	const mitad = (page.viewportSize()?.width ?? 1280) / 2;
+	expect(box?.x ?? 9999).toBeLessThan(mitad);
 	const menu = page.getByRole("navigation", { name: "Navegación" });
 	await expect(menu).toBeHidden();
 	await fab.click();
 	await expect(menu).toBeVisible();
+	const menuBox = await menu.boundingBox();
+	const headerBox = await page.locator("body > header").boundingBox();
+	if (menuBox === null || headerBox === null)
+		throw new Error("sin menú o sin header de página");
+	expect(menuBox.y + menuBox.height).toBeLessThanOrEqual(headerBox.y + 2);
 	await expect(menu.getByText("En esta página")).toBeVisible();
 	await expect(menu.getByText("Páginas")).toBeVisible();
 	await expect(
