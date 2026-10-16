@@ -95,6 +95,7 @@ const links: NavLink[] = [
 		});
 
 		syncTop();
+		fab.classList.add("is-ready");
 		window.addEventListener("resize", syncTop);
 	});
 </script>
@@ -109,6 +110,10 @@ const links: NavLink[] = [
 		flex-direction: column;
 		align-items: flex-end;
 		gap: 10px;
+		visibility: hidden;
+	}
+	.fab.is-ready {
+		visibility: visible;
 	}
 	.fab-toggle {
 		width: 56px;
