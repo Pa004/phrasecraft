@@ -19,7 +19,11 @@ const links: NavLink[] = [
 		label: "Practicar",
 		desc: "5 etapas guiadas en minutos",
 	},
-	{ href: "/seguridad", label: "Seguridad", desc: "Qué se defiende y qué no" },
+	{
+		href: "/seguridad",
+		label: "Seguridad",
+		desc: "Qué se defiende y qué no",
+	},
 	{
 		href: "/estudio",
 		label: "Estudio",
@@ -28,20 +32,28 @@ const links: NavLink[] = [
 ];
 ---
 
-<div class="fab" data-nav-fab>
-	<button
-		type="button"
-		class="fab-toggle"
-		aria-expanded="false"
-		aria-haspopup="true"
-		aria-controls="fab-menu"
-		aria-label="Abrir menú de navegación"
-	>
-		<span class="burg" aria-hidden="true"><span></span><span></span><span></span></span>
-	</button>
+<div class="sitehead" data-nav-fab>
+	<div class="sitehead-row">
+		<button
+			type="button"
+			class="fab-toggle"
+			aria-expanded="false"
+			aria-haspopup="true"
+			aria-controls="fab-menu"
+			aria-label="Abrir menú de navegación"
+		>
+			<span class="burg" aria-hidden="true"><span></span><span></span><span></span></span>
+		</button>
+		<a class="brand" href="/" aria-label="phrasecraft: inicio">
+			<span class="brand-mark" aria-hidden="true">
+				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="4" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /><circle cx="12" cy="15" r="1.6" fill="currentColor" /></svg>
+			</span>
+			<span class="brand-text">phrasecraft<small>RECUERDA · PROTEGE</small></span>
+		</a>
+	</div>
 	<nav id="fab-menu" class="fab-menu" aria-label="Navegación" hidden>
 		{sections.length > 0 && (
-			<>
+			<div class="fab-col">
 				<p class="fab-group" id="fab-grupo-pagina">En esta página</p>
 				<ul class="fab-list" aria-labelledby="fab-grupo-pagina">
 					{sections.map((s) => (
@@ -53,24 +65,26 @@ const links: NavLink[] = [
 						</li>
 					))}
 				</ul>
-			</>
+			</div>
 		)}
-		<p class="fab-group" id="fab-grupo-sitio">Páginas</p>
-		<ul class="fab-list" aria-labelledby="fab-grupo-sitio">
-			{links.map((l) => (
-				<li>
-					<a
-						class="fab-link"
-						class:list={[{ current: l.href === current }]}
-						href={l.href}
-						aria-current={l.href === current ? "page" : undefined}
-					>
-						<span class="fab-title">{l.label}</span>
-						{l.desc && <small class="fab-desc">{l.desc}</small>}
-					</a>
-				</li>
-			))}
-		</ul>
+		<div class="fab-col">
+			<p class="fab-group" id="fab-grupo-sitio">Páginas</p>
+			<ul class="fab-list" aria-labelledby="fab-grupo-sitio">
+				{links.map((l) => (
+					<li>
+						<a
+							class="fab-link"
+							class:list={[{ current: l.href === current }]}
+							href={l.href}
+							aria-current={l.href === current ? "page" : undefined}
+						>
+							<span class="fab-title">{l.label}</span>
+							{l.desc && <small class="fab-desc">{l.desc}</small>}
+						</a>
+					</li>
+				))}
+			</ul>
+		</div>
 	</nav>
 </div>
 
@@ -98,12 +112,6 @@ const links: NavLink[] = [
 			menu.hidden = false;
 		};
 
-		const syncTop = () => {
-			const bar = document.querySelector<HTMLElement>(".topbar");
-			const y = bar ? bar.getBoundingClientRect().bottom + 10 : 84;
-			fab.style.setProperty("--fab-top", `${Math.round(y)}px`);
-		};
-
 		btn.addEventListener("click", () => (expanded ? close() : open()));
 
 		document.addEventListener("keydown", (e) => {
@@ -120,27 +128,26 @@ const links: NavLink[] = [
 		menu.addEventListener("click", (e) => {
 			if (e.target instanceof Element && e.target.closest("a")) close();
 		});
-
-		syncTop();
-		fab.classList.add("is-ready");
-		window.addEventListener("resize", syncTop);
 	});
 </script>
 
 <style>
-	.fab {
-		position: fixed;
-		left: 12px;
-		top: var(--fab-top, 84px);
+	.sitehead {
+		position: sticky;
+		top: 12px;
 		z-index: 40;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 10px;
-		visibility: hidden;
+		max-width: 1080px;
+		margin: 16px auto 0.5rem;
+		background: var(--surface);
+		border: 3px solid var(--edge);
+		border-radius: 16px;
+		box-shadow: 4px 4px 0 var(--hard);
+		padding: 8px 12px;
 	}
-	.fab.is-ready {
-		visibility: visible;
+	.sitehead-row {
+		display: flex;
+		align-items: center;
+		gap: 12px;
 	}
 	.fab-toggle {
 		width: 56px;
@@ -153,6 +160,7 @@ const links: NavLink[] = [
 		place-items: center;
 		cursor: pointer;
 		color: var(--ink);
+		flex: none;
 		transition: transform 0.08s ease-out, box-shadow 0.08s ease-out,
 			background 0.15s ease;
 	}
@@ -192,22 +200,63 @@ const links: NavLink[] = [
 	.is-open .burg span:nth-child(3) {
 		transform: translateY(-8.5px) rotate(-45deg);
 	}
+	.brand {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		text-decoration: none;
+		color: var(--ink);
+		min-height: 44px;
+	}
+	.brand-mark {
+		width: 44px;
+		height: 44px;
+		border-radius: 16px;
+		background: var(--accent);
+		border: 3px solid var(--edge);
+		display: grid;
+		place-items: center;
+		box-shadow: 2px 2px 0 var(--hard);
+		flex: none;
+		color: var(--btn-ink);
+	}
+	.brand-mark svg {
+		width: 24px;
+		height: 24px;
+	}
+	.brand-text {
+		font-family: var(--font-display);
+		font-weight: 800;
+		font-size: 1.25rem;
+		display: block;
+		line-height: 1.05;
+		letter-spacing: -0.02em;
+	}
+	.brand-text small {
+		display: block;
+		font-family: var(--font-body);
+		font-size: 0.72rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		opacity: 0.75;
+	}
 	.fab-menu[hidden] {
 		display: none;
 	}
 	.fab-menu {
-		display: flex;
-		flex-direction: column;
-		background: var(--surface);
-		border: 3px solid var(--edge);
-		border-radius: 16px;
-		box-shadow: 6px 6px 0 var(--hard);
-		padding: 6px 6px 10px;
-		min-width: 248px;
-		max-width: 300px;
-		max-height: calc(100vh - var(--fab-top, 84px) - 90px);
+		display: grid;
+		gap: 4px 24px;
+		margin-top: 8px;
+		padding: 10px 2px 4px;
+		border-top: 3px solid var(--edge);
+		max-height: 60vh;
 		overflow-y: auto;
 		overscroll-behavior: contain;
+	}
+	@media (min-width: 720px) {
+		.fab-menu {
+			grid-template-columns: 1fr 1fr;
+		}
 	}
 	.fab-group {
 		font-size: 0.72rem;

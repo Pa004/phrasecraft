@@ -4,7 +4,6 @@ import Board from "../components/Board.astro";
 import FeatureBento from "../components/FeatureBento.astro";
 import Footer from "../components/Footer.astro";
 import Generator from "../components/Generator.svelte";
-import HeaderBar from "../components/HeaderBar.astro";
 import NavFab from "../components/NavFab.astro";
 import PageHero from "../components/PageHero.astro";
 import StepCard from "../components/StepCard.astro";
@@ -24,6 +23,7 @@ import "../styles/tokens.css";
 	</head>
 	<body>
 	<BgField client:load />
+	<a class="skip" href="#contenido">Saltar al contenido</a>
 	<NavFab
 		current="/"
 		sections={[
@@ -32,14 +32,7 @@ import "../styles/tokens.css";
 			{ href: "#uso", label: "Úsala bien", desc: "Tu escena es tu contraseña" },
 		]}
 	/>
-	<a class="skip" href="#contenido">Saltar al contenido</a>
 	<header>
-		<HeaderBar
-			current="/"
-			links={[]}
-			ctaHref="#generar"
-			ctaLabel="Crear contraseña"
-		/>
 		<PageHero
 			badge="100% local · nada sale de tu navegador"
 			badgeRight="501 palabras"
