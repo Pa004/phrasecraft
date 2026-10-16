@@ -105,7 +105,7 @@ test("la escena generada aparece dentro de un modal con story y contraseña", as
 	const dialog = page.getByRole("dialog");
 	await expect(dialog).toBeVisible();
 	await expect(page.getByRole("img", { name: /^escena con/i })).toBeVisible();
-	await expect(dialog.getByText(/^tu contraseña:/i)).toBeVisible();
+	await expect(dialog.getByText(/\d+ palabras · \d+ caracteres/)).toBeVisible();
 	await expect(
 		page.getByRole("button", { name: /practicar esta escena/i }),
 	).toBeVisible();

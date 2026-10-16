@@ -43,16 +43,6 @@ let mode: PasswordMode = $derived(compat ? "compat" : "standard");
 let liveBits = $derived(
 	compat ? bitsCompat(COUNT, k, 2) : bitsDistinct(COUNT, k),
 );
-let strength = $derived(
-	liveBits >= 70
-		? "Pensada para contraseña maestra"
-		: liveBits >= 50
-			? "Aceptable solo si el sitio limita la longitud"
-			: "Débil",
-);
-let strengthPlain = $derived(
-	liveBits >= 70 ? "muy alta" : liveBits >= 50 ? "media" : "baja",
-);
 let masked = $derived(result ? "•".repeat(result.text.length) : "");
 let ready = $derived(sprite === "ready" && list !== null);
 
@@ -133,6 +123,7 @@ async function copy(): Promise<void> {
 
 <section aria-labelledby="gen-title">
 	<h2 id="gen-title">Genera tu escena</h2>
+	<p class="gen-sub">Palabras al azar unidas en una escena que solo tú recuerdas.</p>
 	<SpriteProvider bind:status={sprite} />
 	<button type="button" class="primary btn-3d" disabled={!ready} onclick={openModal}>
 		Generar mi escena
@@ -144,40 +135,9 @@ async function copy(): Promise<void> {
 			<h2 id="gen-modal-title">Tu escena</h2>
 			<button type="button" class="cierre" aria-label="Cerrar" onclick={() => dialog?.close()}>X</button>
 		</div>
-	<div class="controls">
-		<fieldset>
-			<legend>Número de palabras</legend>
-			<div class="deslizador">
-				<input type="range" id="gen-k" min="4" max="12" step="1" bind:value={k} disabled={!ready} aria-label="Número de palabras" aria-describedby="gen-k-ayuda" />
-				<output for="gen-k">{k}</output>
-			</div>
-			<p class="ayuda" id="gen-k-ayuda">8 por defecto ≈ 72 bits. Más palabras, más fuerza.</p>
-		</fieldset>
-		<label class="interruptor">
-			<input type="checkbox" bind:checked={compat} disabled={!ready} />
-			<span><b>Modo compatibilidad</b><small>Mayúsculas, dígitos y símbolo para sitios exigentes</small></span>
-		</label>
-		<div class="fuerza">
-			Fuerza: <strong>{strengthPlain}</strong>
-			<span class="bits-detalle">({liveBits.toFixed(1)} bits de entropía)</span>
-			<details class="bits-que">
-				<summary>¿Qué significa?</summary>
-				<p>
-					Los bits miden cuántas combinaciones tendría que probar un atacante que ya conoce
-					este método y la lista de palabras. Con {liveBits.toFixed(0)} bits hay unas
-					2<sup>{Math.round(liveBits)}</sup> posibilidades: más bits, más intentos necesarios.
-					70 o más es lo recomendado para una contraseña maestra.
-				</p>
-			</details>
-		</div>
-		{#if compat && liveBits < 60}
-			<p role="alert">Atención: por debajo de 60 bits. Úsalo solo si el sitio lo exige.</p>
+		{#if !result}
+			<p class="loadnote" aria-live="polite">{notice || "Cargando escena…"}</p>
 		{/if}
-	</div>
-	<button type="button" class="primary btn-3d" disabled={!ready} onclick={doGenerate}>
-		Generar mi escena
-	</button>
-	<p class="loadnote" aria-live="polite">{ready ? "" : "Cargando escena…"}</p>
 
 	{#if result}
 		<AutoLock active={true} onLock={lock} />
@@ -187,29 +147,52 @@ async function copy(): Promise<void> {
 			<div class="card card-3d">
 				<div class="frase-caja">
 					<p class="secret-label">TU CONTRASEÑA</p>
-					<WordChips words={result.words} />
-					<p class="secret-line">
+					<div class="secret-veil" class:masked={!shown}>
+						<WordChips words={result.words} />
+					</div>
+					<p class="caption">{result.words.length} palabras · {result.text.length} caracteres</p>
+					<p class="sr-only">
 						Tu contraseña: <code aria-label={shown ? "Contraseña generada" : "Contraseña oculta"}>{shown ? result.text : masked}</code>
-						— {result.text.length} caracteres.
 					</p>
 				</div>
 				<div class="row acciones">
-					<button type="button" class="btn-3d" onclick={doGenerate}>
-						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.6-6.4" /><path d="M21 3v6h-6" /></svg>
-						Generar nueva escena
-					</button>
-					<button type="button" class="btn-3d-secondary" onclick={copy}>
-						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="4" /><path d="M5 15V5a2 2 0 0 1 2-2h10" /></svg>
+					<button type="button" class="btn-3d" onclick={copy}>
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="4" /><path d="M5 15V5a2 2 0 0 1 2-2h10" /></svg>
 						Copiar
 					</button>
-					<button type="button" class="btn-3d-secondary" onclick={newStory}>Otra historia</button>
 					<button type="button" class="btn-3d-secondary" aria-pressed={shown} onclick={() => (shown = !shown)}>
 						{shown ? "Ocultar" : "Mostrar"}
 					</button>
+					<button type="button" class="btn-3d-secondary" onclick={newStory}>Otra historia</button>
+					<button type="button" class="btn-3d-secondary" onclick={doGenerate}>
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.6-6.4" /><path d="M21 3v6h-6" /></svg>
+						Generar nueva escena
+					</button>
 				</div>
-				<StrengthMeter bits={result.bits} extra={`${result.words.length} palabras · ${result.text.length} caracteres`} />
+				<StrengthMeter bits={result.bits} />
 				<p class="warn">Esta escena <strong>es</strong> tu contraseña: no la captures ni la compartas.</p>
 				{#if notice}<p>{notice}</p>{/if}
+				<details class="ajustes">
+					<summary>Ajustar: {k} palabras{compat ? " · con mayúsculas y símbolos" : ""}</summary>
+					<div class="controls">
+						<fieldset>
+							<legend>Número de palabras</legend>
+							<div class="deslizador">
+								<input type="range" id="gen-k" min="4" max="12" step="1" bind:value={k} disabled={!ready} aria-label="Número de palabras" aria-describedby="gen-k-ayuda" />
+								<output for="gen-k">{k}</output>
+							</div>
+							<p class="ayuda" id="gen-k-ayuda">Más palabras, más cuesta adivinarla.</p>
+						</fieldset>
+						<label class="interruptor">
+							<input type="checkbox" bind:checked={compat} disabled={!ready} />
+							<span><b>Mayúsculas y símbolos</b><small>Solo si el sitio los exige</small></span>
+						</label>
+						{#if compat && liveBits < 60}
+							<p role="alert">Atención: corta para ser maestra. Úsala solo si el sitio lo exige.</p>
+						{/if}
+					</div>
+					<p class="ayuda">Con estos ajustes, genera una escena nueva.</p>
+				</details>
 				{#if !practicing}
 					<button type="button" class="primary btn-3d" onclick={() => ((practicing = true), (runId += 1))}>
 						Practicar esta escena
@@ -238,6 +221,11 @@ async function copy(): Promise<void> {
 	.loadnote {
 		min-height: 1.5em;
 		margin: 0.25rem 0 0;
+	}
+	.gen-sub {
+		margin: 0.25rem 0 0.75rem;
+		font-size: 0.98rem;
+		opacity: 0.85;
 	}
 	.story {
 		font-size: 1.25rem;
@@ -330,12 +318,49 @@ async function copy(): Promise<void> {
 		opacity: 0.75;
 		margin: 0 0 12px;
 	}
-	.secret-line {
-		line-height: 1.6;
+	.caption {
 		margin: 12px 0 0;
+		font-size: 0.9rem;
+		opacity: 0.8;
 	}
-	.secret-line strong {
-		color: var(--ink);
+	.secret-veil :global(.wchips) {
+		transition: filter 0.2s ease-out;
+	}
+	.secret-veil.masked :global(.wchips) {
+		filter: blur(9px);
+	}
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+	.ajustes {
+		border: 3px solid var(--edge);
+		border-radius: 12px;
+		padding: 4px 12px;
+		background: var(--surface);
+	}
+	.ajustes summary {
+		cursor: pointer;
+		font-family: var(--font-display);
+		font-weight: 800;
+		min-height: 44px;
+		display: flex;
+		align-items: center;
+	}
+	.ajustes .controls {
+		margin: 0.5rem 0 0.75rem;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.secret-veil :global(.wchips) {
+			transition: none;
+		}
 	}
 	.frase-caja {
 		border: 3px solid var(--edge);

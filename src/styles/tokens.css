@@ -369,35 +369,6 @@ input[type="range"] {
 	font-weight: 800;
 }
 
-/* Bloque de fuerza en lenguaje humano + explainer plegable. */
-.fuerza {
-	font-size: 1.1rem;
-}
-
-.fuerza .bits-detalle {
-	font-size: 0.95rem;
-	opacity: 0.85;
-}
-
-details.bits-que {
-	margin-top: 0.4rem;
-}
-
-details.bits-que summary {
-	cursor: pointer;
-	font-weight: 700;
-	min-height: 44px;
-	display: inline-flex;
-	align-items: center;
-	text-decoration: underline;
-	text-underline-offset: 3px;
-}
-
-details.bits-que p {
-	max-width: 40rem;
-	line-height: 1.6;
-}
-
 /* Campos de texto con borde grueso y profundidad interior. */
 .field-3d {
 	background: var(--surface);
