@@ -3,6 +3,7 @@ import BgField from "../components/BgField.svelte";
 import Board from "../components/Board.astro";
 import Footer from "../components/Footer.astro";
 import HeaderBar from "../components/HeaderBar.astro";
+import NavFab from "../components/NavFab.astro";
 import PageHero from "../components/PageHero.astro";
 import PracticeStandalone from "../components/PracticeStandalone.svelte";
 import "../styles/tokens.css";
@@ -17,6 +18,7 @@ import "../styles/tokens.css";
 	</head>
 	<body>
 		<BgField client:load />
+		<NavFab current="/practicar" />
 		<a class="skip" href="#contenido">Saltar al contenido</a>
 		<header>
 			<HeaderBar current="/practicar" ctaHref="/" ctaLabel="Crear contraseña" />
