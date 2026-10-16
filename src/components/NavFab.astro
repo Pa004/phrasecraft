@@ -2,6 +2,7 @@
 interface NavLink {
 	href: string;
 	label: string;
+	desc?: string;
 }
 
 interface Props {
@@ -12,10 +13,18 @@ interface Props {
 const { current = "", sections = [] } = Astro.props;
 
 const links: NavLink[] = [
-	{ href: "/", label: "Generar" },
-	{ href: "/practicar", label: "Practicar" },
-	{ href: "/seguridad", label: "Seguridad" },
-	{ href: "/estudio", label: "Estudio" },
+	{ href: "/", label: "Generar", desc: "Crea tu contraseña maestra" },
+	{
+		href: "/practicar",
+		label: "Practicar",
+		desc: "5 etapas guiadas en minutos",
+	},
+	{ href: "/seguridad", label: "Seguridad", desc: "Qué se defiende y qué no" },
+	{
+		href: "/estudio",
+		label: "Estudio",
+		desc: "Desechable, recuerdo y exporte",
+	},
 ];
 ---
 
@@ -31,19 +40,37 @@ const links: NavLink[] = [
 		<span class="burg" aria-hidden="true"><span></span><span></span><span></span></span>
 	</button>
 	<nav id="fab-menu" class="fab-menu" aria-label="Navegación" hidden>
-		{sections.map((s) => <a class="fab-link" href={s.href}>{s.label}</a>)}
-		{sections.length > 0 && <div class="fab-sep" aria-hidden="true"></div>}
-		{
-			links.map((l) =>
-				l.href === current ? (
-					<span class="fab-link current" aria-current="page">
-						{l.label}
-					</span>
-				) : (
-					<a class="fab-link" href={l.href}>{l.label}</a>
-				),
-			)
-		}
+		{sections.length > 0 && (
+			<>
+				<p class="fab-group" id="fab-grupo-pagina">En esta página</p>
+				<ul class="fab-list" aria-labelledby="fab-grupo-pagina">
+					{sections.map((s) => (
+						<li>
+							<a class="fab-link" href={s.href}>
+								<span class="fab-title">{s.label}</span>
+								{s.desc && <small class="fab-desc">{s.desc}</small>}
+							</a>
+						</li>
+					))}
+				</ul>
+			</>
+		)}
+		<p class="fab-group" id="fab-grupo-sitio">Páginas</p>
+		<ul class="fab-list" aria-labelledby="fab-grupo-sitio">
+			{links.map((l) => (
+				<li>
+					<a
+						class="fab-link"
+						class:list={[{ current: l.href === current }]}
+						href={l.href}
+						aria-current={l.href === current ? "page" : undefined}
+					>
+						<span class="fab-title">{l.label}</span>
+						{l.desc && <small class="fab-desc">{l.desc}</small>}
+					</a>
+				</li>
+			))}
+		</ul>
 	</nav>
 </div>
 
@@ -103,12 +130,12 @@ const links: NavLink[] = [
 <style>
 	.fab {
 		position: fixed;
-		right: 12px;
+		left: 12px;
 		top: var(--fab-top, 84px);
 		z-index: 40;
 		display: flex;
 		flex-direction: column;
-		align-items: flex-end;
+		align-items: flex-start;
 		gap: 10px;
 		visibility: hidden;
 	}
@@ -171,47 +198,62 @@ const links: NavLink[] = [
 	.fab-menu {
 		display: flex;
 		flex-direction: column;
-		gap: 0.35rem;
 		background: var(--surface);
 		border: 3px solid var(--edge);
 		border-radius: 16px;
 		box-shadow: 6px 6px 0 var(--hard);
-		padding: 10px;
-		min-width: 152px;
+		padding: 6px 6px 10px;
+		min-width: 248px;
+		max-width: 300px;
 		max-height: calc(100vh - var(--fab-top, 84px) - 90px);
 		overflow-y: auto;
 		overscroll-behavior: contain;
 	}
+	.fab-group {
+		font-size: 0.72rem;
+		font-weight: 800;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		opacity: 0.7;
+		margin: 10px 12px 2px;
+	}
+	.fab-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+	}
 	.fab-link {
+		display: block;
+		padding: 10px 12px;
+		border-radius: 12px;
 		text-decoration: none;
+		color: var(--ink);
+	}
+	.fab-title {
+		display: block;
 		font-family: var(--font-display);
 		font-weight: 800;
 		font-size: 1.02rem;
-		color: var(--ink);
-		min-height: 44px;
-		display: inline-flex;
-		align-items: center;
-		padding: 8px 14px;
-		border-radius: 12px;
-		border: 3px solid transparent;
+		line-height: 1.25;
 	}
-	.fab-link:hover {
-		background: var(--surface-2);
+	.fab-desc {
+		display: block;
+		font-size: 0.82rem;
+		opacity: 0.75;
+		margin-top: 2px;
+	}
+	.fab-link:hover .fab-title {
+		text-decoration: underline;
+		text-underline-offset: 3px;
 	}
 	.fab-link:focus-visible {
 		outline: 4px solid var(--accent-dark);
 		outline-offset: 2px;
 	}
-	.fab-link.current {
-		background: var(--accent);
-		color: var(--btn-ink);
-		border-color: var(--edge);
-	}
-	.fab-sep {
-		height: 3px;
-		border-radius: 2px;
-		background: var(--edge);
-		opacity: 0.12;
-		margin: 4px 6px;
+	.fab-link.current .fab-title {
+		text-decoration: underline;
+		text-underline-offset: 3px;
 	}
 </style>
