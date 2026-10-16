@@ -10,7 +10,7 @@ Demo: https://phrasecraft.pages.dev (Cloudflare Pages, preview por PR). Para el 
 
 - Entropia por defecto: `k=8` ≈ 72 bits (`es-v0-draft`, 501 palabras).
 - 0 peticiones tras Generar + 0 dependientes de las palabras (e2e con `serviceWorkers: block`).
-- Lighthouse CI ≥ 0.95 en Rendimiento, Accesibilidad, Buenas prácticas y SEO en `/`, `/practicar`, `/seguridad`, `/estudio`; LCP < 2 s, CLS = 0.
+- Lighthouse CI ≥ 0.95 en Rendimiento, Accesibilidad, Buenas prácticas y SEO en `/`, `/practicar`, `/estudio`; LCP < 2 s, CLS = 0.
 - Cobertura `src/lib/**`: 100 % líneas y funciones.
 - axe-core: 0 violaciones críticas/serias en `/` y `/practicar`.
 - Presupuestos: JS inicial 35 KB gzip (≤ 150; la lista va como asset aparte precacheado), sprite 197 KB brotli (≤ 600), `words.json` 8.3 KB gzip (≤ 40).

@@ -37,7 +37,6 @@ test("la cabecera abre a la izquierda un menú superpuesto con glass y descripci
 	).toHaveAttribute("aria-current", "page");
 	for (const nombre of [
 		"Practicar 5 etapas guiadas en minutos",
-		"Seguridad Qué se defiende y qué no",
 		"Estudio Desechable, recuerdo y exporte",
 	]) {
 		await expect(menu.getByRole("link", { name: nombre })).toBeVisible();
@@ -93,21 +92,6 @@ test("un enlace de sección del menú salta al ancla y cierra el menú", async (
 		.click();
 	await expect(menu).toBeHidden();
 	await expect(page).toHaveURL(/#como$/);
-});
-
-test("la confianza vive en /seguridad y no en la home", async ({ page }) => {
-	await page.goto("/");
-	await expect(
-		page.getByRole("heading", { name: "Por qué confiar" }),
-	).toHaveCount(0);
-	await expect(page.getByText("sin cuentas ni rastreo")).toBeVisible();
-	await page.goto("/seguridad");
-	await expect(
-		page.getByRole("heading", { name: "Por qué confiar" }),
-	).toBeVisible();
-	await expect(
-		page.getByText("Al pulsar Generar no sale ninguna petición de red"),
-	).toBeVisible();
 });
 
 test("la escena generada aparece dentro de un modal con story y contraseña", async ({

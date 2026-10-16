@@ -12,9 +12,9 @@ import "../styles/tokens.css";
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="phrasecraft: genera una contraseña maestra memorable con una escena visual. Privado, offline, sin cuentas." />
+		<meta name="description" content="phrasecraft: genera una contraseña maestra memorable con una escena visual." />
 		<meta property="og:title" content="phrasecraft — una escena, una contraseña maestra" />
-		<meta property="og:description" content="Generador privado de contraseñas memorables. Todo ocurre en tu navegador." />
+		<meta property="og:description" content="Generador de contraseñas que solo recuerdas y nadie adivina." />
 		<meta property="og:image" content="https://phrasecraft.pages.dev/og-demo.png" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="manifest" href="/manifest.webmanifest" />
@@ -31,7 +31,7 @@ import "../styles/tokens.css";
 	/>
 	<header>
 		<PageHero
-			badge="100% local · nada sale de tu navegador"
+			badge="Si la imaginas, la recuerdas"
 			badgeRight="501 palabras"
 			title="Contraseñas que sólo recuerdas y nadie adivina."
 			marks={["sólo recuerdas"]}
@@ -54,13 +54,10 @@ import "../styles/tokens.css";
 				<h2 id="como">Cómo funciona</h2>
 				<ol class="steps">
 					<StepCard n="1" title="Genera" text="Un clic crea palabras al azar unidas por una frase absurda y una escena numerada." />
-					<StepCard n="2" title="Practica" text="5 etapas guiadas en minutos, todo en tu navegador y sin guardar nada." />
+					<StepCard n="2" title="Practica" text="5 etapas guiadas en minutos." />
 					<StepCard n="3" title="Recuerda" text="Una sola contraseña maestra para lo importante; repásala a 1, 3 y 7 días." />
 				</ol>
 			</section>
-			<p class="tira-confianza">
-				Código abierto · sin cuentas ni rastreo. <a href="/seguridad">Por qué confiar</a>
-			</p>
 		</main>
 		<Footer />	</body>
 </html>
@@ -77,13 +74,5 @@ import "../styles/tokens.css";
 	}
 	.aviso-maestra strong {
 		font-family: var(--font-display);
-	}
-	.tira-confianza {
-		text-align: center;
-		font-size: 0.92rem;
-		margin: 1.5rem 0 0;
-	}
-	.tira-confianza a {
-		font-weight: 700;
 	}
 </style>
