@@ -1,6 +1,7 @@
 ---
 interface Props {
 	badge: string;
+	badgeRight?: string;
 	title: string;
 	sub: string;
 	ctaHref?: string;
@@ -12,6 +13,7 @@ interface Props {
 
 const {
 	badge,
+	badgeRight,
 	title,
 	sub,
 	ctaHref,
@@ -41,7 +43,10 @@ function marked(text: string): { hit: boolean; text: string }[] {
 ---
 
 <div class="hero">
-	<p class="hero-badge"><span class="dot" aria-hidden="true"><i></i></span>{badge}</p>
+	<p class="hero-badge">
+		<span class="dot" aria-hidden="true"><i></i></span>{badge}
+		{badgeRight && <span class="hero-badge-extra">{badgeRight}</span>}
+	</p>
 	<h1 class="title-3d hero-display">
 		{marked(title).map((p) =>
 			p.hit ? <span class="marker">{p.text}</span> : p.text,
@@ -116,14 +121,25 @@ function marked(text: string): { hit: boolean; text: string }[] {
 		max-width: 20ch;
 		text-wrap: balance;
 	}
+	.hero-badge-extra {
+		margin-left: 10px;
+		padding: 4px 14px;
+		border: 3px solid var(--edge);
+		border-radius: 999px;
+		background: var(--surface-2);
+		font-weight: 800;
+	}
 	.hero-ctas {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.75rem;
 	}
 	.hero-cta {
-		display: inline-block;
+		display: inline-flex;
+		align-items: center;
+		min-height: 52px;
 		text-decoration: none;
 		font-size: 1.15rem;
+		padding: 0.55rem 1.4rem;
 	}
 </style>

@@ -36,6 +36,7 @@ let k = $state(minWordCount(COUNT, 70));
 let compat = $state(false);
 let shown = $state(false);
 let notice = $state("");
+let dialog: HTMLDialogElement | null = $state(null);
 let clearTimer: ReturnType<typeof setTimeout> | undefined;
 
 let mode: PasswordMode = $derived(compat ? "compat" : "standard");
@@ -73,6 +74,12 @@ function pickLayout(): LayoutName {
 	return LAYOUTS[Math.floor(Math.random() * LAYOUTS.length)]!;
 }
 
+function openModal(): void {
+	if (!ready || !dialog) return;
+	if (!result) doGenerate();
+	dialog.showModal();
+}
+
 function doGenerate(): void {
 	if (!list) return;
 	if (clearTimer) clearTimeout(clearTimer);
@@ -96,7 +103,8 @@ function lock(): void {
 	practicing = false;
 	story = "";
 	shown = false;
-	notice = "Bloqueado por inactividad o al ocultar la página. Genera de nuevo.";
+	notice = "Bloqueado por inactividad o al ocultar la pǭgina. Genera de nuevo.";
+	if (dialog?.open) dialog.close();
 }
 
 async function copy(): Promise<void> {
@@ -126,7 +134,16 @@ async function copy(): Promise<void> {
 <section aria-labelledby="gen-title">
 	<h2 id="gen-title">Genera tu escena</h2>
 	<SpriteProvider bind:status={sprite} />
+	<button type="button" class="primary btn-3d" disabled={!ready} onclick={openModal}>
+		Generar mi escena
+	</button>
+	<p class="loadnote" aria-live="polite">{ready ? "" : "Cargando escena…"}</p>
 
+	<dialog bind:this={dialog} class="gen-modal" aria-labelledby="gen-modal-title">
+		<div class="modal-cabeza">
+			<h2 id="gen-modal-title">Tu escena</h2>
+			<button type="button" class="cierre" aria-label="Cerrar" onclick={() => dialog?.close()}>X</button>
+		</div>
 	<div class="controls">
 		<fieldset>
 			<legend>Número de palabras</legend>
@@ -205,6 +222,7 @@ async function copy(): Promise<void> {
 			</div>
 		</div>
 	{/if}
+	</dialog>
 </section>
 
 <style>
@@ -224,7 +242,75 @@ async function copy(): Promise<void> {
 	.story {
 		font-size: 1.25rem;
 		line-height: 1.7;
-		max-width: 40rem;
+		width: 100%;
+	}
+	.gen-modal {
+		background: var(--surface);
+		color: var(--ink);
+		border: 5px solid var(--edge);
+		border-radius: 16px;
+		box-shadow: 12px 12px 0 var(--hard);
+		padding: 24px;
+		width: min(960px, 94vw);
+		max-height: min(90vh, 90dvh);
+		overflow-y: auto;
+	}
+	.gen-modal::backdrop {
+		background: var(--edge);
+		opacity: 0.55;
+	}
+	.gen-modal[open] {
+		animation: modal-in 0.25s ease-out;
+	}
+	.modal-cabeza {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 12px;
+		margin-bottom: 0.75rem;
+	}
+	.modal-cabeza h2 {
+		margin: 0;
+		font-size: 1.45rem;
+	}
+	.cierre {
+		appearance: none;
+		width: 44px;
+		height: 44px;
+		flex: none;
+		display: grid;
+		place-items: center;
+		border: 3px solid var(--edge);
+		border-radius: 12px;
+		background: var(--surface);
+		color: var(--ink);
+		font-family: var(--font-display);
+		font-weight: 800;
+		font-size: 1.1rem;
+		cursor: pointer;
+		box-shadow: 3px 3px 0 var(--hard);
+	}
+	.cierre:hover {
+		background: var(--surface-2);
+	}
+	.cierre:focus-visible {
+		outline: 4px solid var(--accent-dark);
+		outline-offset: 2px;
+	}
+	@keyframes modal-in {
+		from {
+			transform: translateY(12px);
+			opacity: 0;
+		}
+		to {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.gen-modal[open] {
+			animation: none;
+		}
 	}
 	.card {
 		display: grid;

@@ -1,13 +1,12 @@
 ---
 import BgField from "../components/BgField.svelte";
 import Board from "../components/Board.astro";
-import DemoCard from "../components/DemoCard.astro";
 import FeatureBento from "../components/FeatureBento.astro";
 import Footer from "../components/Footer.astro";
 import Generator from "../components/Generator.svelte";
 import HeaderBar from "../components/HeaderBar.astro";
+import NavFab from "../components/NavFab.astro";
 import PageHero from "../components/PageHero.astro";
-import StatBadge from "../components/StatBadge.astro";
 import StepCard from "../components/StepCard.astro";
 import "../styles/tokens.css";
 ---
@@ -24,38 +23,31 @@ import "../styles/tokens.css";
 		<title>phrasecraft — una escena, una contraseña maestra</title>
 	</head>
 	<body>
-		<BgField client:load />
-		<a class="skip" href="#contenido">Saltar al contenido</a>
-		<header>
-			<HeaderBar
-				current="/"
-				links={[
-					{ href: "#como", label: "Cómo funciona" },
-					{ href: "#confia", label: "Confianza" },
-				]}
-				ctaHref="#generar"
-				ctaLabel="Crear contraseña"
-			/>
-			<div class="hero-grid">
-				<PageHero
-					badge="100% local · nada sale de tu navegador"
-					title="Contraseñas que sí recuerdas y nadie adivina."
-					marks={["sí recuerdas"]}
-					sub="Palabras cotidianas en español unidas en una escena absurda. Más largas, más fuertes y mucho más fáciles de recordar que un código críptico."
-					ctaHref="#generar"
-					ctaLabel="Crear contraseña"
-					cta2Href="#como"
-					cta2Label="Ver cómo funciona"
-				>
-					<ul class="stats" slot="stats" aria-label="Datos clave">
-						<StatBadge value="72 bits" label="ENTROPÍA REAL" />
-						<StatBadge value="501 palabras" label="LISTA EN ESPAÑOL" />
-						<StatBadge value="0 servidores" label="TODO LOCAL" />
-					</ul>
-				</PageHero>
-				<DemoCard />
-			</div>
-		</header>
+	<BgField client:load />
+	<NavFab current="/" />
+	<a class="skip" href="#contenido">Saltar al contenido</a>
+	<header>
+		<HeaderBar
+			current="/"
+			links={[
+				{ href: "#como", label: "Cómo funciona" },
+				{ href: "#confia", label: "Confianza" },
+			]}
+			ctaHref="#generar"
+			ctaLabel="Crear contraseña"
+		/>
+		<PageHero
+			badge="100% local · nada sale de tu navegador"
+			badgeRight="501 palabras"
+			title="Contraseñas que sólo recuerdas y nadie adivina."
+			marks={["sólo recuerdas"]}
+			sub="Palabras cotidianas en español unidas en una escena absurda. Más largas, más fuertes y mucho más fáciles de recordar que un código críptico."
+			ctaHref="#generar"
+			ctaLabel="Crear contraseña"
+			cta2Href="#como"
+			cta2Label="Ver cómo funciona"
+		/>
+	</header>
 		<main id="contenido">
 			<Board title="Tablero de escena" id="generar" pill="501 palabras">
 				<Generator client:load />

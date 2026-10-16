@@ -1,5 +1,5 @@
-/* Antes que el <style> que Astro inyecta en body: evita el salto de layout al hidratar islas. */
-astro-island,
+﻿/* Antes que el <style> que Astro inyecta en body: evita el salto de layout al hidratar islas. */
+	astro-island,
 astro-slot,
 astro-static-slot {
 	display: contents;
@@ -27,30 +27,6 @@ astro-static-slot {
 	}
 }
 
-/* Navegación principal: chips táctiles. */
-.nav-chip {
-	display: inline-block;
-	padding: 0.5rem 1rem;
-	margin: 0.15rem;
-	border-radius: 999px;
-	border: 2px solid var(--surface-border);
-	background: var(--surface);
-	color: var(--ink);
-	font-weight: 600;
-	text-decoration: none;
-	box-shadow: var(--shadow-1);
-}
-
-/* Navegación principal: chips táctiles. */
-.nav-chip:hover {
-	border-color: var(--accent);
-}
-
-.nav-chip:focus-visible {
-	outline: 4px solid var(--accent-dark);
-	outline-offset: 2px;
-}
-
 /* Rejillas de sistema: pasos y bento (los <li> viven en componentes con scope). */
 .steps,
 .bento {
@@ -58,15 +34,6 @@ astro-static-slot {
 	gap: 0.75rem;
 	padding: 0;
 	margin: 1rem 0;
-	list-style: none;
-}
-
-.stats {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0.5rem;
-	margin: 1rem 0;
-	padding: 0;
 	list-style: none;
 }
 
@@ -399,19 +366,6 @@ input[type="range"] {
 	color: var(--paper);
 	font-size: 0.85rem;
 	font-weight: 800;
-}
-
-/* Hero en 2 columnas en escritorio: texto + demo. */
-.hero-grid {
-	display: grid;
-	gap: 1.5rem;
-	align-items: center;
-}
-
-@media (min-width: 960px) {
-	.hero-grid {
-		grid-template-columns: 1.1fr 0.9fr;
-	}
 }
 
 /* Bloque de fuerza en lenguaje humano + explainer plegable. */

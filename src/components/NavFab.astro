@@ -1,0 +1,190 @@
+---
+interface Props {
+	current?: string;
+}
+
+const { current = "" } = Astro.props;
+
+const links = [
+	{ href: "/", label: "Generar" },
+	{ href: "/practicar", label: "Practicar" },
+	{ href: "/seguridad", label: "Seguridad" },
+	{ href: "/estudio", label: "Estudio" },
+];
+---
+
+<div class="fab" data-nav-fab>
+	<button
+		type="button"
+		class="fab-toggle"
+		aria-expanded="false"
+		aria-haspopup="true"
+		aria-controls="fab-menu"
+		aria-label="Abrir menú de navegación"
+	>
+		<span class="burg" aria-hidden="true"><span></span><span></span><span></span></span>
+	</button>
+	<nav id="fab-menu" class="fab-menu" aria-label="Accesos rápidos" hidden>
+		{
+			links.map((l) =>
+				l.href === current ? (
+					<span class="fab-link current" aria-current="page">
+						{l.label}
+					</span>
+				) : (
+					<a class="fab-link" href={l.href}>{l.label}</a>
+				),
+			)
+		}
+	</nav>
+</div>
+
+<script>
+	document.querySelectorAll<HTMLDivElement>("[data-nav-fab]").forEach((fab) => {
+		const btn = fab.querySelector<HTMLButtonElement>("button.fab-toggle");
+		const menu = fab.querySelector<HTMLElement>(".fab-menu");
+		if (!btn || !menu) return;
+
+		let expanded = false;
+
+		const close = () => {
+			expanded = false;
+			fab.classList.remove("is-open");
+			btn.setAttribute("aria-expanded", "false");
+			btn.setAttribute("aria-label", "Abrir menú de navegación");
+			menu.hidden = true;
+		};
+
+		const open = () => {
+			expanded = true;
+			fab.classList.add("is-open");
+			btn.setAttribute("aria-expanded", "true");
+			btn.setAttribute("aria-label", "Cerrar menú de navegación");
+			menu.hidden = false;
+		};
+
+		const syncTop = () => {
+			const bar = document.querySelector<HTMLElement>(".topbar");
+			const y = bar ? bar.getBoundingClientRect().bottom + 10 : 84;
+			fab.style.setProperty("--fab-top", `${Math.round(y)}px`);
+		};
+
+		btn.addEventListener("click", () => (expanded ? close() : open()));
+
+		document.addEventListener("keydown", (e) => {
+			if (e.key === "Escape" && expanded) {
+				close();
+				if (e.target instanceof Node && fab.contains(e.target)) btn.focus();
+			}
+		});
+
+		document.addEventListener("pointerdown", (e) => {
+			if (e.target instanceof Node && !fab.contains(e.target)) close();
+		});
+
+		syncTop();
+		window.addEventListener("resize", syncTop);
+	});
+</script>
+
+<style>
+	.fab {
+		position: fixed;
+		left: 12px;
+		top: var(--fab-top, 84px);
+		z-index: 40;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 10px;
+	}
+	.fab-toggle {
+		width: 56px;
+		height: 56px;
+		border-radius: 18px;
+		background: var(--surface);
+		border: 3px solid var(--edge);
+		box-shadow: 4px 4px 0 var(--hard);
+		display: grid;
+		place-items: center;
+		cursor: pointer;
+		color: var(--ink);
+		transition: transform 0.08s ease-out, box-shadow 0.08s ease-out,
+			background 0.15s ease;
+	}
+	.fab-toggle:hover {
+		background: var(--surface-2);
+	}
+	.fab-toggle:active {
+		transform: translate(3px, 3px);
+		box-shadow: 1px 1px 0 var(--hard);
+	}
+	.fab-toggle:focus-visible {
+		outline: 4px solid var(--accent-dark);
+		outline-offset: 3px;
+	}
+	.burg {
+		display: grid;
+		gap: 5px;
+	}
+	.burg span {
+		width: 24px;
+		height: 3.5px;
+		border-radius: 2px;
+		background: var(--ink);
+		display: block;
+	}
+	@media (prefers-reduced-motion: no-preference) {
+		.burg span {
+			transition: transform 0.2s ease-out, opacity 0.15s ease-out;
+		}
+	}
+	.is-open .burg span:nth-child(1) {
+		transform: translateY(8.5px) rotate(45deg);
+	}
+	.is-open .burg span:nth-child(2) {
+		opacity: 0;
+	}
+	.is-open .burg span:nth-child(3) {
+		transform: translateY(-8.5px) rotate(-45deg);
+	}
+	.fab-menu[hidden] {
+		display: none;
+	}
+	.fab-menu {
+		display: flex;
+		flex-direction: column;
+		gap: 0.35rem;
+		background: var(--surface);
+		border: 3px solid var(--edge);
+		border-radius: 16px;
+		box-shadow: 6px 6px 0 var(--hard);
+		padding: 10px;
+		min-width: 152px;
+	}
+	.fab-link {
+		text-decoration: none;
+		font-family: var(--font-display);
+		font-weight: 800;
+		font-size: 1.02rem;
+		color: var(--ink);
+		min-height: 44px;
+		display: inline-flex;
+		align-items: center;
+		padding: 8px 14px;
+		border-radius: 12px;
+		border: 3px solid transparent;
+	}
+	.fab-link:hover {
+		background: var(--surface-2);
+	}
+	.fab-link:focus-visible {
+		outline: 4px solid var(--accent-dark);
+		outline-offset: 2px;
+	}
+	.fab-link.current {
+		background: var(--accent);
+		color: var(--btn-ink);
+		border-color: var(--edge);
+	}
+</style>
